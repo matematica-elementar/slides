@@ -2,7 +2,7 @@
 Este repositório mantém os slides utilizados em sala para a disciplina Matemática Elementar do Bacharelado em Tecnologia da Informação da Universidade Federal do Rio Grande do Norte.
 
 ## Compilação
-É necessário que alguma distribuição TeX (como o pacote [TexLive](https://tug.org/texlive/) e o utilitário [GNU Make](https://www.gnu.org/software/make/) estejam instalados em sua máquina.
+É necessário que alguma distribuição TeX (como o pacote [TexLive](https://tug.org/texlive/)) e o utilitário [GNU Make](https://www.gnu.org/software/make/) estejam instalados em sua máquina.
 
 Após clonar o repositório, entre no diretório em algum shell e execute o comando abaixo para produzir o documento em formato pdf.
 
