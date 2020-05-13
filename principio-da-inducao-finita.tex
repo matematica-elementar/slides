@@ -1,0 +1,410 @@
+\documentclass[brazil, notheorems, 10pt]{beamer}
+
+\input{theme/imd-lecture-style.tex}
+
+
+
+%lecture[number of class]{type}
+\lecture[4]{Capítulo}
+
+\def\lecturename{IMD1001
+
+
+Matemática Elementar}
+\def\semestre{2018.2}
+\def\nomedoautor{Igor Oliveira}
+\def\emaildoautor{\href{mailto:igoroliveira@imd.ufrn.br}{{\tt igoroliveira@imd.ufrn.br}}}
+
+\title[\lecturename]% optional, use only with long paper titles
+{Matemática Elementar}
+
+\subtitle{Princípio da Indução Finita}  % could also be a conference name
+
+\date{\today}
+
+\author[Igor Oliveira] % optional, use only with lots of authors
+{
+	\nomedoautor\\
+	\emaildoautor
+}
+% - Give the names in the same order as they appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation. See the beamer manual for an example
+
+\institute[
+%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
+	UFRN\\
+	Natal-RN
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the title page
+	Instituto Metrópole Digital\\
+	Universidade Federal do Rio Grande do Norte\\
+	Natal-RN
+
+	%there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+
+\begin{document}
+
+\mode<article>
+{
+\begin{frame} % the plain option removes the sidebar and header from the title page
+	\maketitle
+\end{frame}
+
+% the titlepage
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}
+}
+
+\mode<presentation>
+{
+% the titlepage
+{\imagemfundo
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}}
+}
+
+% TOC
+\begin{frame}{Índice}{}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%
+
+\section{Introdução}
+
+\begin{frame}  \frametitle{Apresentação da Aula}
+
+Imagine uma fila com infinitos dominós, um atrás do outro. Suponha
+que eles estejam de tal modo distribuídos que, uma vez que um dominó
+caia, o seu sucessor na fila também cai. O que acontece quando
+derrubamos o primeiro dominó?
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\section{Objetivos}
+\frame
+{
+\frametitle{Objetivos}
+
+\begin{itemize}
+\item<1-> Conhecer os \alert{sinais analógicos} e digitais
+\item<2-> Fazer uma comparação entre sistemas analógicos e digitais
+\item<3-> Conhecer os elementos elétricos passivos : resistor, capacitor e indutor
+\item<4-> Conhecer as Leis de Kirchhoff
+\item<5-> Conhecer os transistores e os diodos
+\item<6-> Analisar as principais aplicações de sistemas digitais.
+\end{itemize}
+
+}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Princípio da Indução Finita}
+\begin{frame} \frametitle{Formulação Matemática}
+\begin{Teo}[Princípio da Indução Finita]
+Considere $n_0$ um inteiro não negativo. Suponhamos que, para cada
+inteiro $n \geq n_0$, seja dada uma proposição $p \paren n$. Suponha
+que se pode verificar as seguintes propriedades:
+\begin{enumerate}[(a)]
+	\item $p \paren{n_0}$ é verdadeira;
+	\item Se $p \paren n$ é verdadeira, então $p \paren {n+1}$ também
+	é verdadeira, para todo $n \geq n_0$.
+\end{enumerate}
+Então, $p \paren n$ é verdadeira para qualquer $n \geq n_0$.
+\end{Teo}
+
+A afirmação (a) é chamada de \sub{base da indução}, e a (b), de
+\sub{passo indutivo}. O fato de que $p \paren n$ é verdadeira no
+item (b) é chamado de \sub{hipótese de indução}.
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Demonstrando Identidades} %\framesubtitle{Exemplos}
+\begin{Exem}
+Demonstre que, para qualquer $n \in \N^\ast$, é válida a igualdade:
+$$2+ 4+ \dots + 2n = n \paren {n+1}.$$
+\end{Exem} \pause
+
+\begin{Exem}
+Demonstre que, para qualquer $n \in \N^\ast$, é válida a igualdade:
+$$1+3+\dots +\paren {2n-1} = n^2.$$
+\end{Exem}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Demonstrando Desigualdades} %\framesubtitle{Exemplos}
+\begin{Exem}
+Mostre que, para todo número $n \in \N^\ast$, $n>3$, vale que
+$$2^n < n!.$$
+\end{Exem}\pause
+
+\begin{Exem}
+Prove  que, para todo $n \in \N^\ast$,
+$$\underbrace{\sqrt{2+\sqrt{2+\sqrt{2+ \dots + \sqrt 2}}}}_{n  \text{ - radicais}} < 2.$$
+\end{Exem}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Indução na Geometria} %\framesubtitle{Exemplos}
+\begin{Exem}
+Seja $n \in \N$ tal que $n\geq 3$. Mostre  que podemos cobrir os
+$n^2$ pontos no reticulado a seguir traçando $2n-2$ segmentos de
+reta sem tirar o lápis do papel.
+$$\underbrace{\begin{array}{ccccc}
+								\bullet & \bullet & \bullet & \bullet & \bullet \\
+								\bullet & \bullet & \bullet & \bullet & \bullet \\
+								\bullet & \bullet & \bullet & \bullet & \bullet \\
+								\bullet & \bullet & \bullet & \bullet & \bullet \\
+								\bullet & \bullet & \bullet & \bullet & \bullet
+							\end{array}
+}_{n \times n \text{ - pontos}}$$
+\end{Exem}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{A Moeda Falsa} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Um rei muito rico possui $3^n$ moedas de ouro. No entanto, uma dessas
+moedas é falsa, e seu peso é menor que o peso das demais. Com uma
+balança de 2 pratos e sem nenhum peso, mostre que é possível
+encontrar a moeda falsa com apenas $n$ pesagens.
+\end{Exem}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Desigualdade das médias aritmética e geométrica} %\framesubtitle{Exemplos}
+
+\begin{Teo}[Desigualdade das médias aritmética e geométrica]
+Para quaisquer $a_1, a_2, \dots , a_n \in \R_+$ vale
+\begin{equation}
+		\sqrt[n]{a_1\dots a_n} \leq \frac {a_1 + \dots + a_n} n.
+\end{equation}
+\end{Teo}
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\section{Princípio Forte da Indução Finita}
+\begin{frame}
+\frametitle{Formulação Matemática} %\framesubtitle{Exemplos}
+
+
+\begin{Teo}[Princípio Forte da Indução Finita]
+Considere $n_0$ um inteiro não negativo. Suponhamos que, para cada
+inteiro $n \geq n_0$, seja dada uma proposição $p \paren n$. Suponha
+que se pode verificar as seguintes propriedades:
+\begin{enumerate}[(a)]
+	\item $p \paren{n_0}$ é verdadeira;
+	\item Se para cada inteiro não negativo $k$, com $n_0 \leq k \leq n$, temos que
+	 $p \paren k$ é verdadeira, então $p \paren {n+1}$ também
+	é verdadeira.
+\end{enumerate}
+Então, $p \paren n$ é verdadeira para qualquer $n \geq n_0$.
+\end{Teo}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Teorema Fundamental da Aritmética} %\framesubtitle{Exemplos}
+
+\begin{Teo}[Teorema Fundamental da Aritmética]
+Todo número natural $N$ maior que 1 pode ser escrito como um produto
+\begin{equation}\label{fatpri}
+N = p_1 \cdot p_2 \cdot p_3 \dots p_m,
+\end{equation}
+onde $m \geq 1$ é um número natural e os $p_i$, $1 \leq i \leq m$,
+são números primos. Além disso, a fatoração exibida na Equação \ref{fatpri} é única
+se exigirmos que $p_1 \leq p_2 \leq \dots \leq p_m$.
+
+\end{Teo}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Cuidados ao Usar o Princípio da Indução}
+\begin{frame}
+\frametitle{Cuidados ao Usar o Princípio da Indução} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Critique a seguinte argumentação: Quer-se provar que todo número
+natural é pequeno. Evidentemente, 1 é um número pequeno. Além disso,
+se $n$ for pequeno, $n+1$ também o será, pois não se torna grande um
+número pequeno simplesmente somando-lhe uma unidade. Logo, por
+indução, todo número natural é pequeno.
+\end{Exem} \pause
+
+\begin{Exem}
+\emph{\textbf{Afirmação:} Em um conjunto qualquer de $n$ bolas,
+todas as bolas possuem a mesma cor.}
+
+Analise a seguinte demonstração por indução para a afirmação
+anterior e aponte o problema da demonstração, já que a afirmação é
+claramente falsa.
+\end{Exem}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Cuidados ao Usar o Princípio da Indução} %\framesubtitle{Exemplos}
+
+\emph{\textbf{Afirmação:} Em um conjunto qualquer de $n$ bolas,
+todas as bolas possuem a mesma cor.}
+
+\sub{Dem.}: Para $n=1$, nossa proposição é verdadeira pois em
+qualquer conjunto com uma bola, todas as bolas têm a mesma cor, pois
+só existe uma bola. Assuma por hipótese de indução que a afirmação é
+verdadeira para $n$ e provemos que a afirmação é verdadeira para
+$n+1$. Ora, seja $A = \set {b_1, \dots, b_n, b_{n+1}}$ o conjunto
+com $n+1$ bolas referido. Considere os subconjuntos $B$ e $C$ de $A$
+com $n$ elementos, construídos como:
+$$B = \set {b_1, b_2, \dots, b_n} \text{ e } C= \set{ b_2, \dots,
+b_{n+1}}.$$ De fato ambos os conjuntos têm $n$ elementos. Assim, as
+bolas $b_1, b_2, \dots , b_n$ têm a mesma cor. Do mesmo modo, as
+bolas do conjunto $C$ também têm a mesma cor. Em particular, as
+bolas $b_n$ e $b_{n+1}$ têm a mesma cor (ambas estão em $C$). Assim,
+todas as $n+1$ bolas têm a mesma cor.
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Exercícios}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Demonstre, por indução, que para qualquer $n \in \N^\ast$ é
+válida a igualdade:
+$$1+2+ 3+ \dots + n = \frac{n \paren {n+1}} 2.$$ }
+
+\Ex{Demonstre, por indução, que para qualquer $n \in \N^\ast$ é
+válida a igualdade:
+$$1^2 +2^2 + 3^2+ \dots + n^2 = \frac{n \paren {n+1} \paren{2n+1}} 6.$$ }
+
+\Ex{Prove que $3^{n-1} < 2^{n^2}$ para todo $n \in \N^\ast$.
+ }
+
+\Ex{Mostre, por indução, que $$\paren{\frac {n+1}{n}}^n \leq n,$$
+para todo $n \in \N^\ast$ tal que $n \geq 3$. \\ \emph{Dica: }
+Mostre que $\frac{k+2}{k+1} \leq \frac{k+1} k$ para todo $k \in
+\N^\ast$. Depois, eleve tudo à potência $k+1$.}
+\end{frame}
+
+
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Prove que $$\frac 1 {\sqrt 1} +\frac 1 {\sqrt 2} +\frac 1 {\sqrt
+3} + \dots + \frac 1 {\sqrt n} \geq \sqrt n,$$ para todo $ n \in
+\N^\ast$.}
+
+
+\Ex{Um subconjunto do plano é \emph{convexo} se o segmento ligando
+quaisquer dois de seus pontos está totalmente nele contido. Os
+exemplos mais simples de conjuntos convexos são o próprio plano e
+qualquer semi-plano. Mostre que, para qualquer $n \in \N^\ast$, a
+interseção $n$ de conjuntos convexos é ainda um conjunto convexo.}
+
+\end{frame}
+
+
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+
+\begin{comment}
+\subsection{Exemplo de uma figura}
+
+\begin{frame}{Título do slide}
+\framesubtitle{Sub-título do slide}
+\transdissolve
+	\includegraphicscopyright[width=6cm]{Figuras/teste.jpg}
+	{Copyright by Sir Silva}
+\end{frame}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\section{Bibliografia}
+
+\frame{
+\frametitle{Bibliografia}
+
+\begin{thebibliography}{99}
+
+\bibitem {label1}
+OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+\newblock {\em Iniciação à Matemática: um Curso com Problemas e Soluções}.
+\newblock 2. ed. Rio de Janeiro: SBM, 2010.
+
+\bibitem {label2}
+OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+\newblock {\em Estágio dos Alunos Bolsistas - OBMEP 2005 - 4. Equações, Inequações e Desigualdades}.
+\newblock Rio de Janeiro: SBM, 2006.
+
+%\bibitem {label2}
+%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+%\newblock {\em Iniciação à Matemática: um Curso com Problemas e Soluções}.
+%\newblock 2. ed. São Paulo: Cengage Learning, 2010.
+
+
+\end{thebibliography}
+}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+%{\aauwavesbg
+%\begin{frame}[plain,noframenumbering]
+%  \finalpage{Thank you for using this theme!}
+%\end{frame}}
+%%%%%%%%%%%%%%%%%
+
+\end{document}

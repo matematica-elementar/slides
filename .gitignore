@@ -237,7 +237,5 @@ TSWLatexianTemp*
 # generated if using elsarticle.cls
 *.spl
 
-# gererated pdf files
-conjuntos.pdf
-conjuntos-numericos.pdf
-equacoes-e-inequacoes.pdf
+# gererated pdf's folder
+pdf/

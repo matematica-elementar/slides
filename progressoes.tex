@@ -1,0 +1,689 @@
+\documentclass[brazil, notheorems, 10pt]{beamer}
+
+\input{theme/imd-lecture-style.tex}
+
+
+
+%lecture[number of class]{type}
+\lecture[6]{Capítulo}
+
+\def\lecturename{IMD1001
+
+
+Matemática Elementar}
+\def\semestre{2018.1}
+\def\nomedoautor{Igor Oliveira}
+\def\emaildoautor{\href{mailto:igoroliveira@imd.ufrn.br}{{\tt igoroliveira@imd.ufrn.br}}}
+
+\title[\lecturename]% optional, use only with long paper titles
+{Matemática Elementar}
+
+\subtitle{Progressões}  % could also be a conference name
+
+\date{\today}
+
+\author[Igor Oliveira] % optional, use only with lots of authors
+{
+	\nomedoautor\\
+	\emaildoautor
+}
+% - Give the names in the same order as they appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation. See the beamer manual for an example
+
+\institute[
+%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
+	UFRN\\
+	Natal-RN
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the title page
+	Instituto Metrópole Digital\\
+	Universidade Federal do Rio Grande do Norte\\
+	Natal-RN
+
+	%there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+
+\begin{document}
+
+\mode<article>
+{
+\begin{frame} % the plain option removes the sidebar and header from the title page
+	\maketitle
+\end{frame}
+
+% the titlepage
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}
+}
+
+\mode<presentation>
+{
+% the titlepage
+{\imagemfundo
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}}
+}
+
+% TOC
+\begin{frame}{Índice}{}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%
+
+\begin{comment}
+\section{Introdução}
+
+\begin{frame}  \frametitle{Apresentação da Aula}
+
+Imagine uma fila com infinitos dominós, um atrás do outro. Suponha
+que eles estejam de tal modo distribuídos que, uma vez que um dominó
+caia, o seu sucessor na fila também cai. O que acontece quando
+derrubamos o primeiro dominó?
+\end{frame}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\section{Objetivos}
+\frame
+{
+\frametitle{Objetivos}
+
+\begin{itemize}
+\item<1-> Conhecer os \alert{sinais analógicos} e digitais
+\item<2-> Fazer uma comparação entre sistemas analógicos e digitais
+\item<3-> Conhecer os elementos elétricos passivos : resistor, capacitor e indutor
+\item<4-> Conhecer as Leis de Kirchhoff
+\item<5-> Conhecer os transistores e os diodos
+\item<6-> Analisar as principais aplicações de sistemas digitais.
+\end{itemize}
+
+}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Progressão Aritmética}
+\begin{frame} \frametitle{Progressão Aritmética}
+\begin{Def}
+Uma \sub{progressão aritmética} (ou simplesmente \sub{PA}) é uma
+sequência na qual a diferença entre um termo e seu anterior (exceto
+quando o termo em questão é o primeiro) é constante. Essa diferença
+constante é chamada de \sub{razão} da progressão e representada pela
+letra $r$.
+\end{Def}
+
+
+De maneira recursiva, o $n$-ésimo, $n>1$, termo de uma PA é escrito
+como
+$$a_n = a_{n-1} + r.$$
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Progressão Aritmética} %\framesubtitle{Exemplos}
+\begin{Exem}
+Uma fábrica de automóveis produziu 400 veículos em janeiro e aumenta
+mensalmente sua produção em 30 veículos. Quantos veículos foram
+produzidos em junho?
+\end{Exem} \pause
+
+Em uma PA $\paren{ a_1 , a_2 , a_3 , \dots }$, para avançar um termo
+basta somar a razão; para avançar dois termos, basta somar duas
+vezes a razão, e assim por diante. Dessa forma, teremos $a_{13} = a_5
++8r$, $a_4 = a_{17} - 13r$, e, mais geralmente, $$a_i = a_j +
+\paren{i-j}r.$$
+Em particular:
+$$a_n = a_1 + \paren{n-1}r.$$
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Progressão Aritmética} %\framesubtitle{Exemplos}
+\begin{Exem}
+Em uma PA, o quinto termo vale 30, e o vigésimo termo vale 50. Quanto
+vale o oitavo termo dessa progressão?
+\end{Exem}\pause
+
+\begin{Exem}
+Qual a razão da PA que se obtém inserindo 10 termos entre os números
+3 e 25?
+\end{Exem}\pause
+
+\begin{Exem}
+O cometa Halley visita a Terra a cada 76 anos. Sua última passagem
+por aqui foi em 1986. Quantas vezes ele visitou a Terra desde o
+nascimento de Cristo? Em que ano foi sua primeira passagem na Era
+Cristã?
+\end{Exem}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\href{https://pt.khanacademy.org/math/algebra/sequences/introduction-to-arithmetic-squences/e/arithmetic_sequences_2}
+{{\tt Atividade 01 - Use Fórmulas de Progressão Aritmética}}
+
+\href{https://pt.khanacademy.org/math/algebra/sequences/constructing-arithmetic-sequences/e/explicit-and-recursive-formulas-of-arithmetic-sequences}
+{{\tt Atividade 02 - Conversão das Formas Recursiva e Explícita de
+Progressões Aritméticas}}
+
+
+Veja o desempenho na Missão Álgebra I.
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Progressão Aritmética} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+O preço de um carro novo é de R\$ $30000{,}00$ e diminui R\$ $1000{,}00$
+a cada ano de uso. Qual será o preço com 4 anos de uso?
+\end{Exem}\pause
+
+\begin{Exem}
+Determine 4 números em uma PA crescente tais que sua soma é 8 e a
+soma de seus quadrados é 36.
+\end{Exem}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+
+\begin{frame}
+\frametitle{Progressão Aritmética} %\framesubtitle{Exemplos}
+
+\begin{Def}
+Uma PA de razão $r \neq 0$ é chamada de \sub{progressão aritmética
+de primeira ordem}. Se $r=0$, chamamos de \sub{progressão aritmética
+estacionária}.
+\end{Def}
+
+Essas definições são motivadas pelo fato de que, em uma PA, o termo
+geral é dado por um polinômio em $n$, $$a_n = a_1 + \paren{n-1} r =
+r \cdot n + \paren{a_1 - r}.$$
+
+Assim, se $r\neq 0$, esse polinômio é de grau 1. Note que, se $r=0$,
+a PA é constante. \pause
+
+A recíproca desse resultado também é válida, ou seja, se uma
+sequência tiver seu termo de ordem $n$ $\paren{a_n}$ definido por um
+polinômio em $n$ de grau menor ou igual a 1, então essa sequência
+será uma PA.
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Somatório dos $n$ primeiros termos de uma PA}
+\begin{frame}
+\frametitle{Soma dos $n$ primeiros termos de uma PA} %\framesubtitle{Exemplos}
+
+\begin{Prop}
+A soma dos $n$ primeiros termos da PA $\paren{a_1, a_2 , a_3,
+\dots}$ é $$S_n = \frac {\paren{a_1 + a_n}n}{2}.$$
+\end{Prop}\pause
+
+\begin{Cor}
+Nas condições da Proposição anterior, temos: $$S_n = \frac r 2 \cdot
+n^2 + \paren{a_1 - \frac r 2}n.$$
+\end{Cor}
+
+Tem-se que todo polinômio de segundo grau em $n$ que não possua o
+termo independente é o somatório de alguma PA.
+
+De fato, tendo $P \paren n = an^2 + bn$, basta tomar $r = 2a$ e $a_1
+= a+b$. Verifique!
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\section{Progressão Geométrica}
+\begin{frame}
+\frametitle{Progressão Geométrica} %\framesubtitle{Exemplos}
+
+
+\begin{Exem}
+Uma pessoa, começando com R\$ $64{,}00$, faz seis apostas
+consecutivas, em cada uma das quais arrisca perder ou ganhar a
+metade do que possui na ocasião. Se ela ganha três e perde três
+dessas apostas, pode-se afirmar que ela:
+\begin{enumerate}[a)]
+	\item Ganha dinheiro;
+	\item Não ganha nem perde dinheiro;
+	\item Perde R\$ $27{,}00$;
+	\item Perde R\$ $37{,}00$;
+	\item Ganha ou perde dinheiro, dependendo da ordem em que
+	ocorreram suas vitórias e derrotas.
+\end{enumerate}
+\end{Exem}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Progressão Geométrica} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+A população de um país é, hoje, igual a $P_0$ e cresce $2 \%$ ao ano.
+Qual será a população desse país daqui a $n$ anos?
+\end{Exem}\pause
+
+\begin{Exem}
+A torcida de certo clube é, hoje, igual a $T_0$ e decresce $5\%$ ao
+ano. Qual será a torcida desse clube daqui a $n$ anos?
+\end{Exem}
+
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Progressão Geométrica} %\framesubtitle{Exemplos}
+
+Note que, nos exemplos anteriores, se uma grandeza teve taxa de
+crescimento igual a $i$, então cada valor da grandeza é igual a
+$\paren{1+i}$ vezes o valor anterior.
+
+\begin{Def}
+Uma \sub{progressão geométrica} (ou, simplesmente, PG) é uma sequência
+na qual a taxa de crescimento $i$ de cada termo para o seguinte é
+sempre a mesma.
+\end{Def}
+
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Progressão Geométrica} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+A sequência $\paren{1, 2, 4, 8, 16, 32, \dots }$ é um exemplo de uma
+PG. Aqui, a taxa de crescimento de cada termo para o seguinte é de
+$100 \% $, o que faz com que cada termo seja igual a $200 \% $ do
+termo anterior.
+\end{Exem}
+
+\begin{Exem}
+A sequência $\paren{1000, 800, 640, 512 , \dots }$ é um exemplo de
+uma PG. Aqui, cada termo é $80 \% $ do termo anterior. A taxa de
+crescimento de cada termo para o seguinte é de $ -20 \% $.
+\end{Exem}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Fórmulas de uma PG}
+\begin{frame}
+\frametitle{Progressão Geométrica} %\framesubtitle{Exemplos}
+
+É claro que, numa PG, cada termo é igual ao anterior multiplicado por
+$1 + i$, onde $i$ é a taxa de crescimento dos termos. Chamamos $1+i$
+de \sub{razão da progressão} e a representamos por $q$. Assim, para
+$n \geq 2$, $$a_n = a_{n-1} \cdot q.$$
+
+Portanto, uma progressão geométrica é uma sequência na qual é
+constante o quociente da divisão de cada termo pelo termo anterior
+(exceto quando o termo anterior é o primeiro). \pause
+
+
+Em uma PG $\paren{a_1, a_2, a_3 , \dots}$, para avançar um termo
+basta multiplicar pela razão; para avançar dois termos, basta
+multiplicar duas vezes pela razão, e assim por diante. Assim, $$a_i
+= a_j \cdot q^{i-j}.$$ Em particular,
+$$a_n = a_1\cdot q^{n-1}.$$
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Progressão Geométrica} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Em uma PG, o quinto termo vale 5 e o oitavo termo vale 135. Quanto
+vale o sétimo termo dessa progressão?
+\end{Exem}
+
+\begin{Exem}
+Qual é a razão da PG que se obtém inserindo 3 termos entre os
+números 30 e 480?
+\end{Exem}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\href{https://pt.khanacademy.org/math/algebra/sequences/introduction-to-geometric-sequences/e/geometric_sequences_2}
+{{\tt Atividade 03 - Use Fórmulas de Progressão Geométrica}}
+
+\href{https://pt.khanacademy.org/math/algebra/sequences/constructing-geometric-sequences/e/explicit-and-recursive-formulas-of-geometric-sequences}
+{{\tt Atividade 04 - Conversão das Formas Recursiva e Explícita de
+Progressões Geométricas (no Khan aparece errado como Aritméticas)}}
+
+
+Veja o desempenho na Missão Álgebra I.
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Somatório dos $n$ primeiros termos de uma PG}
+\begin{frame}
+\frametitle{Soma dos $n$ primeiros termos de uma PG} %\framesubtitle{Exemplos}
+
+\begin{Prop}
+A soma dos $n$ primeiros termos de uma PG $\paren {a_n}$ de razão $q
+\neq 1$ é $$S_n = a_1 \frac{1-q^n}{1-q}.$$
+\end{Prop}
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Soma dos $n$ primeiros termos de uma PG} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Diz a lenda que o inventor do xadrez pediu como recompensa 1 grão de
+trigo pela primeira casa, 2 grãos pela segunda, 4 pela terceira e
+assim por diante, sempre dobrando a quantidade a cada nova casa.
+Sabendo que o tabuleiro de xadrez tem 64 casas, qual o número de
+grãos pedido pelo inventor do jogo?
+\end{Exem}\pause
+
+Resposta: 18446744073709551615.
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+
+\section{Exercícios}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Formam-se $n$ triângulos com palitos, conforme a figura abaixo.
+\begin{center}
+	\includegraphicscopyright[width=1.5cm]{figures/1-Triangle.png}{\textbf{$n=1$}}
+	\includegraphicscopyright[width=2.15cm]{figures/2-Triangle.png}{\textbf{$n=2$}}
+	\includegraphicscopyright[width=2.8cm]{figures/3-Triangle.png}{\textbf{$n=3$}}
+\end{center}
+Qual o número de palitos usados para construir $n$ triângulos? }
+
+\Ex{A soma dos ângulos internos de um pentágono convexo é igual a
+540º e estes ângulos estão em PA. Determine a mediana dos valores
+dos ângulos.}
+
+\Ex{Se $3-x$, $-x$, $\sqrt{9-x}$, $\dots$ é uma PA, determine $x$ e
+calcule o quinto termo.}
+
+\Ex{Calcule a soma dos termos da PA 2, 5, 8, 11, $\dots$ desde o 25º
+termo até o 41º termo, inclusive.}
+
+\end{frame}
+
+
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Determine o maior valor inteiro que pode ter a razão de uma PA
+que admita os números 32, 227 e 942 como termos da progressão.}
+
+
+
+\Ex{Em um quadrado mágico (relembre a definição na Aula 03),
+chamamos de constante mágica o valor da soma de quaisquer uma das
+linhas, colunas ou diagonais. Calcule a constante mágica de um
+quadrado mágico $n \times n$.}
+
+%\Ex{Podem os números $\sqrt 2$, $\sqrt 3$ e $\sqrt 5 $ pertencer a
+%uma mesma PA?}
+
+\Ex{Suprimindo um dos elementos do conjunto $\set{1, 2, \dots , n}$,
+a média aritmética dos elementos restantes é $16,1$. Determine o
+valor de $n$ e qual foi o elemento suprimido.}
+
+%\Ex{Um bem, cujo valor hoje é de R\$ 8000,00, desvaloriza-se de tal
+%forma que seu valor daqui a 4 anos será de R\$ 2000,00. Supondo
+%constante a desvalorização anual, qual será o valor do bem daqui a 3
+%anos? }
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{O gordinho jaguatirica e Júnio vão jogar um  jogo com as
+seguintes regras:
+\begin{itemize}
+	\item Na primeira jogada, o gordinho jaguatirica escolhe um número no
+	conjunto $A = \set{1, 2, 3, 4, 5, 6, 7}$ e diz esse número;
+	\item Os jogadores jogam alternadamente;
+	\item Cada jogador ao jogar escolhe um elemento de $A$, soma-o ao
+	número DITO pelo jogador anterior e DIZ a soma;
+	\item O vencedor é aquele que disser 63.
+\end{itemize}
+Pode o gordinho jaguatirica ou Júnio ter uma estratégia vencedora?
+Se sim, quem pode e qual é essa estratégia?
+ }
+
+
+%\Ex{Refaça o exercício anterior para o caso do vencedor ser quem
+%disser 64.}
+
+%\Ex{Refaça o penúltimo exercício para o caso de $A = \set{3, 4, 5,
+%6}$.}
+
+\Ex{Mostre que Júnio pode ter uma estratégia que impeça o gordinho
+vencer o jogo se a condição de vitória for 62 e $A =\set{3, 4, 5, 6,
+7}$. }
+
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Descontos sucessivos de 10\% e 20\% equivalem a um desconto
+total de quanto?}
+
+
+%\Ex{Um aumento de 10\% seguido de um desconto de 20\% equivale a um
+%desconto único de quanto?}
+
+%\Ex{Aumentando sua velocidade em 60\%, de quanto você diminui o
+%tempo de viagem?}
+
+\Ex{Um decrescimento mensal de 5\% gera um decrescimento anual de
+quanto?}
+
+%\Ex{O período de um pêndulo simples é diretamente proporcional à
+%raiz quadrada do seu comprimento. De quanto devemos aumentar o
+%comprimento para aumentar o período em 20\%?}
+
+\Ex{Mantida constante a temperatura, a pressão de um gás perfeito é
+inversamente proporcional a seu volume. De quanto aumenta a pressão
+quando reduzimos em 20\% o volume?}
+
+%\Ex{Se a base de um retângulo aumenta em 10\% e a altura diminui em
+%10\%, quanto aumenta a sua área?}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+%\Ex{Um carro novo custa R\$ 18000,00 e, com 4 anos de uso, vale R\$
+%12000,00. Supondo que o valor decresça a uma taxa anual constante,
+%determine quanto vale o carro com 1 ano de uso.}
+
+\Ex{Considere um triângulo retângulo tal que seus lados formam uma
+PG crescente. Determine a razão dessa progressão.}
+
+\Ex{Qual o quarto termo da PG $\sqrt 2 , \sqrt[3] 2 , \sqrt[6] 2 ,
+\dots$?}
+
+\Ex{Determine três números em PG, tais que a soma desses números é
+19 e a soma de seus quadrados é 133.}
+
+\Ex{A soma de três números em PG é 19. Subtraindo-se 1 do primeiro,
+eles passam a formar uma PA. Calcule-os.}
+
+\Ex{Quatro números que estão em sequência são tais que, os três
+primeiros formam uma PA de razão 6, os três últimos uma PG e o
+primeiro número é igual ao quarto. Determine-os.}
+
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Será formada uma pilha de folhas de estanho que têm, cada uma,
+espessura de $0,1$mm. Inicialmente, adiciona-se uma folha na pilha.
+Nas operações seguintes, é inserida uma quantidade de folhas igual
+ao número de folhas que já estavam na pilha no momento da inserção.
+Após serem realizadas 33 adições de folhas, a altura da pilha será,
+aproximadamente:
+\begin{enumerate}[a.]
+	\item A altura de um poste de luz;
+	\item A altura de um prédio de 40 andares;
+	\item O comprimento da praia de Copacabana;
+	\item A distância Rio-São Paulo;
+	\item O comprimento do equador terrestre.
+\end{enumerate}
+}
+
+\Ex{Larga-se uma bola de uma altura de 5m. Após cada choque com o
+solo, ela recupera apenas $\frac 4 9 $ da altura anterior. Qual a
+distância total percorrida pela bola até o décimo choque com o solo?
+E até o centésimo?}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Começando com um segmento de tamanho 1, divide-se esse segmento
+em três partes iguais e retiramos o interior da parte central,
+obtendo dois segmentos de comprimento $\frac 1 3$. Repetimos agora
+essa operação com cada um desses segmentos e assim por diante. Sendo
+$S_n$ a soma dos comprimentos dos intervalos que restaram depois de
+$n$ dessas operações, determine o valor de $S_n$.}
+
+
+
+
+%EXERCÍCIOS PARA FUNÇÕES EXPONENCIAIS E LOGARÍTMICAS
+%\Ex{Se $\paren{a_n}$ é uma PG de termos positivos, prove que
+%$\paren{ b_n}$ definida por $b_n = \log a_n$ é uma PA.}
+
+%\Ex{Se $\paren{a_n}$ é uma PA, prove que $\paren{ b_n}$ definida por
+%$b_n = e^{a_n}$ é uma PG.}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\subsection{Exemplo de uma figura}
+
+\begin{frame}{Título do slide}
+\framesubtitle{Sub-título do slide}
+\transdissolve
+	\includegraphicscopyright[width=6cm]{Figuras/teste.jpg}
+	{Copyright by Sir Silva}
+\end{frame}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\section{Bibliografia}
+
+\frame{
+\frametitle{Bibliografia}
+
+\begin{thebibliography}{99}
+
+\bibitem {label1}
+LIMA, Elon L; CARVALHO, Paulo César P; Wagner, Eduardo; MORGADO,
+Augusto C.
+\newblock {\em A Matemática do Ensino Médio. Vol. 2}.
+\newblock 5. ed. Rio de Janeiro: SBM, 2004.
+
+%\bibitem {label1}
+%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+%\newblock {\em Estágio dos Alunos Bolsistas - OBMEP 2005 - 4. Equações, Inequações e Desigualdades}.
+%\newblock Rio de Janeiro: SBM, 2006.
+
+%\bibitem {label2}
+%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+%\newblock {\em Iniciação à Matemática: um Curso com Problemas e Soluções}.
+%\newblock 2. ed. São Paulo: Cengage Learning, 2010.
+
+
+\end{thebibliography}
+}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+%{\aauwavesbg
+%\begin{frame}[plain,noframenumbering]
+%  \finalpage{Thank you for using this theme!}
+%\end{frame}}
+%%%%%%%%%%%%%%%%%
+
+\end{document}

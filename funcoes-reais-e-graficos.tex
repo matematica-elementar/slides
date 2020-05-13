@@ -1,0 +1,637 @@
+\documentclass[brazil, notheorems, 10pt]{beamer}
+
+\input{theme/imd-lecture-style.tex}
+
+
+
+%lecture[number of class]{type}
+\lecture[7]{Capítulo}
+
+\def\lecturename{IMD1001
+Matemática Elementar}
+\def\semestre{2018.1}
+\def\nomedoautor{Igor Oliveira}
+\def\emaildoautor{\href{mailto:igoroliveira@imd.ufrn.br}{{\tt igoroliveira@imd.ufrn.br}}}
+
+\title[\lecturename]% optional, use only with long paper titles
+{Matemática Elementar}
+
+\subtitle{Funções Reais e Gráficos}  % could also be a conference name
+
+\date{\today}
+
+\author[Igor Oliveira] % optional, use only with lots of authors
+{
+	\nomedoautor\\
+	\emaildoautor
+}
+% - Give the names in the same order as they appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation. See the beamer manual for an example
+
+\institute[
+%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
+	UFRN\\
+	Natal-RN
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the title page
+	Instituto Metrópole Digital\\
+	Universidade Federal do Rio Grande do Norte\\
+	Natal-RN
+
+	%there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+
+\begin{document}
+
+\mode<article>
+{
+\begin{frame} % the plain option removes the sidebar and header from the title page
+	\maketitle
+\end{frame}
+
+% the titlepage
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}
+}
+
+\mode<presentation>
+{
+% the titlepage
+{\imagemfundo
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}}
+}
+
+% TOC
+\begin{frame}{Índice}{}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%
+\begin{comment}
+
+\section{Introdução}
+
+\begin{frame}  \frametitle{Apresentação da Aula}
+
+Considere as funções
+$$\begin{array}{cccc}
+p : & \R & \to     & \R_+ \\
+		 &  x & \mapsto & x^2
+\end{array}
+\text{\ \ \  e \ \ \ }
+\begin{array}{cccc}
+q : & \R_+ & \to     & \R \\
+		 &  x & \mapsto & \sqrt x
+\end{array}.$$
+As funções $p$ e $q$ são inversas uma da outra? \\ \pause Elas são
+bijetivas? \\ \pause
+
+Caso você precise de um conceito mais básico de função, sugiro ver o
+material de
+\href{https://pt.khanacademy.org/math/algebra/algebra-functions}
+{{\tt funções}} no Khan Academy.
+
+
+\end{frame}
+
+\end{comment}
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\section{Objetivos}
+\frame
+{
+\frametitle{Objetivos}
+
+\begin{itemize}
+\item<1-> Conhecer os \alert{sinais analógicos} e digitais
+\item<2-> Fazer uma comparação entre sistemas analógicos e digitais
+\item<3-> Conhecer os elementos elétricos passivos : resistor, capacitor e indutor
+\item<4-> Conhecer as Leis de Kirchhoff
+\item<5-> Conhecer os transistores e os diodos
+\item<6-> Analisar as principais aplicações de sistemas digitais.
+\end{itemize}
+
+}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Gráfico de Função Real}
+\begin{frame} \frametitle{Função Real}
+\begin{Def}
+Uma função na forma $f : D \subset \R \to \R$ é chamada de
+\sub{função real} (pois seus valores são números reais, isto é, seu
+contradomínio é $\R$) de \sub{variável real} (pois sua variável
+independente assume valores reais, isto é, seu domínio é um
+subconjunto de $\R$).
+\end{Def}
+
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Gráfico de Função Real} %\framesubtitle{Exemplos}
+
+\begin{Def}
+O \sub{gráfico} de uma função real é o seguinte subconjunto do plano
+cartesiano $\R^2$: $$G(f) = \set{(x,y) \in \R^2 \tq x \in D , y =
+f(x)}.$$
+\end{Def}
+Em outras palavras, o gráfico de uma função $f$ é o lugar geométrico
+dos pontos cujas coordenadas satisfazem sua lei de associação.
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Gráfico de Função Real} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Esboce o gráfico da função real
+$$\begin{array}{cccl}
+f : & \R^\ast & \to     & \R \\
+		 &  x & \mapsto & \begin{cases}
+												+1,  &  \ \text{ se } x >0 \\
+												-1, &  \ \text{ se } x <0
+												\end{cases}
+\end{array}.$$
+\end{Exem}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Gráficos e Transformações no Plano}
+\begin{frame}
+\frametitle{Translações de gráficos} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Compare os gráficos das funções reais $f, g , h: \R \to \R$ tais que
+$f(x) = \sen x$, \\ $g(x) = f(x) + 1 = \sen x +1$ , \\ $h(x)=
+f(x+\frac {\pi} 2)= \sen (x+ \frac {\pi} 2)$.
+\end{Exem}\pause
+
+Dessa forma, se a função real $g$ é tal que $g(x) = f(x+b) +a$,
+então o gráfico de $g$ pode ser obtido, do gráfico de $f$, através
+de uma translação horizontal determinada pelo parâmetro $b$, e uma
+translação vertical determinada pelo parâmetro $a$. \pause
+\begin{itemize}
+	\item O translado vertical será:
+				\begin{itemize}
+					\item No sentido positivo do eixo $y$ (para cima), se
+					$a>0$;
+					\item No sentido negativo do eixo $y$ (para baixo), se
+					$a<0$.
+				\end{itemize} \pause
+	\item O translado horizontal será:
+				\begin{itemize}
+					\item No sentido positivo do eixo $x$ (para a direita), se $b<0$;
+					\item No sentido negativo do eixo $x$ (para a esquerda), se $b>0$.
+				\end{itemize}
+\end{itemize}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Dilatações de gráficos} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Compare os gráficos das funções reais $f, g , h: \R \to \R$ tais que
+$f(x) = \sen x$, \\ $g(x) = \frac 1 2 \cdot f(x)  = \frac 1 2 \cdot \sen x $, \\
+$h(x)= f(2 \cdot x)= \sen (2 \cdot x)$.
+\end{Exem}\pause
+
+\begin{Exem}
+Compare os gráficos das funções reais $f, g , h: \R \to \R$ tais que
+$f(x) = \sen x$, \\ $g(x) = -1 \cdot f(x)  = -1 \cdot \sen x $ , \\
+$h(x)= f(-1 \cdot x)= \sen (-1 \cdot x)$.
+\end{Exem}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Dilatações de gráficos} %\framesubtitle{Exemplos}
+
+Dessa forma, se a função real $g$ é tal que $g(x) = c \cdot f(d
+\cdot x)$, então o gráfico de $g$ pode ser obtido, do gráfico de
+$f$, através de uma dilatação horizontal determinada pelo parâmetro
+$d$, e uma dilatação vertical determinada pelo parâmetro $c$. Se o
+parâmetro for negativo, haverá, também, uma reflexão. \pause
+\begin{itemize}
+	\item A dilatação vertical será:
+				\begin{itemize}
+					\item Um esticamento se $c>1$;
+					\item Um encolhimento se $0<c<1$;
+					\item Um esticamento composto com reflexão em relação ao eixo $x$ se $c<-1$;
+					\item Um encolhimento composto com reflexão em relação ao eixo $x$ se
+					$-1<c<0$.
+				\end{itemize} \pause
+	\item A dilatação horizontal será:
+				\begin{itemize}
+					\item Um encolhimento se $d>1$;
+					\item Um esticamento se $0<d<1$;
+					\item Um encolhimento composto com reflexão em relação ao eixo $y$ se $d<-1$;
+					\item Um esticamento composto com reflexão em relação ao eixo $y$ se
+					$-1<d<0$.
+				\end{itemize}
+\end{itemize}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\href{https://pt.khanacademy.org/math/algebra2/manipulating-functions/shifting-functions/e/shift-functions}
+{{\tt Atividade 10 - Deslocamento de Funções}}
+
+\href{https://pt.khanacademy.org/math/algebra2/manipulating-functions/stretching-functions/e/shifting_and_reflecting_functions}
+{{\tt Atividade 11 - Como Transformar Funções}}
+
+
+Veja o desempenho na Missão Álgebra II.
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\section{Crescimento e Pontos de Extremo}
+\begin{frame}
+\frametitle{Funções Monótonas} %\framesubtitle{Exemplos}
+
+\begin{Def}\label{funcmon}
+Seja $f: D \subset \R \to \R$ uma função. Dizemos que
+\begin{enumerate}[(i)]
+	\item $f$ é \sub{monótona (estritamente) crescente} se, para todos $x_1, x_2 \in D$,
+	$$x_1 < x_2 \implies f(x_1) < f(x_2);$$
+	\item $f$ é \sub{monótona não decrescente} se, para todos $x_1, x_2 \in D$,
+	$$x_1 < x_2 \implies f(x_1) \leq f(x_2);$$
+	\item $f$ é \sub{monótona (estritamente) decrescente} se, para todos $x_1, x_2 \in D$,
+	$$x_1 < x_2 \implies f(x_1) > f(x_2);$$
+	\item $f$ é \sub{monótona não crescente} se, para todos $x_1, x_2 \in D$,
+	$$x_1 < x_2 \implies f(x_1) \geq f(x_2).$$%
+%  \item $f$ é \sub{constante} se, para todo $x \in D$, temos $f(x) =
+%  k \in \R$.
+\end{enumerate}
+\end{Def}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Funções Monótonas} %\framesubtitle{Exemplos}
+
+
+
+Nas mesmas condições da Definição \ref{funcmon} , se $f(x) = k \in
+\R$ para todo $x \in D$, dizemos que $f$ é \sub{constante}.\\ \pause
+Se $I \subset D$ é um intervalo, definimos a monotonicidade de $f$
+no intervalo $I$ de maneira análoga ao feito anteriormente. Por
+exemplo: \\
+$f$ é \sub{monótona (estritamente) crescente em $I$} se, para todos
+$x_1, x_2 \in I$,
+	$$x_1 < x_2 \implies f(x_1) < f(x_2).$$
+
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Funções Limitadas} %\framesubtitle{Exemplos}
+
+\begin{Def}
+Seja $f: D \subset \R \to \R$ uma função.
+\begin{enumerate}[(i)]
+	\item $f$ é \sub{limitada superiormente} se existe $M \in \R$ tal
+	que $f(x) \leq M$, para todo $x \in D$;
+	\item $f$ é \sub{limitada inferiormente} se existe $M \in \R$ tal
+	que $f(x) \geq M$, para todo $x \in D$;
+	\item $x_0 \in D$ é um \sub{ponto de máximo absoluto} de $f$ se
+	$f(x_0) \geq f(x)$, para todo $x \in D$;
+	\item $x_0 \in D$ é um \sub{ponto de mínimo absoluto} de $f$ se
+	$f(x_0) \leq f(x)$, para todo $x \in D$;
+	\item $x_0 \in D$ é um \sub{ponto de máximo local} de $f$ se
+	existe $r>0$ tal que $f(x_0) \geq f(x)$, para todo $x \in D \cap \paren{x_0 - r , x_0+r}$;
+	\item $x_0 \in D$ é um \sub{ponto de mínimo local} de $f$ se
+	existe $r>0$ tal que $f(x_0) \leq f(x)$, para todo $x \in D \cap \paren{x_0 - r ,
+	x_0+r}$.
+\end{enumerate}
+\end{Def}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Exemplo} %\framesubtitle{Exemplos}
+\begin{Exem}
+A função $h : \left( -1 ; 6 \right] \to \R$, cujo gráfico é esboçado
+abaixo, é definida por $h(x) = \begin{cases}
+																3x-x^2 & \ \text{ se } \ x\leq 2 \\
+																\modu{x-4} +1 & \ \text{ se } \ 2 < x \leq 5 \\
+																2 & \ \text{ se } \ x > 5 \\
+																\end{cases}.$
+
+\begin{center}
+\includegraphics[width=3.8cm]{figures/funch.jpg}
+\end{center}
+
+Determine os intervalos de monotonicidade e os extremos de $h$.
+\end{Exem}
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\href{https://pt.khanacademy.org/math/algebra/algebra-functions/positive-negative-increasing-decreasing-intervals/e/increasing-decreasing-intervals-of-functions}
+{{\tt Atividade 12 - Intervalos Crescentes e Decrescentes}}
+
+\href{https://pt.khanacademy.org/math/algebra/algebra-functions/maximum-and-minimum-points/e/recognize-maxima-and-minima}
+{{\tt Atividade 13 - Mínimos e Máximos Relativos}}
+
+\href{https://pt.khanacademy.org/math/algebra/algebra-functions/maximum-and-minimum-points/e/recognize-absolute-maxima-and-minima}
+{{\tt Atividade 14 - Mínimos e Máximos Absolutos}}
+
+Veja o desempenho na Missão Álgebra I.
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Exercícios}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\Ex{Considere a função $g: [0 ; 5] \to \R$ definida por: $$g(x) =
+																\begin{cases}
+																4x-x^2 & \ \text{ se } \ x< 3 \\
+																x-2 & \ \text{ se } \  x \geq 3 \\
+																\end{cases}.$$
+Determine as soluções de:
+\begin{enumerate}[(a)]
+	\item $g(x) = -1$;
+	\item $g(x) = 0$;
+	\item $g(x) = 3$;
+	\item $g(x) = 4$;
+	\item $g(x) < 3$;
+	\item $g(x) \geq 3$.
+\end{enumerate} }
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Sejam $f: \R \to \R $. Determine se as afirmações abaixo são
+verdadeiras ou falsas, justificando suas respostas. As funções que
+forem usadas como contraexemplo podem ser exibidas somente com o
+esboço de seu gráfico.
+\begin{enumerate}[(a)]
+	\item Se $f$ é limitada superiormente, então $f$ tem pelo menos um máximo absoluto;
+	\item Se $f$ é limitada superiormente, então $f$ tem pelo menos um máximo local;
+	\item Se $f$ tem um máximo local, então $f$ tem um máximo absoluto;
+	\item Todo máximo local de $f$ é máximo absoluto;
+	\item Todo máximo absoluto de $f$ é máximo local;
+	\item Se $x_0$ é o ponto de extremo local de $f$, então é ponto de
+	extremo local de $f^2$, onde $(f^2)(x) = f(x) \cdot f(x)$;
+	\item Se $x_0$ é o ponto de extremo local de $f^2$, então é ponto de
+	extremo local de $f$.
+\end{enumerate}}
+
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Sejam $f: \R \to \R $ e $g: \R \to \R$. Determine se as
+afirmações abaixo são verdadeiras ou falsas, justificando suas
+respostas. As funções que forem usadas como contraexemplo podem ser
+exibidas somente com o esboço de seu gráfico.
+\begin{enumerate}[(a)]
+	\item Se $f$ e $g$ são crescentes, então a composta $f \circ g$ é uma função crescente;
+	\item Se $f$ e $g$ são crescentes, então o produto $f\cdot g$ é
+	uma função crescente, onde $(f \cdot g)(x) = f(x) \cdot g(x)$;
+	\item Se $f$ é crescente em $A \subset \R$ e em $B \subset \R$, então $f$ é crescente em $A \cup B \subset \R$.
+\end{enumerate}}
+
+\Ex{Mostre que a função inversa de uma função crescente é também uma
+função crescente. E a função inversa de uma função decrescente é
+decrescente.}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{comment}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Seja $f: X \to Y$ uma função e seja $A$ um subconjunto de $X$.
+Define-se $$f(A) = \set{f(x) \tq x\in A} \subset Y.$$ Se $A$ e $B$
+são subconjuntos de $X$:
+\begin{enumerate}[(a)]
+	\item Mostre que $f(A \cup B) = f(A) \cup f(B)$;
+	\item Mostre que $f(A \cap B) \subset f(A) \cap f(B)$;
+	\item É possível afirmar que $f(A \cap B) = f(A) \cap f(B)$, para
+	todos $A, B \subset X$? Justifique.
+	\item Determine que condições deve satisfazer $f$ para que a
+	afirmação feita no item (c) seja verdadeira.
+\end{enumerate}
+}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Seja $f: X \to Y$ uma função. Dado $y \in Y$, definimos a
+\sub{contra imagem} ou \sub{imagem inversa} de $y$ como sendo o
+seguinte subconjunto de $X$: $$ f^{-1}(y) = \set{x \in X \tq
+f(x)=y}.$$
+\begin{enumerate}[(a)]
+	\item Se $f$ é injetiva e $y$ é um elemento qualquer de $Y$, o que
+	se pode afirmar sobre a imagem inversa $f^{-1}(y)$?
+	\item Se $f$ é sobrejetiva e $y$ é um elemento qualquer de $Y$, o que
+	se pode afirmar sobre a imagem inversa $f^{-1}(y)$?
+	\item Se $f$ é bijetiva e $y$ é um elemento qualquer de $Y$, o que
+	se pode afirmar sobre a imagem inversa $f^{-1}(y)$?
+\end{enumerate} }
+
+
+
+
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Seja $f: X \to Y$ uma função. Dado $A \subset Y$, definimos a
+\sub{contra imagem} ou \sub{imagem inversa} de $A$ como sendo o
+seguinte subconjunto de $X$: $$ f^{-1}(A) = \set{x \in X \tq f(x)\in
+A}.$$ Mostre que
+\begin{enumerate}[(a)]
+	\item $f^{-1} (A \cup B) = f^{-1} (A) \cup f^{-1} (B)$;
+	\item $f^{-1} (A \cap B) = f^{-1} (A) \cap f^{-1} (B)$.
+\end{enumerate}}
+
+
+
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios - Desafios} %\framesubtitle{Exemplos}
+
+\Ex{Seja $f: X \to Y$ uma função. Mostre que, se existem $g_1 : Y
+\to X$ e $g_2 : Y \to X$ tais que $f \circ g_1 = \I_Y$ e $g_2 \circ
+f = \I_X$, então $g_1 = g_2$ (portanto, neste caso, $f$ será
+invertível).}
+
+\Ex{Seja $f: X \to Y$ uma função. Mostre que
+\begin{enumerate}[(a)]
+	\item $f(f^{-1}(B)) \subset B$, para todo $B \subset Y$;
+	\item $f(f^{-1}(B)) = B$, para todo $B \subset Y$ se, e
+	somente se, $f$ é sobrejetiva.
+\end{enumerate}}
+
+\Ex{Seja $f: X \to Y$ uma função. Mostre que
+\begin{enumerate}[(a)]
+	\item $f(f^{-1}(A)) \supset A$, para todo $A \subset X$;
+	\item $f(f^{-1}(A)) = A$, para todo $A \subset X$ se, e
+	somente se, $f$ é injetiva.
+\end{enumerate}}
+
+\Ex{Mostre que existe uma injeção $f: X \to Y$ se, e somente se,
+existe uma sobrejeção $g: Y \to X$.}
+
+\end{frame}
+
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{comment}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+
+
+
+
+%EXERCÍCIOS PARA FUNÇÕES EXPONENCIAIS E LOGARÍTMICAS
+%\Ex{Se $\paren{a_n}$ é uma PG de termos positivos, prove que
+%$\paren{ b_n}$ definida por $b_n = \log a_n$ é uma PA.}
+
+%\Ex{Se $\paren{a_n}$ é uma PA, prove que $\paren{ b_n}$ definida por
+%$b_n = e^{a_n}$ é uma PG.}
+\end{frame}
+
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\subsection{Exemplo de uma figura}
+
+\begin{frame}{Título do slide}
+\framesubtitle{Sub-título do slide}
+\transdissolve
+	\includegraphicscopyright[width=6cm]{Figuras/teste.jpg}
+	{Copyright by Sir Silva}
+\end{frame}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\section{Bibliografia}
+
+\frame{
+\frametitle{Bibliografia}
+
+\begin{thebibliography}{99}
+
+\bibitem {label1}
+IEZZI, Gelson; et al.
+\newblock {\em Fundamentos de Matemática Elementar. Vol. 1 - Conjuntos e Funções}.
+\newblock São Paulo: Editora Atual.
+
+%LIMA, Elon L; CARVALHO, Paulo César P; Wagner, Eduardo; MORGADO,
+%Augusto C.
+%\newblock {\em A Matemática do Ensino Médio. Vol. 2}.
+%\newblock 5. ed. Rio de Janeiro: SBM, 2004.
+
+%\bibitem {label1}
+%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+%\newblock {\em Estágio dos Alunos Bolsistas - OBMEP 2005 - 4. Equações, Inequações e Desigualdades}.
+%\newblock Rio de Janeiro: SBM, 2006.
+
+%\bibitem {label2}
+%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+%\newblock {\em Iniciação à Matemática: um Curso com Problemas e Soluções}.
+%\newblock 2. ed. São Paulo: Cengage Learning, 2010.
+
+
+\end{thebibliography}
+}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+%{\aauwavesbg
+%\begin{frame}[plain,noframenumbering]
+%  \finalpage{Thank you for using this theme!}
+%\end{frame}}
+%%%%%%%%%%%%%%%%%
+
+\end{document}

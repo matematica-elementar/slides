@@ -1,0 +1,867 @@
+\documentclass[brazil, notheorems, 10pt]{beamer}
+
+\input{theme/imd-lecture-style.tex}
+
+
+
+%lecture[number of class]{type}
+\lecture[8]{Capítulo}
+
+\def\lecturename{IMD1001
+Matemática Elementar}
+\def\semestre{2018.1}
+\def\nomedoautor{Igor Oliveira}
+\def\emaildoautor{\href{mailto:igoroliveira@imd.ufrn.br}{{\tt igoroliveira@imd.ufrn.br}}}
+
+\title[\lecturename]% optional, use only with long paper titles
+{Matemática Elementar}
+
+\subtitle{Funções Polinomiais}  % could also be a conference name
+
+\date{\today}
+
+\author[Igor Oliveira] % optional, use only with lots of authors
+{
+	\nomedoautor\\
+	\emaildoautor
+}
+% - Give the names in the same order as they appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation. See the beamer manual for an example
+
+\institute[
+%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
+	UFRN\\
+	Natal-RN
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the title page
+	Instituto Metrópole Digital\\
+	Universidade Federal do Rio Grande do Norte\\
+	Natal-RN
+
+	%there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+
+\begin{document}
+
+\mode<article>
+{
+\begin{frame} % the plain option removes the sidebar and header from the title page
+	\maketitle
+\end{frame}
+
+% the titlepage
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}
+}
+
+\mode<presentation>
+{
+% the titlepage
+{\imagemfundo
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}}
+}
+
+% TOC
+\begin{frame}{Índice}{}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%
+
+
+\section{Introdução}
+
+\begin{frame}  \frametitle{Apresentação da Aula}
+
+É algo  comum escutar a seguinte frase: "Em matemática eu resolvo
+tudo com regra de três".
+
+Será mesmo que isso é possível? Por exemplo, o lado do quadrado e
+sua área são proporcionais?
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\section{Objetivos}
+\frame
+{
+\frametitle{Objetivos}
+
+\begin{itemize}
+\item<1-> Conhecer os \alert{sinais analógicos} e digitais
+\item<2-> Fazer uma comparação entre sistemas analógicos e digitais
+\item<3-> Conhecer os elementos elétricos passivos : resistor, capacitor e indutor
+\item<4-> Conhecer as Leis de Kirchhoff
+\item<5-> Conhecer os transistores e os diodos
+\item<6-> Analisar as principais aplicações de sistemas digitais.
+\end{itemize}
+
+}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Função Linear}
+\begin{frame} \frametitle{Função Linear}
+\begin{Def}
+Chamamos de \sub{função linear} uma função real com lei de formação
+$f(x) = ax$.
+\end{Def}\pause
+
+A função linear é usada para modelar problemas de proporcionalidade
+direta. Quando duas grandezas são diretamente proporcionais, podemos
+escrevê-las sob a lei de formação de uma função linear.
+
+Note que, sabendo que uma função é linear, o valor de $a$ é igual a
+$f(1)$.\pause
+
+No caso das grandezas inversamente proporcionais, a função
+matemática que modela tal problema é uma função $f: \R^{\ast} \to
+\R^{\ast}$ tal que $f(x) = \frac a x$. Nesse caso, também temos a
+particularidade de $f(1) = a \in \R^{\ast}$.
+
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Função Linear} %\framesubtitle{Exemplos}
+
+\begin{Teo}[Teorema Fundamental da Proporcionalidade]
+Seja $f: \R \to \R$ uma função crescente. As seguintes afirmações
+são equivalentes:
+\begin{enumerate}[(i)]
+	\item  $f$ é linear;
+	\item $f(x+y) = f(x) + f(y)$ para quaisquer $x, y \in \R$;
+	\item $f(nx) = nf(x)$ para todo $n \in \Z$ e todo $x \in \R$.
+\end{enumerate}
+\end{Teo}
+Nas hipóteses do Teorema, tem-se $a=f(1) > 0$. No caso de se supor
+$f$ decrescente, vale um resultado análogo, com $a<0$.
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Função Linear} %\framesubtitle{Exemplos}
+
+A importância desse Teorema está no seguinte fato: se queremos saber
+se $f: \R \to \R$ é uma função linear, basta verificar duas coisas:
+\begin{enumerate}[1ª:]
+	\item $f$ deve ser crescente ou decrescente. (Estamos deixando de
+	lado o caso trivial de $f$ ser identicamente nula);
+	\item $f(nx) = n f(x)$ para todo $x \in \R$ e todo $n \in \Z$. No
+	caso de $f: \R^+ \to \R^+$, basta verificar essa última condição
+	para $n \in \N$.
+\end{enumerate}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Função Linear} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+O lado de um quadrado é proporcional à sua área? Em outras palavras,
+essas duas grandezas podem ser relacionadas por meio de uma função
+linear?
+\end{Exem}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Função Afim}
+\begin{frame}
+\frametitle{Função Afim} %\framesubtitle{Exemplos}
+
+\begin{Def}
+Uma função real chama-se \sub{afim} quando existem constantes $a, b
+\in \R$ tais que $f(x) = ax +b$ para todo $x\in \R$.
+\end{Def}
+
+Em uma função afim na qual $f(x) = ax +b$, chamamos o valor $a$ de
+\sub{taxa de variação} da função ou de \sub{taxa de crescimento}.\\
+Vale observar que é muito comum chamá-lo de coeficiente angular.
+Esse termo não é apropriado pois define-se coeficiente angular para
+retas, e não para funções, mesmo que vejamos que o gráfico de uma
+função afim seja uma reta.
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Função Afim} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+A função identidade $f: \R \to \R$, definida por $f(x) = x$ para
+todo $x \in \R$, é afim, assim como suas translações $g(x) = x+b$.
+São, ainda, casos particulares de funções afins as funções lineares
+$f(x) = ax$ e as funções constantes $f(x) = b$.
+\end{Exem}\pause
+
+\begin{Exem}
+O preço a se pagar por uma corrida de táxi é dado por uma função
+afim $f: x \mapsto ax+b$, em que $x$ é a distância percorrida
+(usualmente medida em quilômetros), o valor inicial $b$ é a chamada
+\emph{bandeirada} e o coeficiente $a$ é o preço de cada quilômetro
+rodado.
+\end{Exem}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Gráfico da Função Afim} %\framesubtitle{Exemplos}
+\begin{Prop}
+O gráfico de uma função afim $f(x) = ax + b$ é uma reta.
+\end{Prop}\pause
+Note que, para desenhar o gráfico de uma função afim, basta conhecer
+dois pontos, pois uma reta é inteiramente determinada por dois
+pontos.
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Função Afim e PA} %\framesubtitle{Exemplos}
+
+\begin{Prop}
+Seja  $f: \R \to \R$. Se $f$ é uma função afim e $\paren{x_1, x_2,
+\dots , x_i, \dots}$ é uma PA, então a sequência formada pelos
+pontos $y_i = f(x_i)$, $i \in \N^{\ast}$ é uma PA. Reciprocamente,
+se $f$ for monótona e transformar qualquer PA $\paren{x_1, x_2,
+\dots , x_i, \dots}$ numa PA com termo geral $y_i = f(x_i)$, $i \in
+\N^{\ast}$, então $f$ é uma função afim.
+\end{Prop}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+OBSERVAÇÃO: No Khan Academy é definido função linear como função
+afim. Ou seja, para eles é qualquer função que o gráfico é uma reta
+(ou pontos colineares).
+
+\href{https://pt.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-linear-functions-modeling/e/constructing-and-interpreting-linear-functions}
+{{\tt Atividade 01 - Problemas de Modelos de Funções Lineares}}
+
+\href{https://pt.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/constructing-linear-models-real-world/e/constructing-linear-functions-word-problems}
+{{\tt Atividade 02 - Problemas de Como Escrever Funções}}
+
+\href{https://pt.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/linear-nonlinear-functions-tut/e/linear-non-linear-functions}
+{{\tt Atividade 03 - Funções Lineares e Não Lineares}}
+
+Veja o desempenho na Missão 9º ano.
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Função Quadrática}
+\begin{frame}
+\frametitle{Função Quadrática} %\framesubtitle{Exemplos}
+
+\begin{Def}
+Uma função $f: \R \to \R$ chama-se \sub{quadrática} quando existem
+números reais $a, b, c$, com $a \neq 0$, tais que $f(x) = ax^2 +bx
++c$ para todo $x \in \R$.
+\end{Def}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Função Quadrática} %\framesubtitle{Exemplos}
+
+\begin{Prop}
+Seja $f$ uma função quadrática da forma $f(x) = ax^2 + bx +c$, onde
+$a >0$.\\
+Mostre que $f$ não é limitada superiormente e que o ponto
+$\paren{-\frac {b} {2a}, -\frac {\Delta} {4a}}$ é o mínimo absoluto
+da função.\\
+Caso tenhamos $a<0$, então $f$ não é limitada inferiormente e  o
+ponto $\paren{-\frac {b} {2a}, -\frac {\Delta} {4a}}$ é o máximo
+absoluto da função.
+\end{Prop}\pause
+
+\begin{Prop}
+Seja $f$ uma função quadrática da forma $f(x) = ax^2 + bx +c$. Se
+$f(x_1) = f(x_2)$ para $x_1 \neq x_2$, então $x_1$ e $x_2$ são
+equidistantes de $-\frac{b} {2a}$, ou seja, $\frac{x_1 +x_2} 2 =
+-\frac{b}{2a}$.
+\end{Prop}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{O Gráfico da Função Quadrática} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+O gráfico da função quadrática $f(x) = ax^2$ é uma parábola cujo
+foco é $F = \paren{0, \frac 1 {4a}}$ e cuja diretriz é a reta
+horizontal $y = -\frac{1}{4a}$. Ademais, o vértice da parábola é a
+origem do plano cartesiano.
+\end{Exem}\pause
+
+\begin{Prop}
+O gráfico de uma função quadrática $f(x) = ax^2 + bx + c$ é uma
+parábola, tem a reta $x = -\frac {b}{2a}$ como eixo de simetria e o
+ponto $\paren{-\frac {b} {2a}, -\frac {\Delta} {4a}}$ é o vértice da
+parábola.
+\end{Prop}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\href{https://pt.khanacademy.org/math/algebra-home/alg-quadratics/quad-standard-form-alg/e/key-features-quadratics}
+{{\tt Atividade 04 - Problemas com Expressões do Segundo Grau (Forma
+Padrão)}}
+
+\href{https://pt.khanacademy.org/math/algebra-home/alg-quadratics/alg-features-of-quadratic-functions/e/graphing_parabolas_2}
+{{\tt Atividade 05 - Faça o Gráfico de Parábolas em Todas as
+Formas}}
+
+\href{https://pt.khanacademy.org/math/algebra-home/alg-quadratics/alg-transforming-quadratic-functions/e/shift-parabolas}
+{{\tt Atividade 06 - Deslocamento de Parábolas}}
+
+\href{https://pt.khanacademy.org/math/algebra-home/alg-quadratics/alg-transforming-quadratic-functions/e/stretch-and-shrink-parabolas}
+{{\tt Atividade 07 - Dimensionar e Refletir Parábolas}}
+
+Veja o desempenho na Missão Álgebra I.
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\section{Funções Polinomiais}
+\begin{frame}
+\frametitle{Polinômio} %\framesubtitle{Exemplos}
+
+\begin{Def}
+Um \sub{polinômio} é uma expressão formal do tipo
+$$p(X) = a_n X^n+ a_{n-1} X^{n-1} + \dots + a_1X + a_0,$$
+onde $\paren{a_0, a_1 , \dots , a_n}$ é uma lista ordenada de
+números reais e $X$ é um símbolo, chamado de \sub{indeterminada},
+sendo $X^i$ uma abreviatura para $X\cdot X  \dots  X$ ($i$ fatores).
+Ao maior número $n$ tal que $a_n \neq 0$ damos o nome de \sub{grau
+do polinômio $p(X)$}.
+\end{Def}\pause
+
+Dizemos que dois polinômios $p(X) = a_n X^n+ a_{n-1} X^{n-1} + \dots
++ a_1X + a_0$ e $q(X) = b_m X^m + b_{m-1} X^{m-1} + \dots + b_1X +
+b_0$ são iguais quando $n=m$ e $a_i = b_i$ para todo $i \in \set{0,
+1, \dots , n}$.
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\href{https://pt.khanacademy.org/math/algebra2/polynomial-functions/proving-polynomial-identities/e/polynomial-identities}
+{{\tt Atividade 08 - Verificação de Identidades Polinomiais}}
+
+
+
+Veja o desempenho na Missão Álgebra II.
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Funções Polinomiais} %\framesubtitle{Exemplos}
+
+\begin{Def}
+Diz-se que $p: \R \to \R$ é uma \sub{função polinomial} quando
+existem números reais $a_0, a_1, \dots , a_n$ tais que, para todo $x
+\in \R$, tem-se
+
+\begin{equation}\label{funcpol}
+p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0.
+\end{equation}
+
+Os elementos de $p^{-1}(0)$ são chamados de \sub{raízes de $p$}.
+\end{Def}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Funções Polinomiais} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Além das funções lineares, afins e quadráticas, a soma e o produto
+de funções polinomiais são funções polinomiais. Considere a função
+polinomial $p$ tal que $$p(x) = \paren{x - \alpha} \paren{x^{n-1} +
+\alpha x^{n-2} + \dots + \alpha^{n-2}x+ \alpha^{n-1}}=x^n -
+\alpha^n.$$ Nesse caso, dizemos que $p(x)$ é \sub{divisível} por $x-
+\alpha$.
+\end{Exem}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Funções Polinomiais} %\framesubtitle{Exemplos}
+\begin{Prop}
+Se $\alpha \in \R$ é raiz da função polinomial $p(x)$ de grau $n$,
+então existe uma função polinomial $q(x)$, de grau $n-1$, tal que
+$$p(x) = \paren{x- \alpha}q(x).$$
+Além disso, $p(x)$ não pode ter mais do que $n$ raízes.
+\end{Prop}\pause
+
+Uma função polinomial $p$ chama-se \sub{identicamente nula} quando
+se tem $p(x) = 0$ para todo $x \in \R$. Nesse caso, $p$ tem uma
+infinidade de raízes, já que todo número real é raiz de $p$. Esse
+caso não contradiz a proposição anterior, já que o grau de uma
+função polinomial não está definido para a função identicamente
+nula.
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Funções Polinomiais} %\framesubtitle{Exemplos}
+\begin{Teo}
+Seja $p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$ uma função polinomial de grau $n$ e coeficientes inteiros. Se $\frac p q$ é uma fração irredutível e raiz de $p(x)$, então $p$ é divisor de $a_0$ e $q$ é divisor de $a_n$.
+\end{Teo}\pause
+
+Este Teorema nos permite encontrar facilmente as raízes racionais de um polinômio, caso exista alguma. Basta listar os divisores $p$ de $a_0$, os divisores $q$ de $a_n$ e testar se $p\paren {\frac p q }=0$ para todas as possíveis frações $\frac p q$. Caso haja alguma raiz racional de $p(x)$, ela estará entre as frações obtidas.
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Funções Polinomiais} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Encontre todas as raízes do polinômio $p(x)=2x^4 +3x^3 +6x^2 +12x -8 = 0$.
+\end{Exem}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Funções Polinomiais} %\framesubtitle{Exemplos}
+\begin{Prop}[Fórmula de Interpolação de Lagrange]
+Dados $n+1$ números reais distintos $x_0, x_1 , \dots , x_n$ e
+fixados arbitrariamente os valores $y_0, y_1, \dots, y_n$, existe
+um, e somente um, polinômio $p$ de grau menor ou igual a $n$ tal que
+$$p(x_0) = y_0, \ \ p(x_1) = y_1,  \dots , \ \ p(x_n) = y_n.$$
+
+$p(x)$ pode ser obtido pela fórmula:
+$$p(x) = \sum_{i=0}^{n} \colc{y_i \cdot \prod_{k \neq i} \paren{\frac {x-
+x_k}{x_i-x_k}}}.$$
+\end{Prop}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Gráficos de Funções Polinomiais} %\framesubtitle{Exemplos}
+Quando se deseja traçar o gráfico, ao menos um esboço, de uma função
+polinomial, certas informações são de grande utilidade. Listaremos
+algumas delas.
+
+Seja $p(x) = a_n x^n+ a_{n-1} x^{n-1} + \dots + a_1x + a_0$, com
+$a_n \neq 0$.
+\begin{itemize}
+	\item Se $n$ é par, então para $\modu x $ suficientemente grande,
+	$p(x)$ tem o mesmo sinal de $a_n$;
+	\item Se $n$ é ímpar, então $p(x)$ tem o mesmo sinal de $a_n$ para
+	valores positivos  muito grandes de $x$ e tem o sinal oposto de
+	$a_n$ para valores negativos muito grandes, em módulo, de $x$.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Gráficos de Funções Polinomiais} %\framesubtitle{Exemplos}
+\begin{Exem}
+Identifique se $n$ é par ou ímpar e qual o sinal de $a_n$ para cada
+um dos gráficos de funções polinomiais $p(x) = a_n x^n+ a_{n-1}
+x^{n-1} + \dots + a_1x + a_0$ abaixo:
+
+\begin{center}
+\includegraphics[width=5.8cm]{figures/4graf.jpg}
+\end{center}
+\end{Exem}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Gráficos de Funções Polinomiais} %\framesubtitle{Exemplos}
+ Sejam $p$ e $q$ dois polinômios.
+
+\begin{itemize}
+	\item Se o grau de $p$ é maior do
+	que o grau de $q$, então para todo $x$ com valor absoluto
+	suficientemente grande, tem-se $\modu {p(x)} > \modu{q(x)}$;
+	\pause
+	\item Sejam $x_1, x_2 \in \R$. Se $p(x_1) < 0$ e $p(x_2)>0$,
+	então,
+	$p$ deve possuir uma raiz entre $x_1$ e $x_2$.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Gráficos de Funções Polinomiais} %\framesubtitle{Exemplos}
+\begin{Exem}\label{exemfig}
+Considere os polinômios $p(x) = x^7 $ e $q(x)=x^3$. Quando $0< \modu
+x < 1$, temos que $\modu {p(x)} < \modu{q(x)}$. Porém, quando $
+\modu x > 1$, temos que $\modu {p(x)} > \modu{q(x)}$. Além disso, em
+ambos os casos, $p(-1) = q(-1) = -1 <0$ e $p(1) = q(1) = 1 >0$.
+Assim, os polinômios possuem, cada um, ao menos uma raiz no
+intervalo $(-1, 1)$ -- a saber, $x=0$.
+
+\end{Exem}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Gráficos de Funções Polinomiais} %\framesubtitle{Exemplos}
+\begin{block}{Exemplo \ref{exemfig} (Continuação)}
+
+
+\begin{center}
+\includegraphics[width=4.3cm]{figures/2graf.jpg}
+\end{center}
+
+
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\href{https://pt.khanacademy.org/math/algebra2/polynomial-functions/zeros-of-polynomials-and-their-graphs/e/using-zeros-to-graph-polynomials}
+{{\tt Atividade 09 - Zeros de Polinômios e seus Gráficos}}
+
+
+Veja o desempenho na Missão Álgebra II.
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Exercícios}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\Ex{A escala $N$ de temperaturas foi feita com base nas temperaturas
+máxima e mínima em Nova Iguaçu. A correspondência com a escala
+Celsius é a seguinte:
+\begin{center}
+\begin{tabular}{|r|r|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	ºN & ºC \\ \hline
+	0 & 18 \\ \hline
+	100 & 43 \\
+	\hline
+\end{tabular}
+\end{center}
+Modele o problema com funções afim que transformem a temperatura em
+ºN em ºC e vice-versa. Qual a relação entre essas duas funções? Em
+que temperatura ferve a água na escala $N$?}
+
+\Ex{Mostre que uma função afim $f: \R \to \R$ fica inteiramente
+determinada quando conhecemos $f(x_1)$ e $f(x_2)$ para $x_1 \neq
+x_2$.}
+
+%\Ex{Prove que toda reta não vertical $r$ (as não-paralelas ao eixo
+%$y$) é o gráfico de uma função afim.}
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Pessoas apressadas podem diminuir o tempo gasto em uma escada
+rolante subindo alguns degraus da escada no percurso. Para uma certa
+escada, observa-se que uma pessoa gasta 30 seg na escada quando
+sobre 5 degraus e 20 seg quando sobe 10 degraus. Quantos são os
+degraus da escada e qual o tempo gasto no percurso?}
+
+
+
+\Ex{Dada as PA's $\paren{a_1, a_2, \dots, a_n, \dots}$, de razão não
+nula, e $\paren{b_1, b_2, \dots, b_n, \dots}$, mostre que existe
+uma, e somente uma, função afim $f: \R \to \R$ tal que $f(a_1) =
+b_1$, $f(a_2) = b_2$, \dots , $f(a_n) = b_n$, \dots}
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Os termos $a_1, a_2, \dots, a_n, \dots$ de uma PA são os valores
+$f(1), f(2), \dots, f(n), \dots$ de uma função afim, tal que $f(n)
+>0$ para todo $n \in \N^\ast$.
+\begin{enumerate}[(a)]
+	\item Mostre que cada $a_i$ é igual à área de um trapézio
+	delimitado pelo gráfico de $f$, pelo eixo $x$ e pelas retas
+	verticais de equações $x=i - \frac 1 2 $ e $x = i + \frac 1 2$.
+	\begin{center}
+\includegraphics[width=4.5cm]{figures/paralelogramo.jpg}
+\end{center}
+	\item Mostre, por indução, que a soma $S_n = a_1+a_2+ \dots + a_n$ é igual à
+	área do trapézio delimitado pelo gráfico de $f$, pelo eixo $x$ e
+	pelas retas verticais $x= \frac 1 2$ e $x = n + \frac 1 2 $.
+	\item Conclua, a partir da área do trapézio, que $S_n = \frac{a_1+a_n} 2 n$.
+\end{enumerate}
+}
+
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Para cada uma das funções quadráticas abaixo, escreva-a na forma
+$f(x)=a(x-m)^2+k$. A seguir, calcule suas raízes (se existirem), o
+eixo de simetria de seu gráfico e seu valor mínimo e máximo.
+\begin{enumerate}[(a)]
+	\item $f(x) = x^2 -8x +23$;
+	\item $f(x) = 8x - 2x^2$.
+\end{enumerate}
+}
+
+\Ex{Encontre os valores mínimo e máximo assumidos pela função $f(x)
+= x^2 -4x +3$ em cada um dos intervalos abaixo:
+\begin{enumerate}[(a)]
+	\item $\colc{1, 4}$;
+	\item $\colc{6, 10}$.
+\end{enumerate}
+\emph{Dica: } Esboce o gráfico de $f(x)$ nos intervalos indicados
+para visualizar melhor os valores mínimo e máximo assumidos pela
+função.}
+
+\Ex{Os alunos de uma turma fizeram uma coleta para juntar 405 reais,
+custo de uma excursão. Todos contribuíram igualmente. Na última
+hora, dois alunos desistiram. Com isso, a parte de cada um sofreu um
+aumento de um real e vinte centavos. Quantos alunos tem a turma? }
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Determine o polinômio $p(x)$ de menor grau possível tal que
+$p(1) = 2$, $p(2)=1$, $p(3) = 4$ e $p(4) = 3$. }
+
+\Ex{Mostre que, se $n$ é um número par, então o polinômio $p(x) =
+x^n + x^{n-1} + \dots + x+1$ não possui raiz real.
+\\
+\emph{Dica: } Note que, para $x \neq 1$, $p(x) =
+\frac{x^{n+1}-1}{x-1}$. Proceda supondo, por contradição, que existe
+$a \neq 1$ raiz de $p(x)$.}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{comment}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{Seja $f: X \to Y$ uma função. Dado $A \subset Y$, definimos a
+\sub{contra imagem} ou \sub{imagem inversa} de $A$ como sendo o
+seguinte subconjunto de $X$: $$ f^{-1}(A) = \set{x \in X \tq f(x)\in
+A}.$$ Mostre que
+\begin{enumerate}[(a)]
+	\item $f^{-1} (A \cup B) = f^{-1} (A) \cup f^{-1} (B)$;
+	\item $f^{-1} (A \cap B) = f^{-1} (A) \cap f^{-1} (B)$.
+\end{enumerate}}
+
+
+
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios - Desafios} %\framesubtitle{Exemplos}
+
+\Ex{Seja $f: X \to Y$ uma função. Mostre que, se existem $g_1 : Y
+\to X$ e $g_2 : Y \to X$ tais que $f \circ g_1 = \I_Y$ e $g_2 \circ
+f = \I_X$, então $g_1 = g_2$ (portanto, neste caso, $f$ será
+invertível).}
+
+\Ex{Seja $f: X \to Y$ uma função. Mostre que
+\begin{enumerate}[(a)]
+	\item $f(f^{-1}(B)) \subset B$, para todo $B \subset Y$;
+	\item $f(f^{-1}(B)) = B$, para todo $B \subset Y$ se, e
+	somente se, $f$ é sobrejetiva.
+\end{enumerate}}
+
+\Ex{Seja $f: X \to Y$ uma função. Mostre que
+\begin{enumerate}[(a)]
+	\item $f(f^{-1}(A)) \supset A$, para todo $A \subset X$;
+	\item $f(f^{-1}(A)) = A$, para todo $A \subset X$ se, e
+	somente se, $f$ é injetiva.
+\end{enumerate}}
+
+\Ex{Mostre que existe uma injeção $f: X \to Y$ se, e somente se,
+existe uma sobrejeção $g: Y \to X$.}
+
+\end{frame}
+
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{comment}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+
+
+
+
+%EXERCÍCIOS PARA FUNÇÕES EXPONENCIAIS E LOGARÍTMICAS
+%\Ex{Se $\paren{a_n}$ é uma PG de termos positivos, prove que
+%$\paren{ b_n}$ definida por $b_n = \log a_n$ é uma PA.}
+
+%\Ex{Se $\paren{a_n}$ é uma PA, prove que $\paren{ b_n}$ definida por
+%$b_n = e^{a_n}$ é uma PG.}
+\end{frame}
+
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\subsection{Exemplo de uma figura}
+
+\begin{frame}{Título do slide}
+\framesubtitle{Sub-título do slide}
+\transdissolve
+	\includegraphicscopyright[width=6cm]{Figuras/teste.jpg}
+	{Copyright by Sir Silva}
+\end{frame}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\section{Bibliografia}
+
+\frame{
+\frametitle{Bibliografia}
+
+\begin{thebibliography}{99}
+
+\bibitem {label1}
+LIMA, Elon L; CARVALHO, Paulo César P; Wagner, Eduardo; MORGADO,
+Augusto C.
+\newblock {\em A Matemática do Ensino Médio. Vol. 1}.
+\newblock 9. ed. Rio de Janeiro: SBM, 2006.
+
+\bibitem {label2}
+IEZZI, Gelson; et al.
+\newblock {\em Fundamentos de Matemática Elementar. Vol. 1 - Conjuntos e Funções}.
+\newblock São Paulo: Editora Atual.
+
+%LIMA, Elon L; CARVALHO, Paulo César P; Wagner, Eduardo; MORGADO,
+%Augusto C.
+%\newblock {\em A Matemática do Ensino Médio. Vol. 2}.
+%\newblock 5. ed. Rio de Janeiro: SBM, 2004.
+
+%\bibitem {label1}
+%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+%\newblock {\em Estágio dos Alunos Bolsistas - OBMEP 2005 - 4. Equações, Inequações e Desigualdades}.
+%\newblock Rio de Janeiro: SBM, 2006.
+
+%\bibitem {label2}
+%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+%\newblock {\em Iniciação à Matemática: um Curso com Problemas e Soluções}.
+%\newblock 2. ed. São Paulo: Cengage Learning, 2010.
+
+
+\end{thebibliography}
+}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+%{\aauwavesbg
+%\begin{frame}[plain,noframenumbering]
+%  \finalpage{Thank you for using this theme!}
+%\end{frame}}
+%%%%%%%%%%%%%%%%%
+
+\end{document}
