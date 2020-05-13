@@ -1,0 +1,860 @@
+\documentclass[brazil, notheorems, 10pt]{beamer}
+
+\input{theme/imd-lecture-style.tex}
+
+
+
+%lecture[number of class]{type}
+\lecture[3]{Capítulo}
+
+\def\lecturename{IMD1001
+
+
+Matemática Elementar}
+\def\semestre{2018.2}
+\def\nomedoautor{Igor Oliveira}
+\def\emaildoautor{\href{mailto:igoroliveira@imd.ufrn.br}{{\tt igoroliveira@imd.ufrn.br}}}
+
+\title[\lecturename]% optional, use only with long paper titles
+{Matemática Elementar}
+
+\subtitle{Equações e Inequações}  % could also be a conference name
+
+\date{\today}
+
+\author[Igor Oliveira] % optional, use only with lots of authors
+{
+	\nomedoautor\\
+	\emaildoautor
+}
+% - Give the names in the same order as they appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation. See the beamer manual for an example
+
+\institute[
+%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
+	UFRN\\
+	Natal-RN
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the title page
+	Instituto Metrópole Digital\\
+	Universidade Federal do Rio Grande do Norte\\
+	Natal-RN
+
+	%there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+
+\begin{document}
+
+\mode<article>
+{
+\begin{frame} % the plain option removes the sidebar and header from the title page
+	\maketitle
+\end{frame}
+
+% the titlepage
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}
+}
+
+\mode<presentation>
+{
+% the titlepage
+{\imagemfundo
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+	\titlepage
+\end{frame}}
+}
+
+% TOC
+\begin{frame}{Índice}{}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%
+
+\section{Introdução}
+
+\frame { \frametitle{Apresentação da Aula}
+
+Como você responderia se te perguntassem: Qual o número cujo dobro
+somado com sua quinta parte é igual a 121?
+
+Você já viu alguma brincadeira do tipo?\\
+\begin{enumerate}
+	\item Escolha um número;
+	\item Multiplique esse número por 6;
+	\item Some 12;
+	\item Divida por 3;
+	\item Subtraia o dobro do número que você escolheu; \pause
+	\item O resultado é igual a 4.
+\end{enumerate}
+ }
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\section{Objetivos}
+\frame
+{
+\frametitle{Objetivos}
+
+\begin{itemize}
+\item<1-> Conhecer os \alert{sinais analógicos} e digitais
+\item<2-> Fazer uma comparação entre sistemas analógicos e digitais
+\item<3-> Conhecer os elementos elétricos passivos : resistor, capacitor e indutor
+\item<4-> Conhecer as Leis de Kirchhoff
+\item<5-> Conhecer os transistores e os diodos
+\item<6-> Analisar as principais aplicações de sistemas digitais.
+\end{itemize}
+
+}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Equação do 1º grau}
+\frame { \frametitle{Equação do 1º grau}
+\begin{Def}
+Uma \sub{equação do primeiro grau} na variável $x$ é uma expressão
+da forma $$ax+b=0,$$ onde $a,b \in \R$, $a \neq 0$ e $x$ é um número
+real a ser encontrado.
+\end{Def}
+
+\begin{Prop}[Propriedades]
+Sejam $a, b, c \in \R$. Os seguintes valem:
+\begin{enumerate}[i.]
+	\item $a=b \implies a+c = b+c$;
+	\item $a=b \implies ac = bc$.
+\end{enumerate}
+\end{Prop}
+}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Equação do 1º grau} %\framesubtitle{Exemplos}
+\begin{Exem}
+Resolva a equação $5x - 3 = 6$.
+\end{Exem}
+
+\begin{Exem}
+Escreva em forma de expressões cada passo da brincadeira da
+Introdução:
+\begin{enumerate}
+	\item Escolha um número;
+	\item Multiplique esse número por 6;
+	\item Some 12;
+	\item Divida por 3;
+	\item Subtraia o dobro do número que você escolheu;
+	\item O resultado é igual a 4.
+\end{enumerate}
+\end{Exem}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Equação do 1º grau} %\framesubtitle{Exemplos}
+\begin{block}{Observação}
+Muito cuidado ao efetuar divisões em ambos os lados de uma equação
+para não cometer o erro de dividir os lados por zero. Já vimos em
+sala uma prova obviamente falsa que $1=2$, você lembra? Tente
+fazê-la.
+\end{block}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\link{https://pt.khanacademy.org/math/cc-sixth-grade-math/cc-6th-equations-and-inequalities/cc-6th-super-yoga/e/model-with-one-step-equations-and-solve}
+{Atividade Online 06 - Modelo com equações de primeiro grau e
+resolução}
+
+
+
+Veja o desempenho na Missão 7º ano -- Introdução às equações e
+inequações
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Equação do 1º grau} %\framesubtitle{Exemplos}
+
+
+\begin{Exem}
+Se $x$ representa um dígito na base 10 na equação $$x11 + 11x + 1x1
+= 777,$$ qual o valor de $x$?
+\end{Exem}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Equação do 1º grau} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Determine se é possível completar o preenchimento do tabuleiro
+abaixo com os números naturais de 1 a 9, sem repetição, de modo que
+a soma de qualquer linha seja igual à de qualquer coluna ou
+diagonal.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	1 &   & 6 \\ \hline
+		&   &   \\ \hline
+		& 9 &   \\
+	\hline
+\end{tabular}
+\end{center}
+
+\end{Exem}
+
+Os tabuleiros preenchidos com essas propriedades são conhecidos como
+\sub{quadrados mágicos}.
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Equação do 1º grau} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Imagine que você possui um fio de cobre extremamente longo, mas tão
+longo que você consegue dar a volta na Terra com ele. Para
+simplificar, considere que a Terra é uma bola redonda e que seu raio
+é de exatamente 6.378.000 metros.
+
+O fio com seus milhões de metros está ajustado à Terra, ficando bem
+colado ao chão ao longo do Equador. Digamos, agora, que você
+acrescente 1 metro ao fio e o molde de modo que ele forme um círculo
+enorme, cujo raio é um pouco maior que o raio da Terra e tenha o
+mesmo centro. Você acha que essa folga será de que tamanho?
+\end{Exem}
+
+\pause Já sabemos que a folga obtida aumentando o fio independe do
+raio em consideração. Além desse problema, veja outras curiosidades
+sobre o número $\pi$ no vídeo \link
+{https://www.youtube.com/watch?v=evfc6bv6_lM}{O Pi existe} e tente
+calculá-o em casa usando algum objeto redondo.
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Equação do 2º grau}
+\begin{frame}
+\frametitle{Equação do 2º grau} %\framesubtitle{Exemplos}
+
+\begin{Def}
+A \sub{equação do segundo grau} com coeficientes $a$, $b$ e $c$ é
+uma equação da forma $$ax^2 + bx + c = 0,$$ onde $a, b, c \in \R$,
+$a \neq 0$ e $x$ é uma variável real a ser determinada.
+\end{Def}
+
+\begin{Exem}
+Encontre as soluções de uma equação do segundo grau.
+\end{Exem}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\link{https://pt.khanacademy.org/math/algebra/quadratics/quadratics-square-root/e/quadratics-by-taking-square-roots-with-steps}
+{Atividade Online 07 - Equações do segundo grau com cálculo de
+raízes quadradas: com etapas}
+
+\link{https://pt.khanacademy.org/math/algebra/quadratics/solving-quadratics-by-completing-the-square/e/completing_the_square_2}
+{Atividade Online 08 - Método de completar quadrados}
+
+Veja o desempenho na Missão Álgebra I -- Equações do segundo grau
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Equação do 2º grau} %\framesubtitle{Exemplos}
+
+\begin{Def}
+Chamamos de \sub{discriminante} da equação do segundo grau a
+expressão $b^2-4ac$ e denotamos pela letra grega maiúscula $\Delta$
+(lê-se delta).
+\end{Def}
+
+Em resumo:
+\begin{itemize}
+	\item Se $\Delta > 0$, existem duas soluções reais;
+	\item Se $\Delta = 0 $, existe uma solução real ($x_1 = x_2 =
+	-b/2a)$;
+	\item Se $\Delta < 0$, não existe solução real.
+\end{itemize}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Equação do 2º grau} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Sabendo que $x$ é um número real que satisfaz $$x = 1 + \frac 1 {1 +
+\frac 1 x},$$ determine os valores possíveis de $x$.
+\end{Exem}
+\pause
+\begin{block}{Observação}
+O número $\phi = \frac{\paren {1+\sqrt 5}}2$ é conhecido como razão
+áurea, número de ouro, proporção divina, entre outras denominações.
+Veja o episódio A Proporção Divina
+\link{https://www.youtube.com/watch?v=mfL6-g5mQw4}{parte 01} e
+\link{https://www.youtube.com/watch?v=xtsTXAwWF20&}{parte 02} do
+programa português Isto É Matemática.
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\link{https://pt.khanacademy.org/math/algebra/quadratics/solving-quadratics-using-the-quadratic-formula/e/quadratic_equation}
+{Atividade Online 09 - Fórmula de Bhaskara}
+
+
+Veja o desempenho na Missão Álgebra I -- Equações do segundo grau
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Equação do 2º grau} %\framesubtitle{Exemplos}
+
+\begin{Teo}
+Os números $\alpha$ e $\beta$ são as raízes da equação do segundo
+grau $$ax^2+ bx+c=0$$ se, e somente se, $$\alpha + \beta = \frac
+{-b} a \; \text{ e } \; \alpha \beta = \frac c a.$$
+\end{Teo}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Inequação do 1º grau}
+\begin{frame}
+\frametitle{Inequação do 1º grau} %\framesubtitle{Exemplos}
+
+\begin{Def}
+Uma \sub{inequação do primeiro grau} é uma relação de uma das formas
+abaixo $$ax+b <0, \; \; ax+b>0,$$ $$ax+b \leq 0, \; \; ax+b \geq
+0,$$ onde $a, b \in \R$ e $ a \neq 0$. Lemos os símbolos da seguinte
+maneira: $<$ (menor que), $>$ (maior que), $\leq$ (menor ou igual
+que) e $\geq$ (maior ou igual que).
+\end{Def}
+
+O \sub{conjunto solução} de uma inequação do primeiro grau é o
+conjunto $\mathcal{S}$ de números reais que satisfazem a inequação,
+isto é, o conjunto de números que, quando substituídos na inequação,
+tornam a desigualdade verdadeira.
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Inequação do 1º grau} %\framesubtitle{Exemplos}
+
+\begin{Prop}[Propriedades de inequações]
+Sejam $a, b, c, d \in \R$; $n \in \N^*$. Valem:
+\begin{enumerate}[i.]
+	\item Invariância por adição de números reais: $a < b \implies a+c < b+c$;
+	\item Invariância por multiplicação de números reais positivos:
+	$a < b ; c>0 \implies a \cdot c < b \cdot c$;
+	\item Mudança por multiplicação de números reais
+	negativos: $a < b ; c<0 \implies a \cdot c > b \cdot c$;
+	\item Se $a < b$, então $\frac 1 a > \frac 1 b$, para $a, b \neq
+	0$;
+	\item Se $a,b \geq 0$ e $c>0$, segue que $a < b \implies a^c < b^c$;
+	\item Se $a,b < 0$ e $n$ par, segue que $a < b \implies a^n > b^n$;
+	\item Se $a,b < 0$ e $n$ ímpar, segue que $a < b \implies a^n <
+	b^n$;
+	\item Se $a< b$ e $c< d$, então $a+c < b+d$;
+	\item Para $a, b, c, d \in \R_+$. Se $a< b$ e $c< d$, então $ac < bd$.
+\end{enumerate}
+O resultado é análogo para os tipos $>$, $\leq$ ou $\geq$.
+\end{Prop}
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Inequação do 1º grau} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Qual o conjunto solução da inequação $8x - 4 \geq 0$?
+\end{Exem}
+
+\begin{Exem}
+Antes de fazer os cálculos, diga: qual dos números $a = 3456784
+\cdot 3456786 + 3456785$ e $b = 3456785^2 - 3456788$ é maior?
+\end{Exem}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\link{https://pt.khanacademy.org/math/cc-sixth-grade-math/cc-6th-equations-and-inequalities/cc-6th-inequalities/e/inequalities-in-one-variable-1}
+{Atividade Online 10 - Problemas com Inequações}
+
+
+Veja o desempenho na Missão 7º Ano -- Introdução às Equações e
+Inequações
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\section{Inequação do 2º grau}
+\begin{frame}
+\frametitle{Inequação do 2º grau} %\framesubtitle{Exemplos}
+
+\begin{Def}
+Uma \sub{inequação do segundo grau} é uma relação de uma das formas
+abaixo
+$$ax^2 +bx + c <0, \; \; ax^2 +bx + c>0,$$ $$ax^2 +bx + c \leq 0, \; \; ax^2 +bx + c \geq 0,$$ onde
+$a, b, c \in \R$ e $ a \neq 0$.
+\end{Def}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Inequação do 2º grau} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Resolva as seguintes inequações: $x^2 -3x +2 > 0$; $x^2 -3x +2 \leq
+0$.
+\end{Exem}
+
+\begin{Exem}
+Prove que a soma de um número positivo com seu inverso é sempre
+maior ou igual que 2.
+\end{Exem}
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\section{Módulos}
+\begin{frame}
+\frametitle{Definição de Módulo} %\framesubtitle{Exemplos}
+
+\begin{Def}
+O \sub{módulo} (ou \sub{valor absoluto}) de um número real $x$,
+denotado por $\modu x$, é definido por:
+$$
+\modu x =
+\begin{cases}
+x , & \text{se $x\geq 0$} \\
+-x, & \text{se $x<0$}.
+\end{cases}
+$$
+\end{Def}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Equações Modulares} %\framesubtitle{Exemplos}
+
+Para resolver equações modulares, usaremos dois métodos:
+\begin{itemize}
+	\item Eliminação do módulo pela definição;
+	\item Partição em intervalos.
+\end{itemize}
+
+\begin{Exem}
+Resolva as equações
+\begin{enumerate}[(a)]
+	\item  $\modu {2x-5} = 3$;
+	\item $\modu{2x-3} = 1-3x$;
+	\item $\modu{3-x} - \modu{x+1} = 4$.
+\end{enumerate}
+
+\end{Exem}
+
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\link{https://pt.khanacademy.org/math/algebra-home/alg-absolute-value/alg-absolute-value-equations/e/absolute_value_equations}
+{Atividade Online 11 - Resolva Equações Modulares}
+
+
+Veja o desempenho na Missão O Mundo da Matemática
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Inequações Modulares} %\framesubtitle{Exemplos}
+
+Para solucionarmos inequações modulares, usaremos as propriedades a
+seguir:
+\begin{Prop}[Propriedades]
+Sejam $x \in \R$, $a\in \R^{\ast}_+ $.
+\begin{enumerate}[(i)]
+	\item $\modu x \geq 0$;
+	\item $\modu x < a \Leftrightarrow -a < x < a$;
+	\item $\modu x > a \Leftrightarrow x > a$ ou $-x < -a$;
+	\item $-\modu x \leq x \leq \modu x$.
+
+	Os resultados (ii) e (iii) também são válidos para os casos com $\leq$ ou
+	$\geq$.
+\end{enumerate}
+
+\end{Prop}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Inequações Modulares} %\framesubtitle{Exemplos}
+\begin{Exem}
+Resolva as inequações
+\begin{enumerate}[(a)]
+	\item  $\modu {2x-5} < 3$;
+	\item $\modu{2x-3} \geq 1-3x$;
+	\item $\modu{3-x} - \modu{x+1} \leq 4$.
+\end{enumerate}
+
+\end{Exem}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Desigualdades clássicas}
+\begin{frame}
+\frametitle{Desigualdades clássicas} %\framesubtitle{Exemplos}
+
+Para iniciar, apresentamos algumas desigualdades simples mas
+famosas, válidas para quaisquer $a,b \in \R$:
+\begin{itemize}
+	\item $\modu a \geq 0$;
+	\item $a^2 \geq 0$;
+	\item $\modu {a+b} \leq \modu a + \modu b$ (desigualdade triangular).
+\end{itemize}
+
+
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Desigualdades clássicas} %\framesubtitle{Exemplos}
+
+\begin{Teo}
+Para quaisquer $x, y \in \R$ vale
+\begin{equation}
+		xy \leq \frac {x^2 +y^2} 2.
+\end{equation}
+Além disso, a igualdade acontece se, e somente se, $x=y$.
+\end{Teo}
+
+Vejamos no quadro um experimento geométrico relacionado a essa
+desigualdade.
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Desigualdades clássicas} %\framesubtitle{Exemplos}
+\begin{Teo}
+Para quaisquer $a, b \in \R_+$ vale
+\begin{equation}
+		\sqrt{ab} \leq \frac {a +b} 2.
+\end{equation}
+Além disso, a igualdade acontece se, e somente se, $a=b$.
+\end{Teo}
+
+\begin{Teo}[Desigualdade das médias aritmética e geométrica]
+Para quaisquer $a_1, a_2, \dots , a_n \in \R_+$ vale
+\begin{equation}
+		\sqrt[n]{a_1\dots a_n} \leq \frac {a_1 + \dots + a_n} n.
+\end{equation}
+\end{Teo}
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Desigualdades clássicas} %\framesubtitle{Exemplos}
+\begin{Teo}[Desigualdade das médias harmônica e geométrica]
+Para quaisquer $a_1, a_2, \dots , a_n \in \R_+^*$ vale
+\begin{equation}
+		\frac n {\frac 1 {a_1} + \dots + \frac 1 {a_n}}  \leq \sqrt[n]{a_1\dots a_n}  .
+\end{equation}
+\end{Teo}
+
+\begin{Teo}[Desigualdade de Cauchy-Schwarz]
+Sejam $x_1, \dots , x_n, y_1, \dots y_n \in \R$, então vale:
+\begin{equation}
+		\modu{x_1y_1 + \dots + x_ny_n} \leq \sqrt{x^2_1+ \dots + x^2_n}
+		\cdot \sqrt{y^2_1+ \dots + y^2_n}.
+\end{equation}
+Além disso, a igualdade só ocorre se existir um número real $\alpha$
+tal que $x_1 = \alpha y_1$, ..., $x_n = \alpha y_n$.
+\end{Teo}
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Aplicações} %\framesubtitle{Exemplos}
+\begin{Exem}
+Duas torres são amarradas por uma corda $APB$ que vai do topo $A$ da
+primeira torre para um ponto $P$ no chão, entre as torres, e então
+até o topo $B$ da segunda torre. Qual a posição do ponto $P$ que nos
+dá o comprimento mínimo da corda a ser utilizada?
+\end{Exem}
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Aplicações} %\framesubtitle{Exemplos}
+\begin{Exem}
+Prove que, num triângulo retângulo, a altura relativa à hipotenusa é
+sempre menor ou igual que a metade da hipotenusa. Prove, ainda, que
+a igualdade só ocorre quando o triângulo retângulo é isósceles.
+\end{Exem}
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Aplicações} %\framesubtitle{Exemplos}
+\begin{Exem}
+Prove que, entre todos os triângulos retângulos de catetos $a$ e
+$b$, e com hipotenusa $c$ fixada, o que tem maior soma dos catetos
+$S = a+b$ é o triângulo isósceles.
+\end{Exem}
+
+\end{frame}
+%------------------------------------------------------------------------------------------------------------
+
+\section{Exercícios}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{ Descubra os valores de $x$ de modo que seja possível completar
+o preenchimento do quadrado mágico abaixo:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	 &   &  \\ \hline
+		& $x$ &   \\ \hline
+		&  &   \\
+	\hline
+\end{tabular}
+\end{center}
+}
+
+\Ex{ Observe as multiplicações a seguir:
+\begin{enumerate}[i.]
+	\item $12.345.679 \cdot 18 = 222.222.222$
+	\item $12.345.679 \cdot 27 = 333.333.333$
+	\item $12.345.679 \cdot 54 = 666.666.666$
+\end{enumerate}
+Para obter 999.999.999 devemos multiplicar 12.345.679 por quanto?
+ }
+
+
+
+
+\end{frame}
+
+
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{ Com algarismos $x$, $y$ e $z$ não todos nulos formam-se os
+números de dois algarismos $xy$ e $yx$, cuja soma é o número de três
+algarismos $zxz$. Quanto valem $x$, $y$ e $z$?}
+
+\Ex{ Quantos são os números inteiros de 2 algarismos que são iguais
+ao dobro do produto de seus algarismos?}
+
+\Ex{ O número $-3$ é a raiz da equação $x^2 -7x -2c = 0$. Nessas
+condições, determine o valor do coeficiente $c$. }
+
+\Ex{ Dada as frações $$\frac{966666555557}{966666555558} \; \text{ e
+} \; \frac{966666555558}{966666555559},$$ qual é a maior? }
+
+\Ex{Nove cópias de certas notas custam menos de R\$ 10,00 e dez
+cópias das mesmas notas (custando o mesmo preço cada uma) custam
+mais de R\$ 11,00. Quanto custa uma cópia das notas? }
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{ Ache os valores de $x$ para os quais cada uma das seguintes
+expressões é positiva:
+\begin{enumerate}[a.]
+	\item $$\frac x {x^2+9};$$
+	\item $$\frac{x-3}{x+1};$$
+	\item $$\frac{x^2-1}{x^2-3}.$$
+\end{enumerate}
+}
+
+\Ex{ Sejam  $a$, $b$, $c$, $d > 0$ tais que $\frac a b < \frac c d$.
+Mostre que $$\frac a b < \frac {a+c} {b+d} < \frac c d.$$ }
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{ Determine o conjunto solução de cada uma das equações ou
+inequações modulares abaixo:
+\begin{enumerate}[a.]
+	\item $\modu {3x - 5}= 7;$
+	\item $\modu {-x +8} = -1;$
+	\item $\modu{x^2 - 1}= 3;$
+	\item $\modu{x +1} + \modu { -3x +2} = 6;$
+	\item $\modu{x-1} \cdot \modu{x+2} = 3;$
+	\item $\modu{x-1}+ \modu{x+1}>2;$
+	\item $\modu{x+1}- \modu{x-1}<-2.$
+\end{enumerate}
+}
+
+\Ex{ Prove que $\modu{x\cdot y } = \modu x \cdot \modu y$ para todo
+$x, y \in \R$. }
+
+\Ex{Seja $x \in \R$. Mostre que:
+\begin{enumerate}[a.]
+		\item $\modu{x-5}<0,1 \implies \modu{2x - 10}< 0,2;$
+		\item $\modu{x+3}<0,1 \implies \modu{-\frac 3 2 x + 3 -
+		7,5}<0,15;$
+	\item $\modu{x-2}< \sqrt{5} - 2 \implies \modu{x^2 - 4}< 1.$
+\end{enumerate}
+}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\Ex{Provar que em todo triângulo a soma dos comprimentos das
+medianas é menor que o perímetro do triângulo e maior que o
+semiperímetro (metade do perímetro) dele. }
+
+\Ex{ Prove que $a^4 +b^4 +c^4 \geq abc \paren{a+b+c}$. }
+
+\Ex{ Sejam $a, b, c \in \R_+$. Prove que $$\paren {a+b} \paren {a+c}
+\paren {b+c} \geq 8abc.$$ }
+
+\Ex{ Sejam $a, b, c, d \in \R_+^*$. Prove que $$\paren {a+b+c+d}
+\paren {\frac 1 a + \frac 1 b + \frac 1 c + \frac 1 d} \geq 16.$$ }
+
+\Ex{A soma de três números positivos é 6. Prove que a soma de seus
+quadrados não é menor que 12. }
+
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\subsection{Exemplo de uma figura}
+
+\begin{frame}{Título do slide}
+\framesubtitle{Sub-título do slide}
+\transdissolve
+	\includegraphicscopyright[width=6cm]{Figuras/teste.jpg}
+	{Copyright by Sir Silva}
+\end{frame}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\section{Bibliografia}
+
+\frame{
+\frametitle{Bibliografia}
+
+\begin{thebibliography}{99}
+
+\bibitem {label1}
+OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+\newblock {\em Iniciação à Matemática: um Curso com Problemas e Soluções}.
+\newblock 2. ed. Rio de Janeiro: SBM, 2010.
+
+\bibitem {label2}
+OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+\newblock {\em Estágio dos Alunos Bolsistas - OBMEP 2005 - 4. Equações, Inequações e Desigualdades}.
+\newblock Rio de Janeiro: SBM, 2006.
+
+%\bibitem {label2}
+%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+%\newblock {\em Iniciação à Matemática: um Curso com Problemas e Soluções}.
+%\newblock 2. ed. São Paulo: Cengage Learning, 2010.
+
+
+\end{thebibliography}
+}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+%{\aauwavesbg
+%\begin{frame}[plain,noframenumbering]
+%  \finalpage{Thank you for using this theme!}
+%\end{frame}}
+%%%%%%%%%%%%%%%%%
+
+\end{document}
