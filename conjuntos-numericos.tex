@@ -1,0 +1,465 @@
+\documentclass[brazil, notheorems, 10pt]{beamer}
+
+\input{theme/imd-lecture-style.tex}
+
+
+
+%lecture[number of class]{type}
+\lecture[2]{Capítulo}
+
+\def\lecturename{IMD1001
+
+
+Matemática Elementar}
+\def\semestre{2018.1}
+\def\nomedoautor{Igor Oliveira}
+\def\emaildoautor{\href{mailto:igoroliveira@imd.ufrn.br}{{\tt igoroliveira@imd.ufrn.br}}}
+
+\title[\lecturename]% optional, use only with long paper titles
+{Matemática Elementar}
+
+\subtitle{Conjuntos Numéricos e Potenciação}  % could also be a conference name
+
+\date{\today}
+
+\author[Igor Oliveira] % optional, use only with lots of authors
+{
+  \nomedoautor\\
+  \emaildoautor
+}
+% - Give the names in the same order as they appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation. See the beamer manual for an example
+
+\institute[
+%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
+  UFRN\\
+  Natal-RN
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the title page
+  Instituto Metrópole Digital\\
+  Universidade Federal do Rio Grande do Norte\\
+  Natal-RN
+
+  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+
+\begin{document}
+
+\mode<article>
+{
+\begin{frame} % the plain option removes the sidebar and header from the title page
+  \maketitle
+\end{frame}
+
+% the titlepage
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+  \titlepage
+\end{frame}
+}
+
+\mode<presentation>
+{
+% the titlepage
+{\imagemfundo
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+  \titlepage
+\end{frame}}
+}
+
+% TOC
+\begin{frame}{Índice}{}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%
+
+\section{Apresentação}
+
+\frame
+{
+\frametitle{Apresentação da Aula}
+\begin{block}{Motivação}
+\justifying
+    Os números têm grande importância na matemática; eles podem
+    servir para contar ou medir coisas. Conhecer os conjuntos
+    numéricos e suas operações é indispensável para trabalhar
+    corretamente com os números.
+ \end{block}
+}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{comment}
+\section{Objetivos}
+\frame
+{
+\frametitle{Objetivos}
+
+\begin{itemize}
+\item<1-> Conhecer os \alert{sinais analógicos} e digitais
+\item<2-> Fazer uma comparação entre sistemas analógicos e digitais
+\item<3-> Conhecer os elementos elétricos passivos : resistor, capacitor e indutor
+\item<4-> Conhecer as Leis de Kirchhoff
+\item<5-> Conhecer os transistores e os diodos
+\item<6-> Analisar as principais aplicações de sistemas digitais.
+\end{itemize}
+
+}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Conjuntos Numéricos}
+\frame { \frametitle{Naturais}
+\begin{Def}
+Ao conjunto $\N = \set {0, 1, 2, \dots , n, n+1, \dots}$ damos o
+nome de \sub{conjunto dos números naturais}.
+\end{Def}
+\begin{itemize}
+\item Denotamos $\N \setminus \set 0 = \set {1, 2, \dots , n, n+1,
+\dots}$ por $\N ^\ast$.
+
+\item Usamos o conjunto dos números naturais para contar coisas, como
+casas, animais, etc.
+\end{itemize}
+}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Inteiros} %\framesubtitle{Exemplos}
+\begin{Def}
+Ao conjunto $\Z =\set {\dots , -m -1, -m, \dots, -1, 0, 1,  \dots ,
+n, n+1, \dots}$ damos o nome de \sub{conjunto dos números inteiros}.
+\end{Def}
+
+\begin{block}{Notação}
+$\Z^\ast = \Z \setminus \set 0$; \\
+$\Z_+ = \N$ (Inteiros não negativos); \\
+$\Z^\ast_+ =\N ^\ast$ (Inteiros positivos); \\
+$\Z_- =\set {\dots , -m -1, -m, \dots, -1, 0}$ (Inteiros não
+positivos); \\
+$\Z_-^\ast =\Z_- \setminus \set 0$ (Inteiros negativos).
+\end{block}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Racionais} %\framesubtitle{Exemplos}
+\begin{Def}
+Ao conjunto $\Q = \set{\frac p q \tq p, q \in \Z \text{ e } q \neq
+0}$ damos o nome de \sub{conjunto dos números racionais}.
+\end{Def}
+
+A representação decimal de um número racional é finita ou é uma
+dízima periódica (infinita).
+\begin{block}{Exercício}
+Reescreva os números $0,6$; $1,37$; $0,222\dots$; $0,313131 \dots$ e
+$1,123123123 \dots$ em forma de fração irredutível, ou seja, já
+simplificada.
+\end{block}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Irracionais} %\framesubtitle{Exemplos}
+\begin{Def}
+O \sub{conjunto dos números irracionais} é constituído por todos os
+números que possuem uma representação decimal infinita e não
+periódica.
+\end{Def}
+
+\begin{Exem}
+$\sqrt 2$, $e$ e $\pi$ são números irracionais. Provemos que $\sqrt
+2 \notin \Q$.
+\end{Exem}
+
+Você sabia que existem infinitos ``maiores'' que outros? Qual
+conjunto você diria que tem mais elementos: racionais ou
+irracionais?
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Problema} %\framesubtitle{Exemplos}
+
+O Grande Hotel Georg Cantor tinha uma infinidade de quartos,
+numerados consecutivamente, um para cada número natural. Todos eram
+igualmente confortáveis. Num fim de semana prolongado, o hotel
+estava com seus quartos todos ocupados, quando chega um visitante. A
+recepcionista vai logo dizendo: \\
+-Sinto muito, mas não há vagas. \\
+Ouvindo isto, o gerente interveio: \\
+-Podemos abrigar o cavalheiro sim, senhora. \\
+E ordena: \\
+Transfira o hóspede do quarto 1 para o quarto 2, passe o do quarto 2
+para o quarto 3 e assim por diante. Quem estiver no quarto $n$, mude
+para o quarto $n+1$. Isto manterá todos alojados e deixará
+disponível o quarto 1 para o recém chegado. Logo depois chegou um
+ônibus com 30 passageiros, todos querendo hospedagem. Como deve
+proceder a recepcionista para acomodar todos?
+\\ Horas depois, chegou um trem com uma infinidade de
+passageiros. Como proceder para acomodá-los?
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\href{https://pt.khanacademy.org/math/algebra/rational-and-irrational-numbers/modal/e/recognizing-rational-and-irrational-numbers}
+{{\tt Atividade 02 - Classifique números: racionais e irracionais}}
+
+\href{https://pt.khanacademy.org/math/algebra/rational-and-irrational-numbers/modal/e/recognizing-rational-and-irrational-expressions}
+{{\tt Atividade 03 - Expressões racionais versus irracionais}}
+
+Veja o desempenho na Missão Álgebra I - Números Racionais e
+Irracionais
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Reais} %\framesubtitle{Exemplos}
+\begin{Def}
+À reunião de $\Q$ com o conjunto dos números irracionais, nomeamos
+de \sub{conjunto dos números reais}. Denotamos por $\R$.
+\end{Def}
+
+\begin{itemize}
+\item $\R \setminus \Q = \set {x \tq x \text{ é irracional}}$;
+\item Usamos os números reais para medir algo. A cada número real
+está associado um ponto na reta graduada e vice-versa.
+\item Entre dois números reais distintos sempre há pelo menos um número racional e um
+irracional.
+\href{https://pt.khanacademy.org/math/algebra/rational-and-irrational-numbers/proofs-concerning-irrational-numbers/v/proof-that-there-is-an-irrational-number-between-any-two-rational-numbers}
+{{\tt Este vídeo}} do Khan Academy mostra que entre dois racionais
+distintos sempre há pelo menos um número irracional.
+\item A igualdade $0,999\dots = 1 $ é verdadeira?
+\end{itemize}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Complexos} %\framesubtitle{Exemplos}
+\begin{Def}
+Chamamos $i = \sqrt {-1}$ de \sub{número imaginário}, e ao conjunto
+$\C = \set{ a+bi \tq a,b \in \R}$ damos o nome de \sub{conjunto dos
+números complexos}.
+\end{Def}
+
+Seja $a+bi \in \C$. Nomeamos o número $a-bi$ de \sub{conjugado} de
+$a+bi$.
+
+Temos a seguinte cadeia de inclusões próprias: $\N \subset \Z
+\subset \Q \subset \R \subset \C$.
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Operações}
+\begin{frame}
+\frametitle{Operações} %\framesubtitle{Exemplos}
+Definimos duas operações básicas com os elementos dos conjuntos
+numéricos: a adição e a multiplicação. A subtração e a divisão
+provêm da adição e da multiplicação, respectivamente.
+\begin{itemize}
+  \item Adição
+    \begin{itemize}
+    \item Subtração: é a soma de números negativos;
+    \end{itemize}
+  \item Multiplicação
+    \begin{itemize}
+    \item Divisão: é a multiplicação de números da forma $\frac 1
+    q$.
+    \end{itemize}
+\end{itemize}
+
+Você está bem treinado nas operações com frações? Dê uma treinada
+\href{https://pt.khanacademy.org/math/arithmetic-home/arith-review-fractions}
+{{\tt aqui}} no Khan Academy!
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Potenciação}
+\begin{frame}
+\frametitle{Potenciação} %\framesubtitle{Exemplos}
+\begin{Def}
+A \sub{potência} $n \in \N^\ast$ de um número real $a$ é definida
+como sendo a multiplicação de $a$ por ele mesmo $n$ vezes, ou seja:
+$$a^n = \underbrace{a \cdot a  \dots  a}_{n \text{
+vezes}}.$$
+\end{Def}
+
+\begin{Def}
+Quando $a \neq 0$, $a^0 = 1$. $0^0$ é uma indeterminação; \\
+$a^{-n} = \frac{1}{a^n}$; \\
+$a^{1/n} = \sqrt[n] a$, para $n> 0$.
+\end{Def}
+
+É importante ressaltar que é comum definir $0^0 =1$ dependendo da
+abordagem que se quer com as potências. Saiba mais
+\href{https://pt.wikipedia.org/wiki/Zero_elevado_a_zero}{{\tt
+aqui}}.
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Potenciação} %\framesubtitle{Exemplos}
+\begin{Prop}[Propriedades]
+Sejam $a, b, n, m \in \R$ a menos que se diga o contrário.
+\begin{enumerate}[i.]
+  \item $a^m \cdot a^n = a^{m+n}$;
+  \item $\frac {a^m}{a^n} = a^{m-n}$, $a \neq 0$;
+  \item $\paren{a^m}^n = a^{m\cdot n}$;
+  \item $a^{m^n} = a^{\overbrace{m \cdot m  \dots  m}^{n \text{
+  vezes}}}$, $n \in \N^\ast$;
+  \item $\paren{a \cdot b }^n= a^n \cdot b^n$;
+  \item $\paren{\frac a b }^n = \frac {a^n} {b^n}$;
+  \item $a^{m/n} = \sqrt[n]{a^m}$, $n \neq 0$.
+\end{enumerate}
+\end{Prop}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Potenciação} %\framesubtitle{Exemplos}
+\begin{Obse}
+Seja $a \in \R$. Temos que $\sqrt{a^2} = \modu a$. Mais geralmente,
+$\sqrt[n] {a^n} = \modu a$ para $n$ par. \\
+É errado dizer que $\sqrt 4 = \pm 2$. O correto é $\sqrt 4 = 2$,
+mesmo que escrevas $\sqrt 4 = \sqrt{\paren {-2}^2}$. \\
+Tal erro é comum, e o fator de confusão é que responder o conjunto
+solução da equação $x^2=4$ não é equivalente a responder qual a raiz
+de $4$, e sim responder quais números que elevados ao quadrado são
+iguais a $4$.
+\end{Obse}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\section{Atividade Online}
+\begin{frame}
+\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+
+\href{https://pt.khanacademy.org/math/algebra/rational-exponents-and-radicals/rational-exponents-and-the-properties-of-exponents/e/exponents_4}
+{{\tt Atividade 04 - Propriedades da potenciação (expoentes
+racionais)}}
+
+\href{https://pt.khanacademy.org/math/algebra/rational-exponents-and-radicals/alg1-simplify-square-roots/e/multiplying_radicals}
+{{\tt Atividade 05 - Simplifique raízes quadradas (variáveis)}}
+
+\href{https://pt.khanacademy.org/math/algebra/rational-exponents-and-radicals/alg1-simplify-square-roots/e/adding_and_subtracting_radicals}
+{{\tt Atividade 06 - Simplifique expressões de raiz quadrada}}
+
+
+
+Veja o desempenho na Missão Álgebra I - Expressões com expoentes
+fracionários e radicais
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Exercícios}
+\begin{frame}
+\frametitle{Exercícios} %\framesubtitle{Exemplos}
+
+\Ex{ Faça os testes do Khan Academy do assunto
+\href{https://pt.khanacademy.org/math/arithmetic-home/arith-review-fractions/modal/test/practice-test}
+{{\tt Frações}}. Ao final, revise os assuntos que você teve
+problema. }
+
+\Ex{ Faça o estudo completo (vídeos e exercícios) no Khan Academy do
+\href{https://pt.khanacademy.org/math/algebra/rational-and-irrational-numbers}
+{{\tt assunto}} Números racionais e irracionais. }
+
+\Ex{ Faça o estudo completo (vídeos e exercícios) no Khan Academy do
+\href{https://pt.khanacademy.org/math/algebra/rational-exponents-and-radicals}
+{{\tt conteúdo}} Expressões com expoentes fracionários e radicais. }
+
+\end{frame}
+
+
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\begin{comment}
+\subsection{Exemplo de uma figura}
+
+\begin{frame}{Título do slide}
+\framesubtitle{Sub-título do slide}
+\transdissolve
+  \includegraphicscopyright[width=6cm]{Figuras/teste.jpg}
+  {Copyright by Sir Silva}
+\end{frame}
+\end{comment}
+
+%------------------------------------------------------------------------------------------------------------
+
+\section{Bibliografia}
+
+\frame{
+\frametitle{Bibliografia}
+
+\begin{thebibliography}{99}
+
+\bibitem {label1}
+MEDEIROS, Valéria Z; CALDEIRA, André M; SILVA, Luiza M O; MACHADO,
+Maria A S.
+\newblock {\em Pré-Cálculo}.
+\newblock 2. ed. Rio de Janeiro: Cengage Learning, 2009.
+
+\bibitem {label2}
+LIMA, Elon L; CARVALHO, Paulo César P; Wagner, Eduardo; MORGADO,
+Augusto C.
+\newblock {\em A Matemática do Ensino Médio. Vol. 1}.
+\newblock 9. ed. Rio de Janeiro: SBM, 2006.
+
+%\bibitem {label2}
+%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
+%\newblock {\em Iniciação à Matemática: um Curso com Problemas e Soluções}.
+%\newblock 2. ed. São Paulo: Cengage Learning, 2010.
+
+
+\end{thebibliography}
+}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+
+%{\aauwavesbg
+%\begin{frame}[plain,noframenumbering]
+%  \finalpage{Thank you for using this theme!}
+%\end{frame}}
+%%%%%%%%%%%%%%%%%
+
+\end{document}

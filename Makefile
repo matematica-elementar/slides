@@ -1,17 +1,14 @@
-.PHONY: default pdf view clean cleanall
+.PHONY: default pdf clean cleanall
 
-default: view
+FLAGS=-outdir=pdf
+
+default: pdf
 
 pdf: 
-	latexmk -pdf
-
-view:
-	latexmk -pdf -pv
+	latexmk $(FLAGS) -pdf
 
 clean:
-	latexmk -c
+	latexmk $(FLAGS) -c
 
 cleanall:
-	latexmk -C
-	rm *.nav
-	rm *.snm
+	latexmk $(FLAGS) -C
