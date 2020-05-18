@@ -98,27 +98,6 @@ material de
 
 \end{frame}
 
-
-%------------------------------------------------------------------------------------------------------------
-
-\begin{comment}
-\section{Objetivos}
-\frame
-{
-\frametitle{Objetivos}
-
-\begin{itemize}
-\item<1-> Conhecer os \alert{sinais analógicos} e digitais
-\item<2-> Fazer uma comparação entre sistemas analógicos e digitais
-\item<3-> Conhecer os elementos elétricos passivos : resistor, capacitor e indutor
-\item<4-> Conhecer as Leis de Kirchhoff
-\item<5-> Conhecer os transistores e os diodos
-\item<6-> Analisar as principais aplicações de sistemas digitais.
-\end{itemize}
-
-}
-\end{comment}
-
 %------------------------------------------------------------------------------------------------------------
 
 \section{Definição de Função}
@@ -159,8 +138,6 @@ uma função, ela deve satisfazer a duas condições fundamentais:
 
 \end{frame}
 
-
-
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
@@ -177,11 +154,12 @@ q : & \R_+ & \to     & \R \\
 		 &  x & \mapsto & \sqrt x
 \end{array}.$$
 Qual o domínio, contradomínio e a lei de associação de $p$ e $q$?
-\end{Exem}\pause
+\end{Exem}
+\pause
 
 \begin{Exem}
-Seja $\I_X : X \to X $ uma função tal que $\I_X \paren x = x$ para
-todo $x \in X$. Chamamos $\I_X$ de \sub{função identidade do
+Seja $\I{X} : X \to X $ uma função tal que $\I{X} \paren x = x$ para
+todo $x \in X$. Chamamos $\I{X}$ de \sub{função identidade do
 conjunto $X$}.
 \end{Exem}
 
@@ -213,7 +191,7 @@ g \circ f : & X & \to     & Y \subset U & \to & V \\
 \frametitle{Composição de Funções} %\framesubtitle{Exemplos}
 
 \begin{Exem}
-Seja $f: X \to Y$ uma função. Mostre que $f \circ \I_X = f$ e $\I_Y
+Seja $f: X \to Y$ uma função. Mostre que $f \circ \I{X} = f$ e $\I{Y}
 \circ f = f$.
 \end{Exem}\pause
 
@@ -250,8 +228,8 @@ Veja o desempenho na Missão Álgebra II.
 Uma função $f: X \to Y$ é \sub{invertível} se existe uma função $g:
 Y \to X$ tal que
 \begin{enumerate}[(i)]
-	\item $f \circ g = \I_Y$;
-	\item $g \circ f = \I_X$.
+	\item $f \circ g = \I{Y}$;
+	\item $g \circ f = \I{X}$.
 \end{enumerate}
 Nesse caso, a função $g$ é dita \sub{função inversa} de $f$ e
 denotada por $g = f^{-1}$.
@@ -579,8 +557,8 @@ A}.$$ Mostre que
 \frametitle{Exercícios - Desafios} %\framesubtitle{Exemplos}
 
 \Ex{Seja $f: X \to Y$ uma função. Mostre que, se existem $g_1 : Y
-\to X$ e $g_2 : Y \to X$ tais que $f \circ g_1 = \I_Y$ e $g_2 \circ
-f = \I_X$, então $g_1 = g_2$ (portanto, neste caso, $f$ será
+\to X$ e $g_2 : Y \to X$ tais que $f \circ g_1 = \I{Y}$ e $g_2 \circ
+f = \I{X}$, então $g_1 = g_2$ (portanto, neste caso, $f$ será
 invertível).}
 
 \Ex{Seja $f: X \to Y$ uma função. Mostre que
@@ -602,82 +580,18 @@ existe uma sobrejeção $g: Y \to X$.}
 
 \end{frame}
 
-
-
 %------------------------------------------------------------------------------------------------------------
-\begin{comment}
-\begin{frame}
-\frametitle{Exercícios} %\framesubtitle{Exemplos}
-
-
-
-
-
-%EXERCÍCIOS PARA FUNÇÕES EXPONENCIAIS E LOGARÍTMICAS
-%\Ex{Se $\paren{a_n}$ é uma PG de termos positivos, prove que
-%$\paren{ b_n}$ definida por $b_n = \log a_n$ é uma PA.}
-
-%\Ex{Se $\paren{a_n}$ é uma PA, prove que $\paren{ b_n}$ definida por
-%$b_n = e^{a_n}$ é uma PG.}
-\end{frame}
-
-\end{comment}
-
-%------------------------------------------------------------------------------------------------------------
-
-\begin{comment}
-\subsection{Exemplo de uma figura}
-
-\begin{frame}{Título do slide}
-\framesubtitle{Sub-título do slide}
-\transdissolve
-	\includegraphicscopyright[width=6cm]{Figuras/teste.jpg}
-	{Copyright by Sir Silva}
-\end{frame}
-\end{comment}
-
-%------------------------------------------------------------------------------------------------------------
-
 
 \section{Bibliografia}
 
 \frame{
-\frametitle{Bibliografia}
-
-\begin{thebibliography}{99}
-
-\bibitem {label1}
-IEZZI, Gelson; et al.
-\newblock {\em Fundamentos de Matemática Elementar. Vol. 1 - Conjuntos e Funções}.
-\newblock São Paulo: Editora Atual.
-
-%LIMA, Elon L; CARVALHO, Paulo César P; Wagner, Eduardo; MORGADO,
-%Augusto C.
-%\newblock {\em A Matemática do Ensino Médio. Vol. 2}.
-%\newblock 5. ed. Rio de Janeiro: SBM, 2004.
-
-%\bibitem {label1}
-%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
-%\newblock {\em Estágio dos Alunos Bolsistas - OBMEP 2005 - 4. Equações, Inequações e Desigualdades}.
-%\newblock Rio de Janeiro: SBM, 2006.
-
-%\bibitem {label2}
-%OLIVEIRA, Krerley I M; FERNÁNDEZ, Adán J C.
-%\newblock {\em Iniciação à Matemática: um Curso com Problemas e Soluções}.
-%\newblock 2. ed. São Paulo: Cengage Learning, 2010.
-
-
-\end{thebibliography}
+	\frametitle{Bibliografia}
+	\begin{thebibliography}{99}
+		\bibitem {label1}
+		IEZZI, Gelson; et al.
+		\newblock \emph{Fundamentos de Matemática Elementar. Vol. 1 - Conjuntos e Funções}.
+		\newblock São Paulo: Editora Atual.
+	\end{thebibliography}
 }
-
-
-%------------------------------------------------------------------------------------------------------------
-
-
-%{\aauwavesbg
-%\begin{frame}[plain,noframenumbering]
-%  \finalpage{Thank you for using this theme!}
-%\end{frame}}
-%%%%%%%%%%%%%%%%%
 
 \end{document}
