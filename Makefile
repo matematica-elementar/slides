@@ -1,8 +1,8 @@
-.PHONY: default pdf clean cleanall
+.PHONY: default pdf clean cleanall macros
 
 FLAGS=-outdir=pdf
 
-default: pdf
+default: macros pdf
 
 pdf: 
 	latexmk $(FLAGS) -pdf
@@ -12,3 +12,7 @@ clean:
 
 cleanall:
 	latexmk $(FLAGS) -C
+
+macros:
+	git submodule update --init --recursive
+	git submodule foreach git pull origin master
