@@ -4,14 +4,25 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "make",
+            "label": "Limpar Tudo",
             "type": "shell",
-            "command": "make",
+            "command": "make cleanall",
             "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }
+            "group": "build"
+        },
+        {
+            "label": "Conjuntos",
+            "type": "shell",
+            "command": "make slides aula=conjuntos",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Conjuntos Numéricos",
+            "type": "shell",
+            "command": "make slides aula=conjuntos-numericos",
+            "problemMatcher": [],
+            "group": "build"
+        },
     ]
 }
