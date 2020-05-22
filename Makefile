@@ -2,10 +2,10 @@
 
 FLAGS=-outdir=pdf
 
-default: macros pdf
+default: pdf
 
-pdf: 
-	latexmk $(FLAGS) -pdf
+pdf: macros
+	latexmk $(document) $(FLAGS) -pdf
 
 clean:
 	latexmk $(FLAGS) -c
@@ -16,3 +16,7 @@ cleanall:
 macros:
 	git submodule update --init --recursive
 	git submodule foreach git pull origin master
+
+slides:
+	make pdf document=src/$(aula)/$(aula)
+
