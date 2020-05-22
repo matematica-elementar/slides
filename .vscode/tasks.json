@@ -38,5 +38,47 @@
             "problemMatcher": [],
             "group": "build"
         },
+        {
+            "label": "Funções",
+            "type": "shell",
+            "command": "make slides aula=funcoes",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Progressões",
+            "type": "shell",
+            "command": "make slides aula=progressoes",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Funções Reais e Gráficos",
+            "type": "shell",
+            "command": "make slides aula=funcoes-reais-e-graficos",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Funções Polinomiais",
+            "type": "shell",
+            "command": "make slides aula=funcoes-polinomiais",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Funções Exponenciais e Logarítmicas",
+            "type": "shell",
+            "command": "make slides aula=funcoes-exponenciais-e-logaritmicas",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Funções Trigonométricas",
+            "type": "shell",
+            "command": "make slides aula=funcoes-trigonometricas",
+            "problemMatcher": [],
+            "group": "build"
+        },
     ]
 }
