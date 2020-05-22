@@ -6,7 +6,7 @@
         {
             "label": "Limpar Tudo",
             "type": "shell",
-            "command": "make cleanall",
+            "command": "make clean",
             "problemMatcher": [],
             "group": "build"
         },

@@ -1,8 +1,6 @@
-.PHONY: default pdf clean cleanall macros slides
+.PHONY: pdf clean macros slides
 
 FLAGS=-outdir=pdf
-
-default: pdf
 
 pdf: macros
 	latexmk $(document) $(FLAGS) -pdf -pv
