@@ -11,6 +11,13 @@
             "group": "build"
         },
         {
+            "label": "Atualizar Macros",
+            "type": "shell",
+            "command": "make macros && git add macros && git commit -m 'Submódulo Macros atualizado'",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
             "label": "Conjuntos",
             "type": "shell",
             "command": "make slides aula=conjuntos",
