@@ -31,5 +31,12 @@
             "problemMatcher": [],
             "group": "build"
         },
+        {
+            "label": "Princípio da Indução Finita",
+            "type": "shell",
+            "command": "make slides aula=principio-da-inducao-finita",
+            "problemMatcher": [],
+            "group": "build"
+        },
     ]
 }

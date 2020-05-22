@@ -1,0 +1,106 @@
+
+\section{Princípio da Indução Finita}
+\begin{frame} \frametitle{Formulação Matemática}
+\begin{Teo}[Princípio da Indução Finita]
+Considere $n_0$ um inteiro não negativo. Suponhamos que, para cada
+inteiro $n \geq n_0$, seja dada uma proposição $p \paren n$. Suponha
+que se pode verificar as seguintes propriedades:
+\begin{enumerate}[(a)]
+	\item $p \paren{n_0}$ é verdadeira;
+	\item Se $p \paren n$ é verdadeira, então $p \paren {n+1}$ também
+	é verdadeira, para todo $n \geq n_0$.
+\end{enumerate}
+Então, $p \paren n$ é verdadeira para qualquer $n \geq n_0$.
+\end{Teo}
+
+A afirmação (a) é chamada de \sub{base da indução}, e a (b), de
+\sub{passo indutivo}. O fato de que $p \paren n$ é verdadeira no
+item (b) é chamado de \sub{hipótese de indução}.
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Demonstrando Identidades} %\framesubtitle{Exemplos}
+\begin{Exem}
+Demonstre que, para qualquer $n \in \N^\ast$, é válida a igualdade:
+$$2+ 4+ \dots + 2n = n \paren {n+1}.$$
+\end{Exem} \pause
+
+\begin{Exem}
+Demonstre que, para qualquer $n \in \N^\ast$, é válida a igualdade:
+$$1+3+\dots +\paren {2n-1} = n^2.$$
+\end{Exem}
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Demonstrando Desigualdades} %\framesubtitle{Exemplos}
+\begin{Exem}
+Mostre que, para todo número $n \in \N^\ast$, $n>3$, vale que
+$$2^n < n!.$$
+\end{Exem}\pause
+
+\begin{Exem}
+Prove  que, para todo $n \in \N^\ast$,
+$$\underbrace{\sqrt{2+\sqrt{2+\sqrt{2+ \dots + \sqrt 2}}}}_{n  \text{ - radicais}} < 2.$$
+\end{Exem}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Indução na Geometria} %\framesubtitle{Exemplos}
+\begin{Exem}
+Seja $n \in \N$ tal que $n\geq 3$. Mostre  que podemos cobrir os
+$n^2$ pontos no reticulado a seguir traçando $2n-2$ segmentos de
+reta sem tirar o lápis do papel.
+$$\underbrace{\begin{array}{ccccc}
+								\bullet & \bullet & \bullet & \bullet & \bullet \\
+								\bullet & \bullet & \bullet & \bullet & \bullet \\
+								\bullet & \bullet & \bullet & \bullet & \bullet \\
+								\bullet & \bullet & \bullet & \bullet & \bullet \\
+								\bullet & \bullet & \bullet & \bullet & \bullet
+							\end{array}
+}_{n \times n \text{ - pontos}}$$
+\end{Exem}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{A Moeda Falsa} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Um rei muito rico possui $3^n$ moedas de ouro. No entanto, uma dessas
+moedas é falsa, e seu peso é menor que o peso das demais. Com uma
+balança de 2 pratos e sem nenhum peso, mostre que é possível
+encontrar a moeda falsa com apenas $n$ pesagens.
+\end{Exem}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Desigualdade das médias aritmética e geométrica} %\framesubtitle{Exemplos}
+
+\begin{Teo}[Desigualdade das médias aritmética e geométrica]
+Para quaisquer $a_1, a_2, \dots , a_n \in \R_+$ vale
+\begin{equation}
+		\sqrt[n]{a_1\dots a_n} \leq \frac {a_1 + \dots + a_n} n.
+\end{equation}
+\end{Teo}
+
+\end{frame}
+

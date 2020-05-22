@@ -1,0 +1,51 @@
+
+
+%------------------------------------------------------------------------------------------------------------
+\section{Cuidados ao Usar o Princípio da Indução}
+\begin{frame}
+\frametitle{Cuidados ao Usar o Princípio da Indução} %\framesubtitle{Exemplos}
+
+\begin{Exem}
+Critique a seguinte argumentação: Quer-se provar que todo número
+natural é pequeno. Evidentemente, 1 é um número pequeno. Além disso,
+se $n$ for pequeno, $n+1$ também o será, pois não se torna grande um
+número pequeno simplesmente somando-lhe uma unidade. Logo, por
+indução, todo número natural é pequeno.
+\end{Exem} \pause
+
+\begin{Exem}
+\emph{\textbf{Afirmação:} Em um conjunto qualquer de $n$ bolas,
+todas as bolas possuem a mesma cor.}
+
+Analise a seguinte demonstração por indução para a afirmação
+anterior e aponte o problema da demonstração, já que a afirmação é
+claramente falsa.
+\end{Exem}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Cuidados ao Usar o Princípio da Indução} %\framesubtitle{Exemplos}
+
+\emph{\textbf{Afirmação:} Em um conjunto qualquer de $n$ bolas,
+todas as bolas possuem a mesma cor.}
+
+\sub{Dem.}: Para $n=1$, nossa proposição é verdadeira pois em
+qualquer conjunto com uma bola, todas as bolas têm a mesma cor, pois
+só existe uma bola. Assuma por hipótese de indução que a afirmação é
+verdadeira para $n$ e provemos que a afirmação é verdadeira para
+$n+1$. Ora, seja $A = \set {b_1, \dots, b_n, b_{n+1}}$ o conjunto
+com $n+1$ bolas referido. Considere os subconjuntos $B$ e $C$ de $A$
+com $n$ elementos, construídos como:
+$$B = \set {b_1, b_2, \dots, b_n} \text{ e } C= \set{ b_2, \dots,
+b_{n+1}}.$$ De fato ambos os conjuntos têm $n$ elementos. Assim, as
+bolas $b_1, b_2, \dots , b_n$ têm a mesma cor. Do mesmo modo, as
+bolas do conjunto $C$ também têm a mesma cor. Em particular, as
+bolas $b_n$ e $b_{n+1}$ têm a mesma cor (ambas estão em $C$). Assim,
+todas as $n+1$ bolas têm a mesma cor.
+
+
+\end{frame}

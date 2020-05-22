@@ -1,0 +1,39 @@
+%------------------------------------------------------------------------------------------------------------
+\section{Princípio Forte da Indução Finita}
+\begin{frame}
+\frametitle{Formulação Matemática} %\framesubtitle{Exemplos}
+
+
+\begin{Teo}[Princípio Forte da Indução Finita]
+Considere $n_0$ um inteiro não negativo. Suponhamos que, para cada
+inteiro $n \geq n_0$, seja dada uma proposição $p \paren n$. Suponha
+que se pode verificar as seguintes propriedades:
+\begin{enumerate}[(a)]
+	\item $p \paren{n_0}$ é verdadeira;
+	\item Se para cada inteiro não negativo $k$, com $n_0 \leq k \leq n$, temos que
+	 $p \paren k$ é verdadeira, então $p \paren {n+1}$ também
+	é verdadeira.
+\end{enumerate}
+Então, $p \paren n$ é verdadeira para qualquer $n \geq n_0$.
+\end{Teo}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Teorema Fundamental da Aritmética} %\framesubtitle{Exemplos}
+
+\begin{Teo}[Teorema Fundamental da Aritmética]
+Todo número natural $N$ maior que 1 pode ser escrito como um produto
+\begin{equation}\label{fatpri}
+N = p_1 \cdot p_2 \cdot p_3 \dots p_m,
+\end{equation}
+onde $m \geq 1$ é um número natural e os $p_i$, $1 \leq i \leq m$,
+são números primos. Além disso, a fatoração exibida na Equação \ref{fatpri} é única
+se exigirmos que $p_1 \leq p_2 \leq \dots \leq p_m$.
+
+\end{Teo}
+
+\end{frame}
