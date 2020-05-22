@@ -24,5 +24,12 @@
             "problemMatcher": [],
             "group": "build"
         },
+        {
+            "label": "Equações e Inequações",
+            "type": "shell",
+            "command": "make slides aula=equacoes-e-inequacoes",
+            "problemMatcher": [],
+            "group": "build"
+        },
     ]
 }
