@@ -1,17 +1,14 @@
-.PHONY: default pdf clean cleanall macros
+.PHONY: default pdf clean cleanall macros slides
 
 FLAGS=-outdir=pdf
 
 default: pdf
 
 pdf: macros
-	latexmk $(document) $(FLAGS) -pdf
+	latexmk $(document) $(FLAGS) -pdf -pv
 
 clean:
-	latexmk $(FLAGS) -c
-
-cleanall:
-	latexmk $(FLAGS) -C
+	rm pdf/*
 
 macros:
 	git submodule update --init --recursive
@@ -19,4 +16,3 @@ macros:
 
 slides:
 	make pdf document=src/$(aula)/$(aula)
-
