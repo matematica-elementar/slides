@@ -1,82 +1,43 @@
-\documentclass[brazil, notheorems, 10pt]{beamer}
+\documentclass[10pt]{beamer}
 \input{config/config.tex}
 
-\lecture[2]{Capítulo}
 
-\def\lecturename{IMD1001
-
-
-Matemática Elementar}
-\def\semestre{2018.1}
-\def\nomedoautor{Igor Oliveira}
-\def\emaildoautor{\href{mailto:igoroliveira@imd.ufrn.br}{{\tt igoroliveira@imd.ufrn.br}}}
-
-\title[\lecturename]% optional, use only with long paper titles
-{Matemática Elementar}
-
-\subtitle{Conjuntos Numéricos e Potenciação}  % could also be a conference name
-
-\date{\today}
-
-\author[Igor Oliveira] % optional, use only with lots of authors
-{
-	\nomedoautor\\
-	\emaildoautor
-}
-% - Give the names in the same order as they appear in the paper.
-% - Use the \inst{?} command only if the authors have different
-%   affiliation. See the beamer manual for an example
-
-\institute[
-%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
-	UFRN\\
-	Natal-RN
-] % optional - is placed in the bottom of the sidebar on every slide
-{% is placed on the title page
-	Instituto Metrópole Digital\\
-	Universidade Federal do Rio Grande do Norte\\
-	Natal-RN
-
-	%there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
-}
+\aula{Conjuntos Numéricos e Potenciação}
+\capitulo{2}
 
 
-\begin{document}
+\begin{document}	
 
-\mode<article>
-{
-\begin{frame} % the plain option removes the sidebar and header from the title page
-	\maketitle
-\end{frame}
+	%
+	%	Capa
+	%
 
-% the titlepage
-\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
-	\titlepage
-\end{frame}
-}
+	{\backgroundimage\begin{frame}[plain]
+		\titlepage
+	\end{frame}}
 
-\mode<presentation>
-{
-% the titlepage
-{\imagemfundo
-\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
-	\titlepage
-\end{frame}}
-}
 
-% TOC
-\begin{frame}{Índice}{}
-\tableofcontents
-\end{frame}
-%%%%%%%%%%%%%%%%
+	%
+	%	Sumário
+	%
 
-\input{src/conjuntos-numericos/sections/apresentacao.tex}
-\input{src/conjuntos-numericos/sections/conjuntos-numericos.tex}
-\input{src/conjuntos-numericos/sections/atividade-online-1.tex}
-\input{src/conjuntos-numericos/sections/operacoes.tex}
-\input{src/conjuntos-numericos/sections/potenciacao.tex}
-\input{src/conjuntos-numericos/sections/atividade-online-2.tex}
-\input{src/conjuntos-numericos/sections/exercicios.tex}
-\input{src/conjuntos-numericos/sections/bibliografia.tex}
+	\begin{frame}
+		\frametitle{Índice}
+		\tableofcontents
+	\end{frame}
+
+
+	%
+	%	Seções
+	%
+
+	\input{src/conjuntos-numericos/sections/apresentacao.tex}
+	\input{src/conjuntos-numericos/sections/conjuntos-numericos.tex}
+	\input{src/conjuntos-numericos/sections/atividade-online-1.tex}
+	\input{src/conjuntos-numericos/sections/operacoes.tex}
+	\input{src/conjuntos-numericos/sections/potenciacao.tex}
+	\input{src/conjuntos-numericos/sections/atividade-online-2.tex}
+	\input{src/conjuntos-numericos/sections/exercicios.tex}
+	\input{src/conjuntos-numericos/sections/bibliografia.tex}
 
 \end{document}

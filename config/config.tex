@@ -4,7 +4,7 @@
 
 
 %
-%   Pacotes
+%   Pacotes utilizados
 %
 
 % Codificação dos caracteres em formato universal.
@@ -22,7 +22,6 @@
 % Outros pacotes
 \usepackage{hyperref}
 \usepackage{tikz}
-\usepackage{colortbl}
 \usepackage{yfonts}
 \usepackage{colortbl}
 \usepackage{ragged2e}
@@ -63,6 +62,7 @@
 \newtheorem{lema}[teorema]{Lema}
 \newtheorem{proposicao}[teorema]{Proposição}
 
+
 %
 %   Contadores
 %
@@ -74,9 +74,40 @@
 
 
 %
-%   Comandos auxiliares (compatibilidade)
+%   Definições e comandos auxiliares do preâmbulo
 %
 
+\newcommand{\capitulo}[1]{\lecture[#1]{Capítulo}}
+\newcommand{\aula}[1]{\subtitle{#1}}
+\newcommand{\autor}{Igor Oliveira}
+\newcommand{\email}{\href{mailto:matematicaelementar@imd.ufrn.br}{\texttt{matematicaelementar@imd.ufrn.br}}}
+\newcommand{\disciplina}{Matemática Elementar}
+\newcommand{\codigo}{IMD1001}
+
+\title{\disciplina}
+\date{\today}
+\author[\autor]
+{
+    \autor\\
+    \email
+}
+
+\def\lecturename{\codigo
+
+\disciplina}
+
+\institute[
+	UFRN\\
+	Natal-RN
+]
+{
+	Instituto Metrópole Digital\\
+	Universidade Federal do Rio Grande do Norte\\
+	Natal-RN
+
+}
+
+% compatibilidade
 \newcommand{\vu}{\vec{u}}
 \newcommand{\vv}{\vec{v}}
 \newcommand{\vi}{\vec{i}}

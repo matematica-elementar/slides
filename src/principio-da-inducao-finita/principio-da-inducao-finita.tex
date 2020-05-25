@@ -1,82 +1,41 @@
-\documentclass[brazil, notheorems, 10pt]{beamer}
+\documentclass[10pt]{beamer}
 \input{config/config.tex}
 
 
-%lecture[number of class]{type}
-\lecture[4]{Capítulo}
-
-\def\lecturename{IMD1001
+\aula{Princípio da Indução Finita}
+\capitulo{4}
 
 
-Matemática Elementar}
-\def\semestre{2018.2}
-\def\nomedoautor{Igor Oliveira}
-\def\emaildoautor{\href{mailto:igoroliveira@imd.ufrn.br}{{\tt igoroliveira@imd.ufrn.br}}}
+\begin{document}	
 
-\title[\lecturename]% optional, use only with long paper titles
-{Matemática Elementar}
+	%
+	%	Capa
+	%
 
-\subtitle{Princípio da Indução Finita}  % could also be a conference name
-
-\date{\today}
-
-\author[Igor Oliveira] % optional, use only with lots of authors
-{
-	\nomedoautor\\
-	\emaildoautor
-}
-% - Give the names in the same order as they appear in the paper.
-% - Use the \inst{?} command only if the authors have different
-%   affiliation. See the beamer manual for an example
-
-\institute[
-%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
-	UFRN\\
-	Natal-RN
-] % optional - is placed in the bottom of the sidebar on every slide
-{% is placed on the title page
-	Instituto Metrópole Digital\\
-	Universidade Federal do Rio Grande do Norte\\
-	Natal-RN
-
-	%there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
-}
+	{\backgroundimage\begin{frame}[plain]
+		\titlepage
+	\end{frame}}
 
 
-\begin{document}
+	%
+	%	Sumário
+	%
 
-\mode<article>
-{
-\begin{frame} % the plain option removes the sidebar and header from the title page
-	\maketitle
-\end{frame}
+	\begin{frame}
+		\frametitle{Índice}
+		\tableofcontents
+	\end{frame}
 
-% the titlepage
-\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
-	\titlepage
-\end{frame}
-}
 
-\mode<presentation>
-{
-% the titlepage
-{\imagemfundo
-\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
-	\titlepage
-\end{frame}}
-}
-
-% TOC
-\begin{frame}{Índice}{}
-\tableofcontents
-\end{frame}
-%%%%%%%%%%%%%%%%
-
-\input{src/principio-da-inducao-finita/sections/introducao.tex}
-\input{src/principio-da-inducao-finita/sections/principio-da-inducao-finita.tex}
-\input{src/principio-da-inducao-finita/sections/principio-forte-da-inducao-finita.tex}
-\input{src/principio-da-inducao-finita/sections/cuidados-ao-usar-o-principio-da-inducao.tex}
-\input{src/principio-da-inducao-finita/sections/exercicios.tex}
-\input{src/principio-da-inducao-finita/sections/bibliografia.tex}
+	%
+	%	Seções
+	%
+	
+	\input{src/principio-da-inducao-finita/sections/introducao.tex}
+	\input{src/principio-da-inducao-finita/sections/principio-da-inducao-finita.tex}
+	\input{src/principio-da-inducao-finita/sections/principio-forte-da-inducao-finita.tex}
+	\input{src/principio-da-inducao-finita/sections/cuidados-ao-usar-o-principio-da-inducao.tex}
+	\input{src/principio-da-inducao-finita/sections/exercicios.tex}
+	\input{src/principio-da-inducao-finita/sections/bibliografia.tex}
 
 \end{document}

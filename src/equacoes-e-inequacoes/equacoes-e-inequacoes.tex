@@ -1,90 +1,49 @@
-\documentclass[brazil, notheorems, 10pt]{beamer}
+\documentclass[10pt]{beamer}
 \input{config/config.tex}
 
 
-%lecture[number of class]{type}
-\lecture[3]{Capítulo}
-
-\def\lecturename{IMD1001
+\aula{Equações e Inequações}
+\capitulo{3}
 
 
-Matemática Elementar}
-\def\semestre{2018.2}
-\def\nomedoautor{Igor Oliveira}
-\def\emaildoautor{\href{mailto:igoroliveira@imd.ufrn.br}{{\tt igoroliveira@imd.ufrn.br}}}
+\begin{document}	
 
-\title[\lecturename]% optional, use only with long paper titles
-{Matemática Elementar}
+	%
+	%	Capa
+	%
 
-\subtitle{Equações e Inequações}  % could also be a conference name
-
-\date{\today}
-
-\author[Igor Oliveira] % optional, use only with lots of authors
-{
-	\nomedoautor\\
-	\emaildoautor
-}
-% - Give the names in the same order as they appear in the paper.
-% - Use the \inst{?} command only if the authors have different
-%   affiliation. See the beamer manual for an example
-
-\institute[
-%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
-	UFRN\\
-	Natal-RN
-] % optional - is placed in the bottom of the sidebar on every slide
-{% is placed on the title page
-	Instituto Metrópole Digital\\
-	Universidade Federal do Rio Grande do Norte\\
-	Natal-RN
-
-	%there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
-}
+	{\backgroundimage\begin{frame}[plain]
+		\titlepage
+	\end{frame}}
 
 
-\begin{document}
+	%
+	%	Sumário
+	%
 
-\mode<article>
-{
-\begin{frame} % the plain option removes the sidebar and header from the title page
-	\maketitle
-\end{frame}
+	\begin{frame}
+		\frametitle{Índice}
+		\tableofcontents
+	\end{frame}
 
-% the titlepage
-\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
-	\titlepage
-\end{frame}
-}
 
-\mode<presentation>
-{
-% the titlepage
-{\imagemfundo
-\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
-	\titlepage
-\end{frame}}
-}
+	%
+	%	Seções
+	%
 
-% TOC
-\begin{frame}{Índice}{}
-\tableofcontents
-\end{frame}
-%%%%%%%%%%%%%%%%
-
-\input{src/equacoes-e-inequacoes/sections/introducao.tex}
-\input{src/equacoes-e-inequacoes/sections/equacao-do-1-grau.tex}
-\input{src/equacoes-e-inequacoes/sections/atividade-online-1.tex}
-\input{src/equacoes-e-inequacoes/sections/equacao-do-2-grau.tex}
-\input{src/equacoes-e-inequacoes/sections/atividade-online-2.tex}
-\input{src/equacoes-e-inequacoes/sections/atividade-online-3.tex}
-\input{src/equacoes-e-inequacoes/sections/inequacao-do-1-grau.tex}
-\input{src/equacoes-e-inequacoes/sections/atividade-online-4.tex}
-\input{src/equacoes-e-inequacoes/sections/inequacao-do-2-grau.tex}
-\input{src/equacoes-e-inequacoes/sections/modulos.tex}
-\input{src/equacoes-e-inequacoes/sections/atividade-online-5.tex}
-\input{src/equacoes-e-inequacoes/sections/desigualdades-classicas.tex}
-\input{src/equacoes-e-inequacoes/sections/exercicios.tex}
-\input{src/equacoes-e-inequacoes/sections/bibliografia.tex}
+	\input{src/equacoes-e-inequacoes/sections/introducao.tex}
+	\input{src/equacoes-e-inequacoes/sections/equacao-do-1-grau.tex}
+	\input{src/equacoes-e-inequacoes/sections/atividade-online-1.tex}
+	\input{src/equacoes-e-inequacoes/sections/equacao-do-2-grau.tex}
+	\input{src/equacoes-e-inequacoes/sections/atividade-online-2.tex}
+	\input{src/equacoes-e-inequacoes/sections/atividade-online-3.tex}
+	\input{src/equacoes-e-inequacoes/sections/inequacao-do-1-grau.tex}
+	\input{src/equacoes-e-inequacoes/sections/atividade-online-4.tex}
+	\input{src/equacoes-e-inequacoes/sections/inequacao-do-2-grau.tex}
+	\input{src/equacoes-e-inequacoes/sections/modulos.tex}
+	\input{src/equacoes-e-inequacoes/sections/atividade-online-5.tex}
+	\input{src/equacoes-e-inequacoes/sections/desigualdades-classicas.tex}
+	\input{src/equacoes-e-inequacoes/sections/exercicios.tex}
+	\input{src/equacoes-e-inequacoes/sections/bibliografia.tex}
 
 \end{document}
