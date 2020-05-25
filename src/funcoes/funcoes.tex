@@ -102,7 +102,7 @@ material de
 
 \section{Definição de Função}
 \begin{frame} \frametitle{O que É uma Função?}
-\begin{Def}
+\begin{definicao}
 Sejam $X$ e $Y$ dois conjuntos quaisquer.\\
 Uma \sub{função} é uma relação $f: X \to Y$ que, a cada elemento $x
 \in X$, associa um e somente um elemento $y \in Y$.\\
@@ -115,7 +115,7 @@ Nesse caso:
 	\item Dado $x \in X$, o (único) elemento $y = f(x) \in Y$
 	correspondente é chamado \sub{imagem} de $x$.
 \end{enumerate}
-\end{Def}
+\end{definicao}
 
 \end{frame}
 
@@ -142,7 +142,7 @@ uma função, ela deve satisfazer a duas condições fundamentais:
 
 \begin{frame}
 \frametitle{O que É uma Função?} %\framesubtitle{Exemplos}
-\begin{Exem}
+\begin{exemplo}
 Considere as funções
 $$\begin{array}{cccc}
 p : & \R & \to     & \R_+ \\
@@ -154,14 +154,14 @@ q : & \R_+ & \to     & \R \\
 		 &  x & \mapsto & \sqrt x
 \end{array}.$$
 Qual o domínio, contradomínio e a lei de associação de $p$ e $q$?
-\end{Exem}
+\end{exemplo}
 \pause
 
-\begin{Exem}
+\begin{exemplo}
 Seja $\I{X} : X \to X $ uma função tal que $\I{X} \paren x = x$ para
 todo $x \in X$. Chamamos $\I{X}$ de \sub{função identidade do
 conjunto $X$}.
-\end{Exem}
+\end{exemplo}
 
 \end{frame}
 
@@ -171,7 +171,7 @@ conjunto $X$}.
 \begin{frame}
 \frametitle{Composição de Funções} %\framesubtitle{Exemplos}
 
-\begin{Def}
+\begin{definicao}
 Sejam $f: X \to Y$ e $g: U \to V$ duas funções, com $Y \subset U$.\\
 A \sub{função composta de $g$ com $f$} é a função denotada por $g
 \circ f$, com domínio em $X$ e contradomínio em $V$, que a cada
@@ -181,7 +181,7 @@ $$\begin{array}{cccccc}
 g \circ f : & X & \to     & Y \subset U & \to & V \\
 		 &  x & \mapsto & f(x) & \mapsto & g(f(x))
 \end{array}.$$
-\end{Def}
+\end{definicao}
 
 \end{frame}
 
@@ -190,14 +190,14 @@ g \circ f : & X & \to     & Y \subset U & \to & V \\
 \begin{frame}
 \frametitle{Composição de Funções} %\framesubtitle{Exemplos}
 
-\begin{Exem}
+\begin{exemplo}
 Seja $f: X \to Y$ uma função. Mostre que $f \circ \I{X} = f$ e $\I{Y}
 \circ f = f$.
-\end{Exem}\pause
+\end{exemplo}\pause
 
-\begin{Exem}
+\begin{exemplo}
 Qual função resulta da composição $p \circ q$?
-\end{Exem}
+\end{exemplo}
 \end{frame}
 
 %------------------------------------------------------------------------------------------------------------
@@ -224,7 +224,7 @@ Veja o desempenho na Missão Álgebra II.
 \begin{frame}
 \frametitle{Função Inversa} %\framesubtitle{Exemplos}
 
-\begin{Def}\label{funinv}
+\begin{definicao}\label{funinv}
 Uma função $f: X \to Y$ é \sub{invertível} se existe uma função $g:
 Y \to X$ tal que
 \begin{enumerate}[(i)]
@@ -233,7 +233,7 @@ Y \to X$ tal que
 \end{enumerate}
 Nesse caso, a função $g$ é dita \sub{função inversa} de $f$ e
 denotada por $g = f^{-1}$.
-\end{Def}
+\end{definicao}
 
 \end{frame}
 
@@ -245,9 +245,9 @@ denotada por $g = f^{-1}$.
 \begin{frame}
 \frametitle{Função Inversa} %\framesubtitle{Exemplos}
 
-\begin{Exem}
+\begin{exemplo}
 A função $q$ é inversa de $p$?
-\end{Exem}\pause
+\end{exemplo}\pause
  Esse exemplo ilustra a importância de verificarmos as duas
  condições para que tenhamos uma função inversa.
 
@@ -272,7 +272,7 @@ Veja o desempenho na Missão Álgebra II.
 \frametitle{Funções Injetivas, Sobrejetivas e Bijetivas} %\framesubtitle{Exemplos}
 
 
-\begin{Def}
+\begin{definicao}
 Considere uma função $f: X \to Y$.
 \begin{enumerate}[(i)]
 	\item $f$ é \sub{sobrejetiva} se, para todo $y \in Y$, existe $x
@@ -281,7 +281,7 @@ Considere uma função $f: X \to Y$.
 	\implies f(x_1) \neq f(x_2)$;
 	\item $f$ é \sub{bijetiva} se é sobrejetiva e injetiva.
 \end{enumerate}
-\end{Def}\pause
+\end{definicao}\pause
 Há, ainda, formas alternativas de enunciar as definições acima:
 \begin{itemize}
 	\item $f$ é \sub{sobrejetiva} se, e somente se, $f(X) = Y$;
@@ -301,9 +301,9 @@ Há, ainda, formas alternativas de enunciar as definições acima:
 \begin{frame}
 \frametitle{Funções Injetivas, Sobrejetivas e Bijetivas} %\framesubtitle{Exemplos}
 
-\begin{Exem}\label{pqbij}
+\begin{exemplo}\label{pqbij}
 As funções $p$ e $q$ são sobrejetivas, injetivas ou bijetivas?
-\end{Exem}
+\end{exemplo}
 \end{frame}
 
 
@@ -313,14 +313,14 @@ As funções $p$ e $q$ são sobrejetivas, injetivas ou bijetivas?
 \begin{frame}
 \frametitle{Funções Injetivas, Sobrejetivas e Bijetivas} %\framesubtitle{Exemplos}
 
-\begin{Teo}\label{teoinv}
+\begin{teorema}\label{teoinv}
 Uma função $f: X \to Y$ é invertível se, e somente se, é bijetiva.
-\end{Teo}\pause
+\end{teorema}\pause
 
-\begin{Exem}
+\begin{exemplo}
 Decorre do Teorema \ref{teoinv} e do Exemplo \ref{pqbij} que as
 funções $p$ e $q$ não são invertíveis.
-\end{Exem}
+\end{exemplo}
 
 \end{frame}
 
@@ -359,16 +359,16 @@ como na função $h :  \R  \to      \R$ tal que
 \begin{frame}
 \frametitle{Funções e Cardinalidade} %\framesubtitle{Exemplos}
 
-\begin{Def}
+\begin{definicao}
 Dois conjuntos $X$ e $Y$ são ditos \sub{cardinalmente equivalentes}
 (ou \sub{equipotentes}) se existe uma bijeção $f : X \to Y$.
-\end{Def}
+\end{definicao}
 
-\begin{Def}
+\begin{definicao}
 Dizemos que um conjunto $X$ é \sub{enumerável} se $X$ é um conjunto
 cardinalmente equivalente ao conjunto $\N$ ou a algum dos seus
 subconjuntos.
-\end{Def}
+\end{definicao}
 
 
 \end{frame}
@@ -380,17 +380,17 @@ subconjuntos.
 \begin{frame}
 \frametitle{Funções e Cardinalidade} %\framesubtitle{Exemplos}
 
-\begin{Teo}
+\begin{teorema}
 Se existe uma injeção $f: X \to Y$, então existe uma bijeção entre
 $X$ e um subconjunto $Y' \subset Y$, isto é, $X$ é cardinalmente
 equivalente a um subconjunto de $Y$.
-\end{Teo} \pause
+\end{teorema} \pause
 
-\begin{Teo}
+\begin{teorema}
 Se existe uma sobrejeção $f : X \to Y$, então existe uma bijeção
 entre $Y$ e um subconjunto $X' \subset X$, isto é, $Y$ é
 cardinalmente equivalente a um subconjunto de $X$.
-\end{Teo}
+\end{teorema}
 
 \end{frame}
 
@@ -399,9 +399,9 @@ cardinalmente equivalente a um subconjunto de $X$.
 \begin{frame}
 \frametitle{Funções e Cardinalidade} %\framesubtitle{Exemplos}
 
-\begin{Exem}
+\begin{exemplo}
 O conjunto $\Q$ é enumerável.
-\end{Exem}
+\end{exemplo}
 
 \end{frame}
 

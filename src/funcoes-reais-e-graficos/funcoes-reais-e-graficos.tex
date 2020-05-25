@@ -73,13 +73,13 @@ Matemática Elementar}
 
 \section{Gráfico de Função Real}
 \begin{frame} \frametitle{Função Real}
-\begin{Def}
+\begin{definicao}
 Uma função na forma $f : D \subset \R \to \R$ é chamada de
 \sub{função real} (pois seus valores são números reais, isto é, seu
 contradomínio é $\R$) de \sub{variável real} (pois sua variável
 independente assume valores reais, isto é, seu domínio é um
 subconjunto de $\R$).
-\end{Def}
+\end{definicao}
 
 
 
@@ -90,11 +90,11 @@ subconjunto de $\R$).
 \begin{frame}
 \frametitle{Gráfico de Função Real} %\framesubtitle{Exemplos}
 
-\begin{Def}
+\begin{definicao}
 O \sub{gráfico} de uma função real é o seguinte subconjunto do plano
 cartesiano $\R^2$: $$G(f) = \set{(x,y) \in \R^2 \tq x \in D , y =
 f(x)}.$$
-\end{Def}
+\end{definicao}
 Em outras palavras, o gráfico de uma função $f$ é o lugar geométrico
 dos pontos cujas coordenadas satisfazem sua lei de associação.
 
@@ -107,7 +107,7 @@ dos pontos cujas coordenadas satisfazem sua lei de associação.
 \begin{frame}
 \frametitle{Gráfico de Função Real} %\framesubtitle{Exemplos}
 
-\begin{Exem}
+\begin{exemplo}
 Esboce o gráfico da função real
 $$\begin{array}{cccl}
 f : & \R^\ast & \to     & \R \\
@@ -116,7 +116,7 @@ f : & \R^\ast & \to     & \R \\
 												-1, &  \ \text{ se } x <0
 												\end{cases}
 \end{array}.$$
-\end{Exem}
+\end{exemplo}
 
 \end{frame}
 
@@ -126,11 +126,11 @@ f : & \R^\ast & \to     & \R \\
 \begin{frame}
 \frametitle{Translações de gráficos} %\framesubtitle{Exemplos}
 
-\begin{Exem}
+\begin{exemplo}
 Compare os gráficos das funções reais $f, g , h: \R \to \R$ tais que
 $f(x) = \sen x$, \\ $g(x) = f(x) + 1 = \sen x +1$ , \\ $h(x)=
 f(x+\frac {\pi} 2)= \sen (x+ \frac {\pi} 2)$.
-\end{Exem}\pause
+\end{exemplo}\pause
 
 Dessa forma, se a função real $g$ é tal que $g(x) = f(x+b) +a$,
 então o gráfico de $g$ pode ser obtido, do gráfico de $f$, através
@@ -159,17 +159,17 @@ translação vertical determinada pelo parâmetro $a$. \pause
 \begin{frame}
 \frametitle{Dilatações de gráficos} %\framesubtitle{Exemplos}
 
-\begin{Exem}
+\begin{exemplo}
 Compare os gráficos das funções reais $f, g , h: \R \to \R$ tais que
 $f(x) = \sen x$, \\ $g(x) = \frac 1 2 \cdot f(x)  = \frac 1 2 \cdot \sen x $, \\
 $h(x)= f(2 \cdot x)= \sen (2 \cdot x)$.
-\end{Exem}\pause
+\end{exemplo}\pause
 
-\begin{Exem}
+\begin{exemplo}
 Compare os gráficos das funções reais $f, g , h: \R \to \R$ tais que
 $f(x) = \sen x$, \\ $g(x) = -1 \cdot f(x)  = -1 \cdot \sen x $ , \\
 $h(x)= f(-1 \cdot x)= \sen (-1 \cdot x)$.
-\end{Exem}
+\end{exemplo}
 
 \end{frame}
 
@@ -229,7 +229,7 @@ Veja o desempenho na Missão Álgebra II.
 \begin{frame}
 \frametitle{Funções Monótonas} %\framesubtitle{Exemplos}
 
-\begin{Def}\label{funcmon}
+\begin{definicao}\label{funcmon}
 Seja $f: D \subset \R \to \R$ uma função. Dizemos que
 \begin{enumerate}[(i)]
 	\item $f$ é \sub{monótona (estritamente) crescente} se, para todos $x_1, x_2 \in D$,
@@ -243,7 +243,7 @@ Seja $f: D \subset \R \to \R$ uma função. Dizemos que
 %  \item $f$ é \sub{constante} se, para todo $x \in D$, temos $f(x) =
 %  k \in \R$.
 \end{enumerate}
-\end{Def}
+\end{definicao}
 
 \end{frame}
 
@@ -274,7 +274,7 @@ $x_1, x_2 \in I$,
 \begin{frame}
 \frametitle{Funções Limitadas} %\framesubtitle{Exemplos}
 
-\begin{Def}
+\begin{definicao}
 Seja $f: D \subset \R \to \R$ uma função.
 \begin{enumerate}[(i)]
 	\item $f$ é \sub{limitada superiormente} se existe $M \in \R$ tal
@@ -291,7 +291,7 @@ Seja $f: D \subset \R \to \R$ uma função.
 	existe $r>0$ tal que $f(x_0) \leq f(x)$, para todo $x \in D \cap \paren{x_0 - r ,
 	x_0+r}$.
 \end{enumerate}
-\end{Def}
+\end{definicao}
 
 \end{frame}
 
@@ -302,7 +302,7 @@ Seja $f: D \subset \R \to \R$ uma função.
 
 \begin{frame}
 \frametitle{Exemplo} %\framesubtitle{Exemplos}
-\begin{Exem}
+\begin{exemplo}
 A função $h : \left( -1 ; 6 \right] \to \R$, cujo gráfico é esboçado
 abaixo, é definida por $h(x) = \begin{cases}
 																3x-x^2 & \ \text{ se } \ x\leq 2 \\
@@ -315,7 +315,7 @@ abaixo, é definida por $h(x) = \begin{cases}
 \end{center}
 
 Determine os intervalos de monotonicidade e os extremos de $h$.
-\end{Exem}
+\end{exemplo}
 \end{frame}
 
 %------------------------------------------------------------------------------------------------------------

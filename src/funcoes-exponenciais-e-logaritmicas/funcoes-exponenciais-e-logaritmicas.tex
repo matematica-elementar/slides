@@ -97,20 +97,20 @@ $$f(xy) = f(x) + f(y).$$
 
 \section{Função Exponencial}
 \begin{frame} \frametitle{Definição}
-\begin{Def}
+\begin{definicao}
 Seja $a$ um número real positivo diferente de 1. Chamamos de
 \sub{função exponencial} uma função $f: \R \to \R_+^\ast$ com lei de
 formação $f(x) =
  a^x$. O número $a$ é chamado de \sub{base} da função exponencial.
-\end{Def}\pause
+\end{definicao}\pause
 
 
 
-\begin{Def}
+\begin{definicao}
 Dizemos que uma função $f: \R \to \R$ é de \sub{tipo exponencial}
 quando $f(x) =b\cdot a^x$, onde $a,b \in\R$, $b$ é não nulo e $a$ é
 positivo e diferente de 1.
-\end{Def}
+\end{definicao}
 
 
 
@@ -123,7 +123,7 @@ positivo e diferente de 1.
 \begin{frame}
 \frametitle{Propriedades} %\framesubtitle{Exemplos}
 
-\begin{Prop}[Propriedades Fundamentais da Função Exponencial]
+\begin{proposicao}[Propriedades Fundamentais da Função Exponencial]
 Seja $f: \R \to \R_+^\ast$ uma função exponencial de base $a$.
 Então, para quaisquer $x, y \in \R$ valem:
 \begin{enumerate}[(i)]
@@ -133,7 +133,7 @@ Então, para quaisquer $x, y \in \R$ valem:
 																		a^y < a^x, \ \ \ \text{ quando } \ \ \ 0<a<1
 											 \end{cases}.$
 \end{enumerate}
-\end{Prop}
+\end{proposicao}
 
 
 
@@ -167,7 +167,7 @@ resultados acerca de uma função exponencial $f: \R \to \R_+^\ast$:
 \begin{frame}
 \frametitle{Gráfico da Função Exponencial} %\framesubtitle{Exemplos}
 
-\begin{Exem}
+\begin{exemplo}
 Seja $f: \R \to \R_+^\ast$ uma função exponencial tal que $f(x) =
 a^x$. O gráfico de $f$ é:
 \begin{center}
@@ -176,7 +176,7 @@ a^x$. O gráfico de $f$ é:
 O gráfico de $f$ nunca toca o eixo $x$, mas fica tão próximo quanto
 queiramos. Isso equivale dizer que a reta $y=0$ é \sub{assíntota} do
 gráfico de $f$.
-\end{Exem}
+\end{exemplo}
 
 \end{frame}
 
@@ -187,7 +187,7 @@ gráfico de $f$.
 \begin{frame}
 \frametitle{Gráfico da Função Exponencial} %\framesubtitle{Exemplos}
 
-\begin{Exem}
+\begin{exemplo}
 O crescimento exponencial supera o de qualquer polinômio. Ao
 compararmos, por exemplo, as funções $f(x) = 2^x$ e
 $p(x)=x^{10}$, temos que:\\
@@ -199,7 +199,7 @@ $x>58{,}77$ & $\implies $& $2^x > x^{10}$
 \begin{center}
 \includegraphics[width=7cm]{figures/polXexp.jpg}
 \end{center}
-\end{Exem}
+\end{exemplo}
 
 \end{frame}
 
@@ -239,7 +239,7 @@ Veja o desempenho na Missão Álgebra II.
 \begin{frame}
 \frametitle{Caracterização da Função Exponencial} %\framesubtitle{Exemplos}
 
-\begin{Teo}[Caracterização da Função Exponencial]
+\begin{teorema}[Caracterização da Função Exponencial]
 Seja $f: \R \to \R_+^\ast$ uma função monótona injetiva. As
 seguintes afirmações são equivalentes:
 \begin{enumerate}[(i)]
@@ -247,7 +247,7 @@ seguintes afirmações são equivalentes:
 	\item $f(x) = a^x$ para todo $x\in \R$, onde $a = f(1)$;
 	\item $f(x+y) = f(x)\cdot f(y)$ para quaisquer $x, y \in \R$.
 \end{enumerate}
-\end{Teo}
+\end{teorema}
 
 
 
@@ -258,7 +258,7 @@ seguintes afirmações são equivalentes:
 \begin{frame}
 \frametitle{Funções Exponenciais e Progressões} %\framesubtitle{Exemplos}
 
-\begin{Prop}
+\begin{proposicao}
 Seja  $f: \R \to \R$. Se $f$ é uma função do tipo exponencial e
 $\paren{x_1, x_2, \dots , x_i, \dots}$ é uma PA, então a sequência
 formada pelos pontos $y_i = f(x_i)$, $i \in \N^{\ast}$ é uma PG.
@@ -266,7 +266,7 @@ Reciprocamente, se $f$ for monótona injetiva e transformar qualquer
 PA $\paren{x_1, x_2, \dots , x_i, \dots}$ numa PG com termo geral
 $y_i = f(x_i)$, $i \in \N^{\ast}$ então $f$ é uma função real tal
 que $f(x) = b \cdot a^x$ com $b = f(0)$ e $a = \frac {f(1)} {f(0)}$.
-\end{Prop}
+\end{proposicao}
 
 \end{frame}
 
@@ -277,7 +277,7 @@ que $f(x) = b \cdot a^x$ com $b = f(0)$ e $a = \frac {f(1)} {f(0)}$.
 \section{Função Logarítmica}
 \begin{frame}
 \frametitle{Definição} %\framesubtitle{Exemplos}
-\begin{Def}
+\begin{definicao}
 A inversa da função exponencial de base $a$ é a \sub{função
 logarítmica}
 $$\log_a : \R_+^\ast \to \R,$$
@@ -285,7 +285,7 @@ que associa a cada número real positivo $x$ o número real $\log_a
 x$, chamado \sub{logaritmo} de $x$ na base $a$. No caso de $a=10$,
 escrevemos, por simplicidade, $\log_{10}x = \log
  x$.
-\end{Def}\pause
+\end{definicao}\pause
 Pela definição de função inversa, tem-se
 $$ a^{\log_a x}=x \ \ \ \text{ e } \ \ \ \log_a \paren{a^x} = x.$$
 Assim, $\log_a x $ é o expoente ao qual se deve elevar a base $a$
@@ -299,7 +299,7 @@ $$ y = \log_a x \iff a^y = x.$$
 \begin{frame}
 \frametitle{Propriedades} %\framesubtitle{Exemplos}
 
-\begin{Prop}
+\begin{proposicao}
 Seja $f: \R_+^\ast \to \R$ uma função logarítmica tal que $f(x) =
 \log_a x$. Os seguintes valem para quaisquer  $x, y, b \in
 \R_+^\ast$, $b \neq 1$ e qualquer $k \in \R$:
@@ -312,7 +312,7 @@ Seja $f: \R_+^\ast \to \R$ uma função logarítmica tal que $f(x) =
 	\item O gráfico de $f$ é traçado por uma linha contínua;
 	\item $f$ é crescente se $a>1$ e decrescente se $0<a<1$.
 \end{enumerate}
-\end{Prop}
+\end{proposicao}
 
 
 \end{frame}
@@ -340,14 +340,14 @@ Veja o desempenho na Missão Álgebra II.
 \begin{frame}
 \frametitle{Gráfico da Função Logarítmica} %\framesubtitle{Exemplos}
 
-\begin{Exem}
+\begin{exemplo}
 Considere as funções logarítmicas tais que $f(x) = \log_2 x$ e $g(x)
 = \log_{\frac 1 2} x$. Os gráficos de $f$ e $g$ são apresentados
 abaixo.
 \begin{center}
 \includegraphics[width=6.1cm]{figures/graflog.jpg}
 \end{center}
-\end{Exem}
+\end{exemplo}
 
 
 \end{frame}
@@ -388,11 +388,11 @@ Veja o desempenho na Missão Álgebra II.
 \begin{frame}
 \frametitle{Caracterização da Função Logarítmica} %\framesubtitle{Exemplos}
 
-\begin{Teo}[Caracterização da Função Logarítmica]
+\begin{teorema}[Caracterização da Função Logarítmica]
 Seja $f:  \R_+^\ast \to \R$ uma função monótona injetiva tal que
 $f(xy) = f(x) + f(y)$ para quaisquer $x, y \in \R_+^\ast$. Então
 existe $a>0$ tal que $f(x) = \log_a x$ para todo $x \in \R_+^\ast$.
-\end{Teo}
+\end{teorema}
 
 
 
@@ -410,13 +410,13 @@ existe $a>0$ tal que $f(x) = \log_a x$ para todo $x \in \R_+^\ast$.
 \begin{frame}
 \frametitle{O número $e$} %\framesubtitle{Exemplos}
 
-\begin{Def}
+\begin{definicao}
 Definimos o número $e$ como sendo o número cujos valores aproximados
 por falta são os números racionais da forma $$
 \paren{1+ \frac 1 n}^n , n\in \N^\ast.$$ Em outras palavras, quanto
 maior for $n \in \N^\ast$, melhor a aproximação de $\paren{1+ \frac
 1 n}^n$ para $e$, e ela se dá na medida que desejarmos.
-\end{Def}
+\end{definicao}
 
 \end{frame}
 
