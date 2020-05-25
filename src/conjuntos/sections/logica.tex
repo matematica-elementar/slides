@@ -1,132 +1,112 @@
-
 \section{Lógica}
+
+
 \begin{frame}
-\frametitle{Conjuntos e Lógica} %\framesubtitle{Exemplos}
+	\frametitle{Conjuntos e Lógica}
+	
+	Em toda essa seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$. Considere também $A = \conjunto { x \tq x \text{ possui } P}$ e $B = \conjunto { x \tq x \text{ possui } Q}$.
 
-Em toda essa seção, considere $P$ e $Q$ propriedades aplicáveis aos
-elementos de $\U$. Considere também $A = \set {x \tq x \text{ possui
-} P}$ e $B= \set {x \tq x \text{ possui } Q}$.
-
-\begin{itemize}
-	\item \sub{Inclusão e implicação}: $A \subset B$ é equivalente a
-	$P \implies Q$.
-	\item \sub{Igualdade e bi-implicação}: $A=B$ é equivalente a $P
-	\iff Q$.
-\end{itemize}
+	\begin{itemize}
+		\item \sub{Inclusão e implicação}: $A \contido B$ é equivalente a
+		$P \implica Q$.
+		\item \sub{Igualdade e bi-implicação}: $A=B$ é equivalente a $P
+		\sse Q$.
+	\end{itemize}
 \end{frame}
-%------------------------------------------------------------------------------------------------------------
+
+
 \begin{frame}
-\frametitle{Conjuntos e Lógica} %\framesubtitle{Exemplos}
+	\frametitle{Conjuntos e Lógica} 
 
-\begin{exemplo}
-Analise as implicações abaixo:
-\begin{align*}
-x^2+1=0 & \implies \left(x^2 +1 \right) \left( x^2-1 \right) = 0
-\cdot \left( x^2-1 \right) \\
-& \implies x^4 - 1 = 0 \\
-& \implies x^4 = 1 \\
-& \implies x \in \set {-1, 1}
-\end{align*}
+	\begin{exemplo}
+		Analise as implicações abaixo:
+		\begin{align*}
+			x^2+1=0 & \implica (x^2+1)(x^2-1) = 0\vezes(x^2-1) \\
+			        & \implica x^4-1 = 0 \\
+			        & \implica x^4 = 1 \\
+			        & \implica x \pertence \conjunto{-1, 1}
+		\end{align*}
 
-Isso quer dizer que o conjunto solução de $x^2 +1 = 0$ é $\set{-1,
-1}$?
-\end{exemplo}
-
+		Isso quer dizer que o conjunto solução de $x^2 +1 = 0$ é $\conjunto{-1, 1}$?
+	\end{exemplo}
 \end{frame}
-%------------------------------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Conjuntos e Lógica} %\framesubtitle{Exemplos}
 
-\begin{itemize}
-	\item \sub{Complementar e negação}: $A^C$ é equivalente a $\sim P$;
-	\item Podemos combinar os itens (ii) e (iii) da Proposição
-	\ref{prop-comp} (Propriedades do complementar) e obter que $$P
-	\implies Q \text{ se, e somente se, }\sim Q \implies \sim P.$$
-	Chamamos $\sim Q \implies \sim P$ de \sub{contrapositiva} de $P
-	\implies Q$.
-	\item Chamamos $Q \implies P$ de \sub{recíproca} de $P \implies
-	Q$ e $P \land \sim Q$ de \sub{negação} de $P \implies Q$.
-\end{itemize}
-%Exemplos no Exercício \ref{exrec}.
+
+\begin{frame}
+	\frametitle{Conjuntos e Lógica} 
+
+	\begin{itemize}
+		\item \sub{Complementar e negação}: $A^C$ é equivalente a $\negacao P$;
+		
+		\item Podemos combinar os itens (ii) e (iii) da Proposição \ref{prop-comp} (Propriedades do complementar) e obter que
+			$$P \implica Q \text{ se, e somente se, }\negacao Q \implica \negacao P.$$
+		Chamamos $\negacao Q \implica \negacao P$ de \sub{contrapositiva} de $P \implica Q$.
+		
+		\item Chamamos $Q \implica P$ de \sub{recíproca} de $P \implica Q$ e $P \land \negacao Q$ de \sub{negação} de $P \implica Q$.
+	\end{itemize}
 \end{frame}
-%------------------------------------------------------------------------------------------------------------
+
+
 \begin{frame}
-\frametitle{Conjuntos e Lógica} %\framesubtitle{Exemplos}
+	\frametitle{Conjuntos e Lógica} 
 
-\begin{exemplo}
-Observe as afirmações abaixo:
-\begin{itemize}
-	\item Todo número primo maior do que 2 é ímpar;
-	\item Todo número par maior do que 2 é composto.
-\end{itemize}
-
-Essas afirmações dizem exatamente a mesma coisa, ou seja, exprimem a
-mesma ideia, só que com diferentes termos. Podemos reescrevê-las na
-forma de implicações vendo claramente que uma é a contrapositiva da
-outra, todas sob a hipótese que  $n \in \N$, $n>2$:
-\begin{align*}
-n \text{ primo } & \implies n \text{ ímpar } \\
-\sim \left( n \text{ ímpar } \right) & \implies \sim \left( n \text{
-primo } \right) \\
-n \text{ par } & \implies n \text{ composto }
-\end{align*}
-\end{exemplo}
-
+	\begin{exemplo}
+		Observe as afirmações abaixo:
+		\begin{itemize}
+			\item Todo número primo maior do que 2 é ímpar;
+			\item Todo número par maior do que 2 é composto.
+		\end{itemize}
+		Essas afirmações dizem exatamente a mesma coisa, ou seja, exprimem a mesma ideia, só que com diferentes termos. Podemos reescrevê-las na forma de implicações vendo claramente que uma é a contrapositiva da outra, todas sob a hipótese que  $n \pertence \N$, $n>2$:
+		\begin{align*}
+		          n \text{ primo } & \implica n \text{ ímpar } \\
+		\negacao(n \text{ ímpar }) & \implica \negacao ( n \text{ primo }) \\
+		            n \text{ par } & \implica n \text{ composto }
+		\end{align*}
+	\end{exemplo}
 \end{frame}
-%------------------------------------------------------------------------------------------------------------
+
 
 \begin{frame}
-\frametitle{Conjuntos e Lógica} %\framesubtitle{Exemplos}
+	\frametitle{Conjuntos e Lógica} 
 
-\begin{itemize}
-	\item \sub{União e disjunção}: $A \cup B$ é equivalente a $P \lor
-	Q$ ($P$ ou $Q$).
-	\item \sub{Interseção e conjunção}: $A \cap B$ é equivalente a $P
-	\land Q$ ($P$ e $Q$).
-\end{itemize}
+	\begin{itemize}
+		\item \sub{União e disjunção}: $A \uniao B$ é equivalente a $P \lor Q$ ($P$ ou $Q$).
+		\item \sub{Interseção e conjunção}: $A \inter B$ é equivalente a $P \land Q$ ($P$ e $Q$).
+	\end{itemize}
 
-\begin{observacao}
-O conectivo lógico \sub{ou} tem significado diferente do usado
-normalmente no português. Na linguagem coloquial, usamos $P$
-\sub{ou} $Q$ sem permitir que sejam as duas coisas ao mesmo tempo.
-Analisem a seguinte história:
+	\begin{observacao}
+		O conectivo lógico \sub{ou} tem significado diferente do usado normalmente no português. Na linguagem coloquial, usamos $P$ \sub{ou} $Q$ sem permitir que sejam as duas coisas ao mesmo tempo. Analisem a seguinte história:
 
-Um obstetra que também era matemático acabara de realizar um parto
-quando o pai perguntou: ``é menino ou menina, doutor?''. E ele
-respondeu: ``sim''.
-\end{observacao}
+		Um obstetra que também era matemático acabara de realizar um parto quando o pai perguntou: ``é menino ou menina, doutor?''. E ele respondeu: ``sim''.
+	\end{observacao}
 \end{frame}
-%------------------------------------------------------------------------------------------------------------
+
 
 \begin{frame}
-\frametitle{Conjuntos e Lógica} \framesubtitle{Resumo}
-\begin{center}
-\begin{tabular}{|c|c|}
-	\hline
-	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-	$A=B$ & $P \iff Q$ \\ \hline
-	$A \subset B$ & $P \implies Q$ \\ \hline
-	$A^C$ & $\sim P$ \\ \hline
-	$A \cup B$ & $P \lor Q$ \\ \hline
-	$A \cap B$ & $P \land Q$ \\
-	\hline
-\end{tabular}
-\end{center}
+	\frametitle{Conjuntos e Lógica} \framesubtitle{Resumo}
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			$A=B$          & $P \sse Q$     \\ \hline
+			$A \contido B$ & $P \implica Q$ \\ \hline
+			$A^C$          & $\negacao P$   \\ \hline
+			$A \uniao B$   & $P \lor Q$     \\ \hline
+			$A \inter B$   & $P \land Q$    \\
+			\hline
+		\end{tabular}
+	\end{center}
 \end{frame}
-%------------------------------------------------------------------------------------------------------------
+
 
 \begin{frame}
-\frametitle{Conjuntos e Lógica} %\framesubtitle{Resumo}
-Problema: A
-polícia prende quatro homens, um dos quais cometeu um furto. Eles fazem
-as seguintes declarações:
-\begin{itemize}
-	\item Arnaldo: Bernaldo fez o furto.
-	\item Bernaldo: Cernaldo fez o furto.
-	\item Dernaldo: eu não fiz o furto.
-	\item Cernaldo: Bernaldo mente ao dizer que eu fiz o furto.
-\end{itemize}
-Se sabemos que só uma destas declarações é a verdadeira, quem é
-culpado pelo furto?
-
+	\frametitle{Conjuntos e Lógica}
+	
+	Problema: A polícia prende quatro homens, um dos quais cometeu um furto. Eles fazem as seguintes declarações:
+	\begin{itemize}
+		\item Arnaldo: Bernaldo fez o furto.
+		\item Bernaldo: Cernaldo fez o furto.
+		\item Dernaldo: eu não fiz o furto.
+		\item Cernaldo: Bernaldo mente ao dizer que eu fiz o furto.
+	\end{itemize}
+	Se sabemos que só uma destas declarações é a verdadeira, quem é culpado pelo furto?
 \end{frame}

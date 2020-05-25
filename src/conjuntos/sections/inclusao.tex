@@ -2,109 +2,72 @@
 
 
 \begin{frame}
-\frametitle{A Relação de Inclusão} %\framesubtitle{Exemplos}
+	\frametitle{A Relação de Inclusão}
 
-\begin{definicao}
-Sejam $A$ e $B$ conjuntos. Se todo elemento de $A$ for também
-elemento de $B$, diz-se que $A$ é um \sub{subconjunto} de $B$, que
-$A$ \sub{está contido} em $B$, ou que $A$ é \sub{parte} de $B$. Para
-indicar esse fato, usa-se a notação $A \subset B$.
+	\begin{definicao}
+		Sejam $A$ e $B$ conjuntos. Se todo elemento de $A$ for também elemento de $B$, diz-se que $A$ é um \sub{subconjunto} de $B$, que $A$ \sub{está contido} em $B$, ou que $A$ é \sub{parte} de $B$. Para indicar esse fato, usa-se a notação $A \contido B$.
+	\end{definicao}
 
-\end{definicao}
+	Quando $A$ não é um subconjunto de $B$, escreve-se $A \naocontido B$. Em outras palavras, existe pelo menos um elemento $a$ tal que $a \pertence A$ e $a \naopertence B$.
 
-Quando $A$ não é um subconjunto de $B$, escreve-se $A \not\subset
-B$. Em outras palavras, existe pelo menos um elemento $a$ tal que $a
-\in A$ e $a \notin B$.
-\bigskip
-
-Quando $A \subset B$, dizemos que $B$ \sub{contém} $A$ e escrevemos
-$B \supset A$.
-
-
+	Quando $A \contido B$, dizemos que $B$ \sub{contém} $A$ e escrevemos $B \contem A$.
 \end{frame}
 
 
-%------------------------------------------------------------------------------------------------------------
-
 \begin{frame}
-\frametitle{A Relação de Inclusão} %\framesubtitle{Exemplos}
+	\frametitle{A Relação de Inclusão} 
 
-\begin{exemplo}
-Sejam $T$ o conjunto de todos os triângulos e $P$ o conjunto dos
-polígonos do plano. Todo triângulo é um polígono, logo $ T \subset
-P$.
-\end{exemplo}
+	\begin{exemplo}
+		Sejam $T$ o conjunto de todos os triângulos e $P$ o conjunto dos polígonos do plano. Todo triângulo é um polígono, logo $ T \contido P$.
+	\end{exemplo}
 
-\begin{exemplo}
-Na Geometria, uma reta, um plano e o espaço são conjuntos. Seus
-elementos são pontos.
+	\begin{exemplo}
+		Na Geometria, uma reta, um plano e o espaço são conjuntos. Seus elementos são pontos.
 
-Quando dizemos que uma reta $r$ está no plano $\Pi$, estamos
-afirmando que $r$ está contida em $\Pi$ ou, equivalentemente, que
-$r$ é um subconjunto de $\Pi$, pois todos os pontos que pertencem a
-$r$ pertencem também a $\Pi$.
+		Quando dizemos que uma reta $r$ está no plano $\Pi$, estamos afirmando que $r$ está contida em $\Pi$ ou, equivalentemente, que $r$ é um subconjunto de $\Pi$, pois todos os pontos que pertencem a $r$ pertencem também a $\Pi$.
 
-Nesse caso, deve-se escrever $ r \subset \Pi$. Porém, não é correto
-dizer que $r$ pertence a $\Pi$, nem escrever $r \in \Pi$. Os
-elementos do conjunto $\Pi$ são pontos e não retas.
-\end{exemplo}
-
+		Nesse caso, deve-se escrever $ r \contido \Pi$. Porém, não é correto dizer que $r$ pertence a $\Pi$, nem escrever $r \pertence \Pi$. Os elementos do conjunto $\Pi$ são pontos e não retas.
+	\end{exemplo}
 \end{frame}
 
 
-%------------------------------------------------------------------------------------------------------------
-
 \begin{frame}
-\frametitle{A Relação de Inclusão} %\framesubtitle{Exemplos}
+	\frametitle{A Relação de Inclusão} 
 
-\begin{proposicao}[Inclusão universal do $\emptyset$]
-Para todo conjunto $A$, vale $\emptyset \subset A$.
-\end{proposicao}
+	\begin{proposicao}[Inclusão universal do $\vazio$]
+		Para todo conjunto $A$, vale $\vazio \contido A$.
+	\end{proposicao}
 
-\begin{definicao}
-Dizemos que $A \neq \emptyset$ é um \sub{subconjunto próprio} de $B$
-quando $A \subset B$  e $A \neq B$.
-\end{definicao}
-
-
-
+	\begin{definicao}
+		Dizemos que $A \diferente \vazio$ é um \sub{subconjunto próprio} de $B$ quando $A \contido B$  e $A \diferente B$.
+	\end{definicao}
 \end{frame}
 
 
-%------------------------------------------------------------------------------------------------------------
-
 \begin{frame}
-\frametitle{A Relação de Inclusão} %\framesubtitle{Exemplos}
-\begin{proposicao}[Propriedades da inclusão]
-Sejam $A$, $B$ e $C$ conjuntos. Tem-se:
-\begin{enumerate}[i.]
-	\item \sub{Reflexividade}: $A \subset A$;
-	\item \sub{Antissimetria}: Se $A \subset B$ e $B \subset A$,
-	então $A = B$;
-	\item \sub{Transitividade}: Se $A \subset B$ e $B \subset C$,
-	então $A \subset C$.
-\end{enumerate}
-\end{proposicao}
+	\frametitle{A Relação de Inclusão} 
 
-Demonstração no quadro.
+	\begin{proposicao}[Propriedades da inclusão]
+		Sejam $A$, $B$ e $C$ conjuntos. Tem-se:
+		\begin{enumerate}[i.]
+			\item \sub{Reflexividade}: $A \contido A$;
+			\item \sub{Antissimetria}: Se $A \contido B$ e $B \contido A$, então $A = B$;
+			\item \sub{Transitividade}: Se $A \contido B$ e $B \contido C$, então $A \contido C$.
+		\end{enumerate}
+	\end{proposicao}
 
-
+	Demonstração no quadro.
 \end{frame}
 
-%------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{A Relação de Inclusão} %\framesubtitle{Exemplos}
+	\frametitle{A Relação de Inclusão} 
 
-\begin{definicao}
-Dado um conjunto $A$, chamamos de \sub{conjunto das partes} de $A$ o conjunto formado por todos
-os seus subconjuntos, e denotamo-lo $\mathcal{P}(A)$.
-\end{definicao}
+	\begin{definicao}
+		Dado um conjunto $A$, chamamos de \sub{conjunto das partes} de $A$ o conjunto formado por todos os seus subconjuntos, e denotamo-lo $\partes{A}$.
+	\end{definicao}
 
-\begin{exemplo}
-Dado $A = \set {1, 2, 3}$, determine $\mathcal{P}(A)$.
-\end{exemplo}
-
-
-
+	\begin{exemplo}
+		Dado $A = \conjunto {1, 2, 3}$, determine $\partes{A}$.
+	\end{exemplo}
 \end{frame}

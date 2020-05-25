@@ -19,6 +19,9 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 
+% Diversas funções para o uso das aspas.
+\usepackage{csquotes}
+
 % Outros pacotes
 \usepackage{hyperref}
 \usepackage{tikz}
@@ -52,7 +55,7 @@
 
 \theoremstyle{definition}
 \newtheorem{definicao}[teorema]{Definição}
-\newtheorem{exercicio}{Exercício}
+%\newtheorem{exercicio}{Exercício}
 
 \theoremstyle{remark}
 \newtheorem{obs}[teorema]{Observação}
@@ -62,16 +65,11 @@
 \newtheorem{lema}[teorema]{Lema}
 \newtheorem{proposicao}[teorema]{Proposição}
 
+\newcounter{exercicios}
+\newenvironment{exercicio}{\stepcounter{exercicios} \textbf{\arabic{exercicios}}.}{}
 
-%
-%   Contadores
-%
-
-\newcounter{Listaexercicios}
-\def\Ex#1{
-    \stepcounter{Listaexercicios} \textbf{\arabic{Listaexercicios}}. #1
-}
-
+% compatibilidade
+\newcommand{\Ex}[1]{\begin{exercicio}#1\end{exercicio}}
 
 %
 %   Definições e comandos auxiliares do preâmbulo
@@ -116,3 +114,6 @@
 \newcommand{\vw}{\vec{w}}
 \newcommand{\segmento}[2]{\overline{#1#2}}
 \def\colc#1{\left[#1\right]}
+\newcommando{\negacao}{\negacao}
+
+\justifying

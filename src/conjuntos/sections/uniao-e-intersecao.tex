@@ -2,51 +2,42 @@
 
 
 \begin{frame}
-	\frametitle{União e Interseção de Conjuntos} %\framesubtitle{Exemplos}
+	\frametitle{União e Interseção de Conjuntos} 
 
 	\begin{definicao}
 	Dados os conjuntos $A$ e $B$:
 	\begin{enumerate}[i.]
-		\item A \sub{união} $A \cup B$ é o conjunto formado pelos
+		\item A \sub{união} $A \uniao B$ é o conjunto formado pelos
 		elementos que pertencem a pelo menos um dos conjuntos $A$ e $B$;
-		\item A \sub{interseção} $A \cap B$ é o conjunto formado por elementos que pertencem a ambos $A$ e
+		\item A \sub{interseção} $A \inter B$ é o conjunto formado por elementos que pertencem a ambos $A$ e
 		$B$.
 	\end{enumerate}
 	\end{definicao}
 
 	\begin{exemplo}
-	Sejam $A = \set{1, 2, 3}$ e $ B = \set{2,5}$. Determine $A \cup B$,
-	$A \cap B$, $A \setminus B$ e $B \setminus A$.
+	Sejam $A = \conjunto{1, 2, 3}$ e $ B = \conjunto{2,5}$. Determine $A \uniao B$,
+	$A \inter B$, $A \menos B$ e $B \menos A$.
 \end{exemplo}
 
 \end{frame}
 
-%------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{União e Interseção de Conjuntos} %\framesubtitle{Exemplos}
-\begin{proposicao}[Propriedades da união e interseção] \label{propuniaoint}
-Sejam $A$, $B$ e $C$ conjuntos. Tem-se:
-\begin{enumerate}[i.]
-	\item $A \subset \paren{A \cup B}$ e $\paren{A \cap B} \subset A$;
-	\item \sub{União/interseção com o universo}: $\U \cup A = \U$ e $A \cap \U = A$;
-	\item \sub{Comutatividade}: $A \cup B = B \cup A$ e $A \cap B = B \cap A$;
-	\item \sub{Associatividade}: $\left(A \cup B \right) \cup C = A
-	\cup \left( B \cup C \right)$ e $\left(A \cap B \right) \cap C = A
-	\cap \left( B \cap C \right)$;
+	\frametitle{União e Interseção de Conjuntos} 
+	
+	\begin{proposicao}[Propriedades da união e interseção]
+		\label{propuniaoint}
+		Sejam $A$, $B$ e $C$ conjuntos. Tem-se:
+		\begin{enumerate}[i.]
+			\item $A \contido \paren{A \uniao B}$ e $\paren{A \inter B} \contido A$;
+			\item \sub{União/interseção com o universo}: $\U \uniao A = \U$ e $A \inter \U = A$;
+			\item \sub{Comutatividade}: $A \uniao B = B \uniao A$ e $A \inter B = B \inter A$;
+			\item \sub{Associatividade}: $(A \uniao B) \uniao C = A \uniao (B \uniao C)$ e $(A \inter B) \inter C = A \inter (B \inter C)$;
+			\item \sub{Distributividade, de uma em relação à outra}: $A \inter
+			(B \uniao C) = (A \inter B) \uniao (A \inter C)$ e $A \uniao (B \inter C) = (A \uniao B) \inter (A \uniao C)$;
+			\item \sub{Leis de DeMorgan}: $(A \uniao B)^C = A^C \inter B^C$ e $(A \inter B)^C = A^C \uniao B^C$.
+		\end{enumerate}
+	\end{proposicao}
 
-	\item \sub{Distributividade, de uma em relação à outra}: $A \cap
-	\left( B \cup C \right) = \left(A \cap B \right) \cup \left( A \cap C
-	\right)$ e $A \cup \left( B \cap C \right) = \left(A \cup B \right) \cap
-	\left( A \cup C  \right)$;
-
-	\item \sub{Leis de DeMorgan}: $\left( A \cup B \right)^C = A^C \cap
-	B^C$ e $\left(A \cap B \right)^C = A^C \cup B^C$.
-
-	\end{enumerate}
-\end{proposicao}
-
-Demonstração no quadro.
-
-
+	Demonstração no quadro.
 \end{frame}

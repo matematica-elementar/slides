@@ -2,57 +2,49 @@
 
 
 \begin{frame}
-\frametitle{O Complementar de um Conjunto} %\framesubtitle{Exemplos}
+	\frametitle{O Complementar de um Conjunto}
 
-A noção de complementar de um conjunto só faz sentido quando fixamos
-um \sub{conjunto universo}, que denotaremos por $\U$. Uma vez fixado
-$\U$, todos os elementos considerados pertencerão a $\U$ e todos os
-conjuntos serão subconjuntos de $\U$. Por exemplo, na geometria
-plana, $\U$ é o plano.
+	A noção de complementar de um conjunto só faz sentido quando fixamos um \sub{conjunto universo}, que denotaremos por $\U$. Uma vez fixado $\U$, todos os elementos considerados pertencerão a $\U$ e todos os conjuntos serão subconjuntos de $\U$. Por exemplo, na geometria plana, $\U$ é o plano.
 
-\begin{definicao}
-Dado um conjunto $A$ (isto é, um subconjunto de $\U$), chama-se
-\sub{complementar} de $A$ ao conjunto $A^C$ formado pelos elementos
-de $\U$ que não pertencem a $A$.
-\end{definicao}
+	\begin{definicao}
+		Dado um conjunto $A$ (isto é, um subconjunto de $\U$), chama-se \sub{complementar} de $A$ ao conjunto $A^C$ formado pelos elementos de $\U$ que não pertencem a $A$.
+	\end{definicao}
 
-\begin{exemplo}
-Seja $\U$ o conjunto dos triângulos. Qual o complementar do conjunto
-dos triângulos escalenos?
-\end{exemplo}
-
-\end{frame}
-%------------------------------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{O Complementar de um Conjunto} %\framesubtitle{Exemplos}
-\begin{proposicao}[Propriedades do complementar] \label{prop-comp}
-Fixado um conjunto universo $\U$, sejam $A$ e $B$ conjuntos. Tem-se:
-\begin{enumerate}[i.]
-	\item $\U^C = \emptyset$ e $\emptyset^C = \U$;
-	\item $\left( A^C \right)^C = A$ (Todo conjunto é complementar do seu complementar);
-	\item Se $A \subset B$ então $B^C \subset A^C$ (se um conjunto
-	está contido em outro, seu complementar contém o complementar desse outro).
-\end{enumerate}
-\end{proposicao}
-
-Demonstração no quadro.
-
-
+	\begin{exemplo}
+		Seja $\U$ o conjunto dos triângulos. Qual o complementar do conjunto dos triângulos escalenos?
+	\end{exemplo}
 \end{frame}
 
-%------------------------------------------------------------------------------------------------------------
+
 \begin{frame}
-\frametitle{O Complementar de um Conjunto} %\framesubtitle{Exemplos}
+	\frametitle{O Complementar de um Conjunto}
 
-\begin{definicao}
-A \sub{diferença} entre dois conjuntos $A$ e $B$ é definida por:
-$$ B \setminus A = \set {x \tq x \in B \text { e } x \notin A}.$$
-\end{definicao}
+	\begin{proposicao}[Propriedades do complementar]
+		\label{prop-comp}
+		Fixado um conjunto universo $\U$, sejam $A$ e $B$ conjuntos. Tem-se:
+		\begin{enumerate}[i.]
+			\item $\complemento{\universo} = \vazio$ e $\complemento{\vazio} = \universo$;
+			\item $\complemento{\complemento A} = A$ (Todo conjunto é complementar do seu complementar);
+			\item Se $A \contido B$ então $B\complementar \contido A\complementar$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro).
+		\end{enumerate}
+	\end{proposicao}
 
-\begin{itemize}
-	\item Em geral, não temos $B \setminus A = A \backslash B$. Pense em um contraexemplo a essa
-	igualdade.
-	\item Note que $A^C = \U \setminus A$.
-\end{itemize}
+	Demonstração no quadro.
+\end{frame}
 
+
+\begin{frame}
+	\frametitle{O Complementar de um Conjunto}
+
+	\begin{definicao}
+		A \sub{diferença} entre dois conjuntos $A$ e $B$ é definida por:
+		\[
+			B \menos A = \conjunto { x \taisque x \pertence B \e x \naopertence A}.
+		\]
+	\end{definicao}
+
+	\begin{itemize}
+		\item Em geral, não temos $B \menos A = A \menos B$. Pense em um contraexemplo a essa igualdade.
+		\item Note que $A\complementar = \universo \menos A$.
+	\end{itemize}
 \end{frame}
