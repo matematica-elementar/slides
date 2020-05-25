@@ -2,13 +2,45 @@
 %   Arquivo de Configuração dos Slides
 %
 
-\usepackage[brazil]{babel}
-\usepackage[utf8]{inputenc}
 
-% Tema
+%
+%   Pacotes
+%
+
+% Codificação dos caracteres em formato universal.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Traduz o texto gerados pelo LaTeX para português. ex.: Capítulo, Seção, Conteúdo.
+\usepackage[brazil]{babel}
+
+% Pacotes para ambientes matemáticos
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+% Outros pacotes
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usepackage{yfonts}
+\usepackage{colortbl}
+\usepackage{ragged2e}
+\usepackage{helvet}
+\usepackage{verbatim}
+
+
+%
+%   Tema
+%
+
 \input{theme/imd-lecture-style.tex}
 
-% Macros
+
+%
+%   Macros
+%
+
 \usepackage{macros/macros}
 
 
@@ -30,3 +62,26 @@
 \newtheorem{exemplo}[teorema]{Exemplo}
 \newtheorem{lema}[teorema]{Lema}
 \newtheorem{proposicao}[teorema]{Proposição}
+
+%
+%   Contadores
+%
+
+\newcounter{Listaexercicios}
+\def\Ex#1{
+    \stepcounter{Listaexercicios} \textbf{\arabic{Listaexercicios}}. #1
+}
+
+
+%
+%   Comandos auxiliares (compatibilidade)
+%
+
+\newcommand{\vu}{\vec{u}}
+\newcommand{\vv}{\vec{v}}
+\newcommand{\vi}{\vec{i}}
+\newcommand{\vj}{\vec{j}}
+\newcommand{\vk}{\vec{k}}
+\newcommand{\vw}{\vec{w}}
+\newcommand{\segmento}[2]{\overline{#1#2}}
+\def\colc#1{\left[#1\right]}

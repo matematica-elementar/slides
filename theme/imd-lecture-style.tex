@@ -8,168 +8,27 @@
 % See the file doc/licenses/LICENSE for more details.
 
 
-% Common packages
+\usetheme[right]{AAUsidebar}
 
-
-\usepackage{times}
- \mode<article> {
-	\usepackage{times}
-	\usepackage{mathptmx}
-	\usepackage[left=1.5cm,right=6cm,top=1.5cm,bottom=3cm]{geometry}
-}
-
-\usepackage{hyperref}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath,amssymb}
-\usepackage{tikz}
-\usepackage{colortbl}
-\usepackage{yfonts}
-\usepackage{colortbl}
-\usepackage{translator} % comment this, if not available
-\usepackage{ragged2e} % justifying
-% Or whatever. Note that the encoding and the font should match. If T1
-% does not look nice, try deleting the line with the fontenc.
-\usepackage{helvet}
-\usepackage{verbatim}
-
-
-%\usepackage{lipsum}
-%\usepackage{enumitem}
-
-
-\usetheme[
-%%% options passed to the outer theme
-%    hidetitle,           % hide the (short) title in the sidebar
-%    hideauthor,          % hide the (short) author in the sidebar
-%    hideinstitute,       % hide the (short) institute in the bottom of the sidebar
-%    shownavsym,          % show the navigation symbols
-%    width=2cm,           % width of the sidebar (default is 2 cm)
-%    hideothersubsections,% hide all subsections but the subsections in the current section
-%    hideallsubsections,  % hide all subsections
-		right               % right of left position of sidebar (default is right)
-%%% options passed to the color theme
-%    lightheaderbg,       % use a light header background
-	]{AAUsidebar}
-
-% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
-% Change the bar and sidebar colors:
-%\setbeamercolor{AAUsidebar}{fg=red!20,bg=red}
-%\setbeamercolor{sidebar}{bg=red!20}
-% Change the color of the structural elements:
-%\setbeamercolor{structure}{fg=red}
-% Change the frame title text color:
-%\setbeamercolor{frametitle}{fg=blue}
-% Change the normal text color background:
-%\setbeamercolor{normal text}{bg=gray!10}
-% Highlight the text in the sidebar
 \usecolortheme{rose,sidebartab}
-% ... and you can of course change a lot more - see the beamer user manual.
 
-% colored hyperlinks
-\newcommand{\chref}[2]{%
-	\href{#1}{{\usebeamercolor[bg]{AAUsidebar}#2}}%
-}
+%
+%	specify a logo on the titlepage (you can specify additional logos an include them in institute command below
+%
 
+% placed on the title page
+\pgfdeclareimage[height=1cm]{titlepagelogo}{theme/figures/ufrn2}
 
+% placed on the title page
+\pgfdeclareimage[height=1cm]{titlepagelogo2}{theme/figures/imd}
 
-% specify a logo on the titlepage (you can specify additional logos an include them in
-% institute command below
-\pgfdeclareimage[height=1cm]{titlepagelogo}{theme/figures/ufrn2} % placed on the title page
-\pgfdeclareimage[height=1cm]{titlepagelogo2}{theme/figures/imd} % placed on the title page
-\titlegraphic{% is placed on the bottom of the title page
+% it is placed on the bottom of the title page
+\titlegraphic{
 	\pgfuseimage{titlepagelogo}
 	\hspace{1cm}\pgfuseimage{titlepagelogo2}
 }
 
-
-% Article version layout settings
-
-\mode<article>
-
-\makeatletter
-\def\@listI{\leftmargin\leftmargini
-	\parsep 0pt
-	\topsep 5\p@   \@plus3\p@ \@minus5\p@
-	\itemsep0pt}
-\let\@listi=\@listI
-
-
-\setbeamertemplate{frametitle}{\paragraph*{\insertframetitle\
-		\ \small\insertframesubtitle}\ \par
-}
-\setbeamertemplate{frame end}{%
-	\marginpar{\scriptsize\hbox to 1cm{\sffamily%
-			\hfill\strut\insertshortlecture.\insertframenumber}\hrule height .2pt}}
-\setlength{\marginparwidth}{1cm}
-\setlength{\marginparsep}{4.5cm}
-
-\def\@maketitle{\makechapter}
-
-\def\makechapter{
-	\newpage
-	\null
-	\vskip 2em%
-	{%
-		\parindent=0pt
-		\raggedright
-		\sffamily
-		\vskip8pt
-		\includegraphics[width=\linewidth]{theme/figures/imd.png}\par\vskip2em
-		{\fontsize{36pt}{36pt}\selectfont Aula \insertshortlecture \par\vskip2pt}
-		{\fontsize{24pt}{28pt}\selectfont \color{blue!50!black} \@title\par\vskip4pt}
-		%{\Large\selectfont \color{blue!50!black} \insertsubtitle\par}
-		\vskip10pt
-
-		\normalsize\selectfont [Notas de Aula]
-		Disciplina: \emph{\lecturename \ (\semestre)} \par\vskip1.5em
-		\nomedoautor\hskip1em Email: \ \emaildoautor
-	}
-	\par
-	\vskip 1.5em%
-}
-
-\let\origstartsection=\@startsection
-\def\@startsection#1#2#3#4#5#6{%
-	\origstartsection{#1}{#2}{#3}{#4}{#5}{#6\normalfont\sffamily\color{blue!50!black}\selectfont}}
-
-\makeatother
-
-\mode
-<all>
-
-
-
-
-% Typesetting Listings
-
-\usepackage{listings}
-\lstset{language=Java}
-
-\alt<presentation>
-{\lstset{%
-	basicstyle=\footnotesize\ttfamily,
-	commentstyle=\slshape\color{green!50!black},
-	keywordstyle=\bfseries\color{blue!50!black},
-	identifierstyle=\color{blue},
-	stringstyle=\color{orange},
-	escapechar=\#,
-	emphstyle=\color{red}}
-}
-{
-	\lstset{%
-		basicstyle=\ttfamily,
-		keywordstyle=\bfseries,
-		commentstyle=\itshape,
-		escapechar=\#,
-		emphstyle=\bfseries\color{red}
-	}
-}
-
-
-
-% Common theorem-like environments
-%\usepackage{amsthm}
-
+% Ativa os contadores nos Teoremas.
 \setbeamertemplate{theorems}[numbered]
 
 %
@@ -193,17 +52,3 @@
 {\medskip\rowcolors[]{1}{green!50!black!20}{green!50!black!10}%
 	\tabular{#1}\rowcolor{green!50!black!40}}%
 {\endtabular\medskip}
-
-%\setbeamertemplate{theorem begin}{{ \inserttheoremheadfont
-%\inserttheoremname \inserttheoremnumber
-%\ifx\inserttheoremaddition\empty\else\ (\inserttheoremaddition)\fi%
-%\inserttheorempunctuation }} \setbeamertemplate{theorem end}{}
-
-\newcommand{\vu}{\vec{u}}
-\newcommand{\vv}{\vec{v}}
-\newcommand{\vi}{\vec{i}}
-\newcommand{\vj}{\vec{j}}
-\newcommand{\vk}{\vec{k}}
-\newcommand{\vw}{\vec{w}}
-\newcommand\segmento[2]{\overline{#1#2}}
-\def\colc#1{\left[#1\right]}
