@@ -34,7 +34,7 @@
 \section{Gráfico de Função Real}
 \begin{frame} \frametitle{Função Real}
 \begin{definicao}
-Uma função na forma $f : D \subset \R \to \R$ é chamada de
+Uma função na forma $f : D \contido \R \to \R$ é chamada de
 \sub{função real} (pois seus valores são números reais, isto é, seu
 contradomínio é $\R$) de \sub{variável real} (pois sua variável
 independente assume valores reais, isto é, seu domínio é um
@@ -48,7 +48,7 @@ subconjunto de $\R$).
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Gráfico de Função Real} %\framesubtitle{Exemplos}
+\frametitle{Gráfico de Função Real} 
 
 \begin{definicao}
 O \sub{gráfico} de uma função real é o seguinte subconjunto do plano
@@ -65,7 +65,7 @@ dos pontos cujas coordenadas satisfazem sua lei de associação.
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Gráfico de Função Real} %\framesubtitle{Exemplos}
+\frametitle{Gráfico de Função Real} 
 
 \begin{exemplo}
 Esboce o gráfico da função real
@@ -84,7 +84,7 @@ f : & \R^\ast & \to     & \R \\
 %------------------------------------------------------------------------------------------------------------
 \section{Gráficos e Transformações no Plano}
 \begin{frame}
-\frametitle{Translações de gráficos} %\framesubtitle{Exemplos}
+\frametitle{Translações de gráficos} 
 
 \begin{exemplo}
 Compare os gráficos das funções reais $f, g , h: \R \to \R$ tais que
@@ -117,7 +117,7 @@ translação vertical determinada pelo parâmetro $a$. \pause
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Dilatações de gráficos} %\framesubtitle{Exemplos}
+\frametitle{Dilatações de gráficos} 
 
 \begin{exemplo}
 Compare os gráficos das funções reais $f, g , h: \R \to \R$ tais que
@@ -136,7 +136,7 @@ $h(x)= f(-1 \cdot x)= \sen (-1 \cdot x)$.
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Dilatações de gráficos} %\framesubtitle{Exemplos}
+\frametitle{Dilatações de gráficos} 
 
 Dessa forma, se a função real $g$ é tal que $g(x) = c \cdot f(d
 \cdot x)$, então o gráfico de $g$ pode ser obtido, do gráfico de
@@ -168,7 +168,7 @@ parâmetro for negativo, haverá, também, uma reflexão. \pause
 %------------------------------------------------------------------------------------------------------------
 \section{Atividade Online}
 \begin{frame}
-\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+\frametitle{Atividade Online} 
 
 \href{https://pt.khanacademy.org/math/algebra2/manipulating-functions/shifting-functions/e/shift-functions}
 {{\tt Atividade 10 - Deslocamento de Funções}}
@@ -187,19 +187,19 @@ Veja o desempenho na Missão Álgebra II.
 
 \section{Crescimento e Pontos de Extremo}
 \begin{frame}
-\frametitle{Funções Monótonas} %\framesubtitle{Exemplos}
+\frametitle{Funções Monótonas} 
 
 \begin{definicao}\label{funcmon}
-Seja $f: D \subset \R \to \R$ uma função. Dizemos que
+Seja $f: D \contido \R \to \R$ uma função. Dizemos que
 \begin{enumerate}[(i)]
 	\item $f$ é \sub{monótona (estritamente) crescente} se, para todos $x_1, x_2 \in D$,
-	$$x_1 < x_2 \implies f(x_1) < f(x_2);$$
+	$$x_1 < x_2 \implica f(x_1) < f(x_2);$$
 	\item $f$ é \sub{monótona não decrescente} se, para todos $x_1, x_2 \in D$,
-	$$x_1 < x_2 \implies f(x_1) \leq f(x_2);$$
+	$$x_1 < x_2 \implica f(x_1) \leq f(x_2);$$
 	\item $f$ é \sub{monótona (estritamente) decrescente} se, para todos $x_1, x_2 \in D$,
-	$$x_1 < x_2 \implies f(x_1) > f(x_2);$$
+	$$x_1 < x_2 \implica f(x_1) > f(x_2);$$
 	\item $f$ é \sub{monótona não crescente} se, para todos $x_1, x_2 \in D$,
-	$$x_1 < x_2 \implies f(x_1) \geq f(x_2).$$%
+	$$x_1 < x_2 \implica f(x_1) \geq f(x_2).$$%
 %  \item $f$ é \sub{constante} se, para todo $x \in D$, temos $f(x) =
 %  k \in \R$.
 \end{enumerate}
@@ -211,18 +211,18 @@ Seja $f: D \subset \R \to \R$ uma função. Dizemos que
 
 %------------------------------------------------------------------------------------------------------------
 \begin{frame}
-\frametitle{Funções Monótonas} %\framesubtitle{Exemplos}
+\frametitle{Funções Monótonas} 
 
 
 
 Nas mesmas condições da Definição \ref{funcmon} , se $f(x) = k \in
 \R$ para todo $x \in D$, dizemos que $f$ é \sub{constante}.\\ \pause
-Se $I \subset D$ é um intervalo, definimos a monotonicidade de $f$
+Se $I \contido D$ é um intervalo, definimos a monotonicidade de $f$
 no intervalo $I$ de maneira análoga ao feito anteriormente. Por
 exemplo: \\
 $f$ é \sub{monótona (estritamente) crescente em $I$} se, para todos
 $x_1, x_2 \in I$,
-	$$x_1 < x_2 \implies f(x_1) < f(x_2).$$
+	$$x_1 < x_2 \implica f(x_1) < f(x_2).$$
 
 
 \end{frame}
@@ -232,10 +232,10 @@ $x_1, x_2 \in I$,
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Funções Limitadas} %\framesubtitle{Exemplos}
+\frametitle{Funções Limitadas} 
 
 \begin{definicao}
-Seja $f: D \subset \R \to \R$ uma função.
+Seja $f: D \contido \R \to \R$ uma função.
 \begin{enumerate}[(i)]
 	\item $f$ é \sub{limitada superiormente} se existe $M \in \R$ tal
 	que $f(x) \leq M$, para todo $x \in D$;
@@ -246,9 +246,9 @@ Seja $f: D \subset \R \to \R$ uma função.
 	\item $x_0 \in D$ é um \sub{ponto de mínimo absoluto} de $f$ se
 	$f(x_0) \leq f(x)$, para todo $x \in D$;
 	\item $x_0 \in D$ é um \sub{ponto de máximo local} de $f$ se
-	existe $r>0$ tal que $f(x_0) \geq f(x)$, para todo $x \in D \cap \paren{x_0 - r , x_0+r}$;
+	existe $r>0$ tal que $f(x_0) \geq f(x)$, para todo $x \in D \inter \paren{x_0 - r , x_0+r}$;
 	\item $x_0 \in D$ é um \sub{ponto de mínimo local} de $f$ se
-	existe $r>0$ tal que $f(x_0) \leq f(x)$, para todo $x \in D \cap \paren{x_0 - r ,
+	existe $r>0$ tal que $f(x_0) \leq f(x)$, para todo $x \in D \inter \paren{x_0 - r ,
 	x_0+r}$.
 \end{enumerate}
 \end{definicao}
@@ -261,7 +261,7 @@ Seja $f: D \subset \R \to \R$ uma função.
 
 
 \begin{frame}
-\frametitle{Exemplo} %\framesubtitle{Exemplos}
+\frametitle{Exemplo} 
 \begin{exemplo}
 A função $h : \left( -1 ; 6 \right] \to \R$, cujo gráfico é esboçado
 abaixo, é definida por $h(x) = \begin{cases}
@@ -281,7 +281,7 @@ Determine os intervalos de monotonicidade e os extremos de $h$.
 %------------------------------------------------------------------------------------------------------------
 \section{Atividade Online}
 \begin{frame}
-\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+\frametitle{Atividade Online} 
 
 \href{https://pt.khanacademy.org/math/algebra/algebra-functions/positive-negative-increasing-decreasing-intervals/e/increasing-decreasing-intervals-of-functions}
 {{\tt Atividade 12 - Intervalos Crescentes e Decrescentes}}
@@ -302,7 +302,7 @@ Veja o desempenho na Missão Álgebra I.
 
 \section{Exercícios}
 \begin{frame}
-\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\frametitle{Exercícios} 
 \Ex{Considere a função $g: [0 ; 5] \to \R$ definida por: $$g(x) =
 																\begin{cases}
 																4x-x^2 & \ \text{ se } \ x< 3 \\
@@ -323,7 +323,7 @@ Determine as soluções de:
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\frametitle{Exercícios} 
 
 \Ex{Sejam $f: \R \to \R $. Determine se as afirmações abaixo são
 verdadeiras ou falsas, justificando suas respostas. As funções que
@@ -346,7 +346,7 @@ esboço de seu gráfico.
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\frametitle{Exercícios} 
 
 \Ex{Sejam $f: \R \to \R $ e $g: \R \to \R$. Determine se as
 afirmações abaixo são verdadeiras ou falsas, justificando suas
@@ -356,7 +356,7 @@ exibidas somente com o esboço de seu gráfico.
 	\item Se $f$ e $g$ são crescentes, então a composta $f \circ g$ é uma função crescente;
 	\item Se $f$ e $g$ são crescentes, então o produto $f\cdot g$ é
 	uma função crescente, onde $(f \cdot g)(x) = f(x) \cdot g(x)$;
-	\item Se $f$ é crescente em $A \subset \R$ e em $B \subset \R$, então $f$ é crescente em $A \cup B \subset \R$.
+	\item Se $f$ é crescente em $A \contido \R$ e em $B \contido \R$, então $f$ é crescente em $A \uniao B \contido \R$.
 \end{enumerate}}
 
 \Ex{Mostre que a função inversa de uma função crescente é também uma

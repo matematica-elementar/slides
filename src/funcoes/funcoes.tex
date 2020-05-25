@@ -69,7 +69,7 @@ Nesse caso:
 	\item Os conjuntos $X$ e $Y$ são chamados \sub{domínio} e
 	\sub{contradomínio} de $f$, respectivamente;
 	\item O conjunto $f\paren X = \set{y \in Y \tq \exists x \in X , f \paren x =
-	y} \subset Y$ é chamado \sub{imagem} de $f$;
+	y} \contido Y$ é chamado \sub{imagem} de $f$;
 	\item Dado $x \in X$, o (único) elemento $y = f(x) \in Y$
 	correspondente é chamado \sub{imagem} de $x$.
 \end{enumerate}
@@ -79,7 +79,7 @@ Nesse caso:
 
 %------------------------------------------------------------------------------------------------------------
 
-\begin{frame} \frametitle{O que É uma Função?} %\framesubtitle{Exemplos}
+\begin{frame} \frametitle{O que É uma Função?} 
 
 Dessa forma, uma função é um terno constituído por: \sub{domínio},
 \sub{contradomínio} e \sub{lei de associação} (dos elementos do
@@ -99,7 +99,7 @@ uma função, ela deve satisfazer a duas condições fundamentais:
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{O que É uma Função?} %\framesubtitle{Exemplos}
+\frametitle{O que É uma Função?} 
 \begin{exemplo}
 Considere as funções
 $$\begin{array}{cccc}
@@ -127,16 +127,16 @@ conjunto $X$}.
 %------------------------------------------------------------------------------------------------------------
 \section{Funções Compostas}
 \begin{frame}
-\frametitle{Composição de Funções} %\framesubtitle{Exemplos}
+\frametitle{Composição de Funções} 
 
 \begin{definicao}
-Sejam $f: X \to Y$ e $g: U \to V$ duas funções, com $Y \subset U$.\\
+Sejam $f: X \to Y$ e $g: U \to V$ duas funções, com $Y \contido U$.\\
 A \sub{função composta de $g$ com $f$} é a função denotada por $g
 \circ f$, com domínio em $X$ e contradomínio em $V$, que a cada
 elemento $x \in X$ faz corresponder o elemento $v = \paren{g \circ
 f}(x) = g(f(x)) \in V$. Isto é:
 $$\begin{array}{cccccc}
-g \circ f : & X & \to     & Y \subset U & \to & V \\
+g \circ f : & X & \to     & Y \contido U & \to & V \\
 		 &  x & \mapsto & f(x) & \mapsto & g(f(x))
 \end{array}.$$
 \end{definicao}
@@ -146,7 +146,7 @@ g \circ f : & X & \to     & Y \subset U & \to & V \\
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Composição de Funções} %\framesubtitle{Exemplos}
+\frametitle{Composição de Funções} 
 
 \begin{exemplo}
 Seja $f: X \to Y$ uma função. Mostre que $f \circ \I{X} = f$ e $\I{Y}
@@ -161,7 +161,7 @@ Qual função resulta da composição $p \circ q$?
 %------------------------------------------------------------------------------------------------------------
 \section{Atividade Online}
 \begin{frame}
-\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+\frametitle{Atividade Online} 
 
 \href{https://pt.khanacademy.org/math/algebra2/manipulating-functions/function-composition/e/compose-functions}
 {{\tt Atividade 05 - Encontre Funções Compostas}}
@@ -180,7 +180,7 @@ Veja o desempenho na Missão Álgebra II.
 
 \section{Função Inversa}
 \begin{frame}
-\frametitle{Função Inversa} %\framesubtitle{Exemplos}
+\frametitle{Função Inversa} 
 
 \begin{definicao}\label{funinv}
 Uma função $f: X \to Y$ é \sub{invertível} se existe uma função $g:
@@ -201,7 +201,7 @@ denotada por $g = f^{-1}$.
 
 
 \begin{frame}
-\frametitle{Função Inversa} %\framesubtitle{Exemplos}
+\frametitle{Função Inversa} 
 
 \begin{exemplo}
 A função $q$ é inversa de $p$?
@@ -214,7 +214,7 @@ A função $q$ é inversa de $p$?
 %------------------------------------------------------------------------------------------------------------
 \section{Atividade Online}
 \begin{frame}
-\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+\frametitle{Atividade Online} 
 
 \href{https://pt.khanacademy.org/math/algebra2/manipulating-functions/verifying-that-functions-are-inverses/e/inverses_of_functions}
 {{\tt Atividade 07 - Verifique Funções Inversas}}
@@ -227,7 +227,7 @@ Veja o desempenho na Missão Álgebra II.
 %------------------------------------------------------------------------------------------------------------
 \section{Injetividade e Sobrejetividade}
 \begin{frame}
-\frametitle{Funções Injetivas, Sobrejetivas e Bijetivas} %\framesubtitle{Exemplos}
+\frametitle{Funções Injetivas, Sobrejetivas e Bijetivas} 
 
 
 \begin{definicao}
@@ -236,7 +236,7 @@ Considere uma função $f: X \to Y$.
 	\item $f$ é \sub{sobrejetiva} se, para todo $y \in Y$, existe $x
 	\in X$ tal que $f(x) = y$;
 	\item $f$ é \sub{injetiva} se $x_1, x_2 \in X, x_1 \neq x_2
-	\implies f(x_1) \neq f(x_2)$;
+	\implica f(x_1) \neq f(x_2)$;
 	\item $f$ é \sub{bijetiva} se é sobrejetiva e injetiva.
 \end{enumerate}
 \end{definicao}\pause
@@ -244,7 +244,7 @@ Há, ainda, formas alternativas de enunciar as definições acima:
 \begin{itemize}
 	\item $f$ é \sub{sobrejetiva} se, e somente se, $f(X) = Y$;
 	\item $f$ é \sub{injetiva} se, e somente se, $x_1, x_2 \in X, f(x_1) = f(x_2)
-	\implies x_1 = x_2 $;
+	\implica x_1 = x_2 $;
 	\item $f$ é \sub{injetiva} se, e somente se, para todo $y \in
 	f(X)$, existe um único $x \in X$ tal que $f(x) = y$;
 	\item $f$ é \sub{bijetiva} se, e somente se, para todo $y \in Y$,
@@ -257,7 +257,7 @@ Há, ainda, formas alternativas de enunciar as definições acima:
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Funções Injetivas, Sobrejetivas e Bijetivas} %\framesubtitle{Exemplos}
+\frametitle{Funções Injetivas, Sobrejetivas e Bijetivas} 
 
 \begin{exemplo}\label{pqbij}
 As funções $p$ e $q$ são sobrejetivas, injetivas ou bijetivas?
@@ -269,7 +269,7 @@ As funções $p$ e $q$ são sobrejetivas, injetivas ou bijetivas?
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Funções Injetivas, Sobrejetivas e Bijetivas} %\framesubtitle{Exemplos}
+\frametitle{Funções Injetivas, Sobrejetivas e Bijetivas} 
 
 \begin{teorema}\label{teoinv}
 Uma função $f: X \to Y$ é invertível se, e somente se, é bijetiva.
@@ -287,7 +287,7 @@ funções $p$ e $q$ não são invertíveis.
 %------------------------------------------------------------------------------------------------------------
 \section{Fórmulas e Funções}
 \begin{frame}
-\frametitle{Fórmulas e Funções} %\framesubtitle{Exemplos}
+\frametitle{Fórmulas e Funções} 
 É muito importante não pensar que uma função é uma fórmula.
 Considere as funções
 $$\begin{array}{cccc}
@@ -315,7 +315,7 @@ como na função $h :  \R  \to      \R$ tal que
 %------------------------------------------------------------------------------------------------------------
 \section{Funções e Cardinalidade}
 \begin{frame}
-\frametitle{Funções e Cardinalidade} %\framesubtitle{Exemplos}
+\frametitle{Funções e Cardinalidade} 
 
 \begin{definicao}
 Dois conjuntos $X$ e $Y$ são ditos \sub{cardinalmente equivalentes}
@@ -336,17 +336,17 @@ subconjuntos.
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Funções e Cardinalidade} %\framesubtitle{Exemplos}
+\frametitle{Funções e Cardinalidade} 
 
 \begin{teorema}
 Se existe uma injeção $f: X \to Y$, então existe uma bijeção entre
-$X$ e um subconjunto $Y' \subset Y$, isto é, $X$ é cardinalmente
+$X$ e um subconjunto $Y' \contido Y$, isto é, $X$ é cardinalmente
 equivalente a um subconjunto de $Y$.
 \end{teorema} \pause
 
 \begin{teorema}
 Se existe uma sobrejeção $f : X \to Y$, então existe uma bijeção
-entre $Y$ e um subconjunto $X' \subset X$, isto é, $Y$ é
+entre $Y$ e um subconjunto $X' \contido X$, isto é, $Y$ é
 cardinalmente equivalente a um subconjunto de $X$.
 \end{teorema}
 
@@ -355,7 +355,7 @@ cardinalmente equivalente a um subconjunto de $X$.
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Funções e Cardinalidade} %\framesubtitle{Exemplos}
+\frametitle{Funções e Cardinalidade} 
 
 \begin{exemplo}
 O conjunto $\Q$ é enumerável.
@@ -368,7 +368,7 @@ O conjunto $\Q$ é enumerável.
 
 \section{Atividade Online}
 \begin{frame}
-\frametitle{Atividade Online} %\framesubtitle{Exemplos}
+\frametitle{Atividade Online} 
 
 \href{https://pt.khanacademy.org/math/algebra2/manipulating-functions/invertible-functions/e/inverse-domain-range}
 {{\tt Atividade 08 - Determine se uma Função É Inversível}}
@@ -385,7 +385,7 @@ Veja o desempenho na Missão Álgebra II.
 
 \section{Exercícios}
 \begin{frame}
-\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\frametitle{Exercícios} 
 
 \Ex{Em cada um dos itens abaixo, defina uma função com a lei de
 formação dada (indicando domínio e contradomínio). Verifique se é
@@ -417,7 +417,7 @@ injetiva, sobrejetiva ou bijetiva, a função
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\frametitle{Exercícios} 
 
 \Ex{Considere a  função $f:  \N^*  \to      \Z $ tal que $$f(n) =
 \begin{cases} \frac {-n} 2, \text{ se $n$ é par} \\ \frac {n-1} 2, \text{ se $n$ é
@@ -443,16 +443,16 @@ g_2 (y)$, para todo $y \in Y$.}
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\frametitle{Exercícios} 
 
 \Ex{Seja $f: X \to Y$ uma função e seja $A$ um subconjunto de $X$.
-Define-se $$f(A) = \set{f(x) \tq x\in A} \subset Y.$$ Se $A$ e $B$
+Define-se $$f(A) = \set{f(x) \tq x\in A} \contido Y.$$ Se $A$ e $B$
 são subconjuntos de $X$:
 \begin{enumerate}[(a)]
-	\item Mostre que $f(A \cup B) = f(A) \cup f(B)$;
-	\item Mostre que $f(A \cap B) \subset f(A) \cap f(B)$;
-	\item É possível afirmar que $f(A \cap B) = f(A) \cap f(B)$ para
-	todos $A, B \subset X$? Justifique.
+	\item Mostre que $f(A \uniao B) = f(A) \uniao f(B)$;
+	\item Mostre que $f(A \inter B) \contido f(A) \inter f(B)$;
+	\item É possível afirmar que $f(A \inter B) = f(A) \inter f(B)$ para
+	todos $A, B \contido X$? Justifique.
 	\item Determine que condições deve satisfazer $f$ para que a
 	afirmação feita no item (c) seja verdadeira.
 \end{enumerate}
@@ -465,7 +465,7 @@ são subconjuntos de $X$:
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\frametitle{Exercícios} 
 
 \Ex{Seja $f: X \to Y$ uma função. Dado $y \in Y$, definimos a
 \sub{contraimagem} ou \sub{imagem inversa} de $y$ como sendo o
@@ -491,15 +491,15 @@ f(x)=y}.$$
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Exercícios} %\framesubtitle{Exemplos}
+\frametitle{Exercícios} 
 
-\Ex{Seja $f: X \to Y$ uma função. Dado $A \subset Y$, definimos a
+\Ex{Seja $f: X \to Y$ uma função. Dado $A \contido Y$, definimos a
 \sub{contraimagem} ou \sub{imagem inversa} de $A$ como sendo o
 seguinte subconjunto de $X$: $$ f^{-1}(A) = \set{x \in X \tq f(x)\in
 A}.$$ Mostre que
 \begin{enumerate}[(a)]
-	\item $f^{-1} (A \cup B) = f^{-1} (A) \cup f^{-1} (B)$;
-	\item $f^{-1} (A \cap B) = f^{-1} (A) \cap f^{-1} (B)$.
+	\item $f^{-1} (A \uniao B) = f^{-1} (A) \uniao f^{-1} (B)$;
+	\item $f^{-1} (A \inter B) = f^{-1} (A) \inter f^{-1} (B)$.
 \end{enumerate}}
 
 
@@ -512,7 +512,7 @@ A}.$$ Mostre que
 %------------------------------------------------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Exercícios - Desafios} %\framesubtitle{Exemplos}
+\frametitle{Exercícios - Desafios} 
 
 \Ex{Seja $f: X \to Y$ uma função. Mostre que, se existem $g_1 : Y
 \to X$ e $g_2 : Y \to X$ tais que $f \circ g_1 = \I{Y}$ e $g_2 \circ
@@ -521,15 +521,15 @@ invertível).}
 
 \Ex{Seja $f: X \to Y$ uma função. Mostre que
 \begin{enumerate}[(a)]
-	\item $f(f^{-1}(B)) \subset B$, para todo $B \subset Y$;
-	\item $f(f^{-1}(B)) = B$, para todo $B \subset Y$ se, e
+	\item $f(f^{-1}(B)) \contido B$, para todo $B \contido Y$;
+	\item $f(f^{-1}(B)) = B$, para todo $B \contido Y$ se, e
 	somente se, $f$ é sobrejetiva.
 \end{enumerate}}
 
 \Ex{Seja $f: X \to Y$ uma função. Mostre que
 \begin{enumerate}[(a)]
-	\item $f(f^{-1}(A)) \supset A$, para todo $A \subset X$;
-	\item $f(f^{-1}(A)) = A$, para todo $A \subset X$ se, e
+	\item $f(f^{-1}(A)) \supset A$, para todo $A \contido X$;
+	\item $f(f^{-1}(A)) = A$, para todo $A \contido X$ se, e
 	somente se, $f$ é injetiva.
 \end{enumerate}}
 
