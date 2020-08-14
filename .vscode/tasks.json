@@ -18,6 +18,13 @@
             "group": "build"
         },
         {
+            "label": "Plano de Curso",
+            "type": "shell",
+            "command": "make slides aula=plano-de-curso",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
             "label": "Conjuntos",
             "type": "shell",
             "command": "make slides aula=conjuntos",
