@@ -4,19 +4,32 @@
 \begin{frame}
 	\frametitle{União e Interseção de Conjuntos} 
 
-	\begin{definicao}
+	\begin{definicao}[União e Interseção]
 		Dados os conjuntos $A$ e $B$:
 		\begin{enumerate}[i.]
 			\item A \sub{união} $A \uniao B$ é o conjunto formado pelos elementos que pertencem a pelo menos um dos conjuntos $A$ e $B$;
 			\item A \sub{interseção} $A \inter B$ é o conjunto formado por elementos que pertencem a ambos $A$ e $B$.
 		\end{enumerate}
-	\end{definicao}
+	\end{definicao}\pause
 
 	\begin{exemplo}
-		Sejam $A = \conjunto{1, 2, 3}$ e $B = \conjunto{2, 5}$. Determine $A \uniao B$, $A \inter B$, $A \menos B$ e $B \menos A$.
-	\end{exemplo}
+		Sejam $A = \conjunto{1, 2, 3}$ e $B = \conjunto{2, 5}$. Determine $A \uniao B$ e $A \inter B$.
+	\end{exemplo}\pause
+
+	\begin{definicao}[Conjuntos disjuntos]
+		Sejam  $A$ e $B$ conjuntos. Dizemos que $A$ e $B$ são \sub{conjuntos disjuntos} quando $A \inter B = \vazio$.
+	\end{definicao}
 \end{frame}
 
+
+\begin{frame}
+	\frametitle{União e Interseção de Conjuntos}
+	Algumas propriedades das operações de união e interseção de conjuntos dizem respeito a um conjunto chamado de \emph{conjunto universo}, que denotaremos por $\U$. Esse conjunto deve ser fixado a fim de que fique claro quais são os possíveis objetos que podem ser elementos dos conjuntos a serem abordados. Uma vez fixado $\universo$, todos os elementos considerados pertencerão a $\U$ e todos os conjuntos serão subconjuntos de $\U$. 
+
+\begin{exemplo}
+	Na geometria plana, $\universo$ é o plano onde os elementos são pontos, e todos os conjuntos são constituídos por pontos desse plano. As retas servem como exemplos desses conjuntos; portanto, são subconjuntos de $\U$ (não elementos! Conforme vimos no Exemplo \ref{exem:subconjuntosdoplano}).
+\end{exemplo}
+\end{frame}
 
 \begin{frame}
 	\frametitle{União e Interseção de Conjuntos} 
@@ -26,14 +39,18 @@
 		Sejam $A$, $B$ e $C$ conjuntos. Tem-se:
 		\begin{enumerate}[i.]
 			\item $A \contido \paren{A \uniao B}$ e $\paren{A \inter B} \contido A$;
-			\item \sub{União/interseção com o universo}: $\U \uniao A = \U$ e $A \inter \U = A$;
+			\item \sub{União/interseção com o universo}: $A \uniao \U = \U$ e $A \inter \U = A$;
+			\item \sub{União/interseção com o vazio}: $A \uniao \vazio = A$ e $A \inter \vazio = \vazio$;
 			\item \sub{Comutatividade}: $A \uniao B = B \uniao A$ e $A \inter B = B \inter A$;
 			\item \sub{Associatividade}: $(A \uniao B) \uniao C = A \uniao (B \uniao C)$ e $(A \inter B) \inter C = A \inter (B \inter C)$;
 			\item \sub{Distributividade, de uma em relação à outra}: $A \inter
-			(B \uniao C) = (A \inter B) \uniao (A \inter C)$ e $A \uniao (B \inter C) = (A \uniao B) \inter (A \uniao C)$;
-			\item \sub{Leis de DeMorgan}: $(A \uniao B)^C = A^C \inter B^C$ e $(A \inter B)^C = A^C \uniao B^C$.
+			(B \uniao C) = (A \inter B) \uniao (A \inter C)$ e $A \uniao (B \inter C) = (A \uniao B) \inter (A \uniao C)$.
 		\end{enumerate}
-	\end{proposicao}
+	\end{proposicao} \pause
 
-	Demonstração no quadro.
+
+
+	\begin{exemplo}
+		Sejam $A = \conjunto{1, 2, 3}$, $B = \conjunto{2, 5}$ e $C = \conjunto{3, 4}$. Calcule $A \inter \paren{B \uniao C}$, $(A \inter B) \uniao (A \inter C)$ e $(A \inter B) \uniao  C$.
+	\end{exemplo}
 \end{frame}

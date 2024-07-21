@@ -1,18 +1,14 @@
 \section{Exercícios}
 \begin{frame}
 \frametitle{Exercícios} 
-\Ex{Mostre que a função $f: \Z \to \R$ definida por $f(x)=a^x$ é
-crescente se $a>1$ e decescente se $0<a<1$.}
 
-\Ex{Mostre que a função $f: \Q \to \R$ definida por $f(x)=a^x$ é
-crescente se $a>1$ e decescente se $0<a<1$.}
 
-\Ex{Uma alga cresce de modo que, em cada dia, ela cobre uma
-superfície de área igual ao dobro da coberta no dia anterior. Se
-esta alga cobre a superfície de um lago em 100 dias, qual é o número
-de dias necessários para que duas algas, da mesma espécie anterior,
-cubram a superfície do mesmo lago? E se forem quatro algas? Você
-consegue responder esta pergunta para 3 algas?}
+%\Ex{Uma alga cresce de modo que, em cada dia, ela cobre uma
+%superfície de área igual ao dobro da coberta no dia anterior. Se
+%esta alga cobre a superfície de um lago em 100 dias, qual é o número
+%de dias necessários para que duas algas, da mesma espécie anterior,
+%cubram a superfície do mesmo lago? E se forem quatro algas? Você
+%consegue responder esta pergunta para 3 algas?}
 
 \Ex{O gordinho Jaguatirica, certo dia, fez compras em 5 lojas de um
 shopping. Em cada loja, gastou metade do que possuia e pagou, na
@@ -27,15 +23,76 @@ ainda ficou com R\$ 20{,}00, que quantia ele tinha inicialmente?}
 \begin{frame}
 \frametitle{Exercícios} 
 
-\Ex{Se $\paren{a_n}$ é uma PA, prove que $\paren{ b_n}$ definida por
-$b_n = e^{a_n}$ é uma PG.}
+%\Ex{Se $\paren{a_n}$ é uma PA, prove que $\paren{ b_n}$ definida por
+%$b_n = e^{a_n}$ é uma PG.}
 
-\Ex{Existe exemplo de função crescente $f : \N \to \R_+^\ast$ tal
-que, para todo $x \in \N$, a sequência $f(x)$, $f(x+1)$, $f(x+2)$,
-..., $f(x+n)$, ... é uma progressão geométrica mas $f$ não é do tipo
-$f(x) = b \cdot a^x$?}
+%\Ex{Existe exemplo de função crescente $f : \N \to \R_+^\ast$ tal
+%que, para todo $x \in \N$, a sequência $f(x)$, $f(x+1)$, $f(x+2)$,
+%..., $f(x+n)$, ... é uma progressão geométrica mas $f$ não é do tipo
+%$f(x) = b \cdot a^x$?}
+
+\begin{exercise}
+    Uma aplicação rende a \emph{juros compostos} se o rendimento diário é somado ao capital inicial para o cálculo dos juros dos dias seguintes.
+    
+    Edson faz uma aplicação que rende juros $j>0$ em um mês. Ou seja, se ele investiu um capital inicial $c_0$, então ao fim de 1 mês, Edson poderia resgatar $c = c_0(1+j)$. Leia a \emph{Desigualdade de Bernoulli} e responda o que se pede no slide a seguir.\\
+	
+	\emph{Desigualdade de Bernoulli:}
+        Seja $a \in \R$ tal que $a \geq -1$. Seja também $b \in \R$.
+        
+         Caso $0 < b < 1$. Então $$(1+a)^b \leq 1 + ab.$$
+        
+         Caso seja $b<0$ ou $b>1$, então $$(1+a)^b \geq 1 + ab.$$
+        
+         Em ambos os casos, a igualdade só é satisfeita quando $a=0$.
+\end{exercise}
 
 \end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios}
+
+    \begin{enumerate}[(a)]
+        \item Caso a aplicação renda juros composto, defina uma função do tipo exponencial que calcule o capital $c_c$ em função do tempo $t$ (em meses) da aplicação;
+        \item Suponha que Edson precisará resgatar todo o dinheiro da aplicação em um tempo $t$ menor que um mês. É mais vantajoso aplicar com juros simples ou com juros compostos? Compare com a função criada no Exercício sobre juros simples do capítulo anterior e utilize a Desigualdade de Bernoulli enunciada anteriormente.
+        \item A conclusão do item anterior também é válida caso o tempo de aplicação fosse mais de 1 mês?
+	\end{enumerate}
+
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios}
+
+\begin{exercise}
+    Edson investiu R\$$500{,}00$ em um banco a uma taxa de juros de 9\% ao ano. Edson tem a pretensão de retirar seu dinheiro do banco quando o montante, ou seja, o dinheiro investido mais o rendimento, chegar a R\$$1.000{,}00$.
+
+Se os juros que o banco ofereceu forem juros compostos, defina a função do tipo exponencial que modela o montante e use-a para responder quanto tempo Edson vai esperar para retirar seu dinheiro.
+\end{exercise}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+%\begin{frame}
+%\frametitle{Exercícios}
+
+%\begin{exercise}
+%    Certa cidade teve seus casos de covid-19 perfeitamente monitorados durante $n$ dias. Observou-se que a sequência formada pela quantidade de casos acumulados a cada dia estavam em PG de razão $q>1$.
+%     \begin{enumerate}[(a)]
+%        \item Se no primeiro dia foi detectado $1$ caso, expresse o termo geral da PG no $i$-ésimo dia do monitoramento;
+%        \item Defina uma função do tipo exponencial (podendo ser uma translação ou uma dilatação de uma função do tipo exponencial) com domínio $[1, n]$ que modele o problema. Existe alguma função que não seja do tipo exponencial, ou seja, que não se encaixe na descrição anterior, que satisfaça o termo geral do item (a) para todo $i \pertence \conjunto{1, 2, ..., n}$? Justifique.
+%        \item Estime em que momento do monitoramento a cidade passou a ter uma quantidade $y$ de casos.
+%    \end{enumerate}
+%\end{exercise}
+
+%\end{frame}
 
 
 %------------------------------------------------------------------------------------------------------------
@@ -55,7 +112,12 @@ $f(x) = b \cdot a^x$?}
 \end{enumerate}
 }
 
+\begin{exercise}
+    Mostre que $$\log_{b^n}a^n = \log_{b}a$$ para todo $a, b, n \in \R_+^\ast $ e $b\neq 1$.
+\end{exercise}
 
+\Ex{Considere $x, y \in \R$ tais que $x = 10^k y$, com $k\in \Z$.
+Qual é a relação entre $\log x $ e $\log y$?}
 
 %\Ex{Dada as PA's $\paren{a_1, a_2, \dots, a_n, \dots}$ e
 %$\paren{b_1, b_2, \dots, b_n, \dots}$, mostre que existe uma, e
@@ -116,11 +178,28 @@ tempo $t$ em anos. Sabendo-se que $\log 2 \approx 0{,}30$ e $\log 11
 \begin{frame}
 \frametitle{Exercícios} 
 
-\Ex{Considere $x, y \in \R$ tais que $x = 10^k y$, com $k\in \Z$.
-Qual é a relação entre $\log x $ e $\log y$?}
 
-\Ex{Se $\paren{a_n}$ é uma PG com todos os termos positivos, prove
-que $\paren{ b_n}$ definida por $b_n = \ln{a_n}$ é uma PA.}
+
+\begin{exercise}
+    Há 4 anos uma certa doença tem uma diminuição constante de $20\%$ dos casos anualmente. Estudos apontam que esse decréscimo se manterá nos próximos anos. Hoje, há $10.000$ casos dessa doença. 
+
+        \begin{enumerate}[(a)]
+            \item Defina uma função real que modele o problema. Onde é informado o tempo e a função retorna a estimativa do número de casos;
+            \item Quanto tempo será necessário para que a estimativa do número de casos seja de $1.000$ pessoas?
+            \item Quanto tempo será preciso para a doença ser erradicada? Ou seja, para que a estimativa do número de casos seja inferior a $1$.
+            \end{enumerate}
+\end{exercise}
+
+%\Ex{Se $\paren{a_n}$ é uma PG com todos os termos positivos, prove
+%que $\paren{ b_n}$ definida por $b_n = \ln{a_n}$ é uma PA.}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios}
 
 \Ex{O acidente do reator nuclear de Chernobyl, URSS, em 1986, lançou
 na atmosfera grande quantidade do isótopo radioativo estrôncio-90,
@@ -133,5 +212,63 @@ radioativa e sabendo que o local poderá ser considerado seguro
 quando a quantidade de estrôncio-90 se reduzir, por desintegração, a
 $\frac 1 {16}$ da quantidade inicialmente presente, em que ano o
 local poderá ser habitado novamente? }
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios}
+
+\begin{exercise}
+    A \emph{escala logarítmica} é utilizada para representar certas grandezas ao invés da convencional \emph{escala linear}. Um exemplo é a escala Richter de terremotos. Nessa escala, a magnitude $m$ de um terremoto é expressa em graus e medida através da função real:
+
+    $$m (E) = \dfrac{2}{3} \log \left( \dfrac E {E_0} \right).$$
+
+    Onde $E$ é a energia liberada no terremoto, medida em kWh, e $E_0 = 10^{-3}$ kWh. Responda o que se pede no próximo slide.
+	\begin{remark}
+		O uso da calculadora só é permitido para o cálculo de potências de base 10 e expoente racional em forma de fração de números inteiros. Expresse esse resultado com duas casas decimais.
+   \end{remark}
+\end{exercise}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Exercícios}
+
+    \begin{enumerate}[(a)]
+        \item Há 10 anos o Japão passou pelo seu terremoto de maior magnitude. Esse terremoto  gerou um tsunami que atingiu a cidade de Fukushima, causando um acidente nuclear na usina que havia lá. O terremoto atingiu $9{,}1^\circ $ na escala Richter.
+
+        Em novembro deste ano, o maior terremoto do nosso estado completará 35 anos. Ele ocorreu na cidade de João Câmara e atingiu $5{,}1^\circ$ na escala Richter.
+
+        Calcule a energia liberada em cada um desses terremotos usando uma calculadora somente uma vez para cada uma das situações;
+        \item Calcule a razão entre as energias liberadas em um terremoto de grau $n+1$ e outro de grau $n$, ambos na escala Richter, a fim de responder qual a relação entre elas.
+    \end{enumerate}
+
+
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Desafios} 
+
+Para os exercícios abaixo, use somente as propriedades a seguir de inequações (se precisar, veja com mais detalhes na seção Inequação do 1º grau):
+\begin{itemize}
+	\item $a < b ; c>0 \implica a \cdot c < b \cdot c$;
+	\item Para $a, b, c, d \in \R_+$. Se $a< b$ e $c< d$, então $ac < bd$.
+\end{itemize}
+
+\Ex{Mostre que a função $f: \Z \to \R$ definida por $f(x)=a^x$ é
+crescente se $a>1$ e decrescente se $0<a<1$.}
+
+\Ex{Mostre que a função $f: \Q \to \R$ definida por $f(x)=a^x$ é
+crescente se $a>1$ e decrescente se $0<a<1$.}
 
 \end{frame}

@@ -1,0 +1,152 @@
+\section{Operações com Matrizes}
+
+
+\begin{frame}
+    \frametitle{Operações com Matrizes}
+    
+    \begin{definicao}[Produto por escalar e adição de matrizes]
+        Dadas matrizes de mesmo tipo, $ A = \paren{a_{ij}}_{m \times n}$ e $ B = \paren{b_{ij}}_{m \times n}$, e $\lambda \pertence \R$, definimos o \sub{produto por escalar $\lambda A$} e a \sub{adição $A+B$} por:
+        \begin{displaymath} \lambda A = 
+            \begin{bmatrix}
+                \lambda a_{11} & \dots & \lambda a_{1n} \\
+                \vdots & \ddots & \vdots \\
+                \lambda a_{m1} & \dots & \lambda a_{mn}
+            \end{bmatrix}
+        \end{displaymath}
+        e
+        \begin{displaymath}    A+B=
+            \begin{bmatrix}
+                a_{11} + b_{11} & \dots & a_{1n} + b_{1n} \\
+                \vdots & \ddots & \vdots \\
+                a_{m1} + b_{m1} & \dots & a_{mn} + b_{mn}
+            \end{bmatrix}.
+        \end{displaymath}
+    \end{definicao}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Operações com Matrizes}
+    
+    \begin{exemplo}
+        Calcule: 
+        \begin{displaymath} A = 3 \cdot 
+            \begin{bmatrix}
+                2 & 3 \\
+                3 & 4 \\
+                4 & 5
+            \end{bmatrix}
+        \end{displaymath}
+        e
+        \begin{displaymath}   B = 
+            \begin{bmatrix}
+                1 & 1 & 1 & 1 \\
+                2 & 4 & 8 & 16
+            \end{bmatrix} + 
+            \begin{bmatrix}
+                1 & 2 & 3 & 4 \\
+                1 & 4 & 9 & 16
+            \end{bmatrix}.
+        \end{displaymath}
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Operações com Matrizes} 
+	
+	\begin{proposicao}[Propriedades do produto por escalar e da adição]
+		\label{propopmatriz1}
+		Sejam $A$, $B$ e $C$ matrizes de mesmo tipo $m \times n$, e $\lambda , \mu \in \R$. Tem-se:
+		\begin{enumerate}[i.]
+			\item \sub{Comutatividade da adição}: $A+B = B+A$;
+			\item \sub{Associatividade da adição}: $A + (B+C) = (A+B)+C$;
+			\item \sub{Elemento neutro da adição}: $A + 0_{m \times n} = A$;
+			\item \sub{Existência do oposto aditivo}: $A + (-A) = 0_{m \times n}$;
+			\item \sub{Associatividade da multiplicação por escalar}: $\lambda (\mu A) = (\lambda \mu) A$;
+            \item \sub{Elemento neutro da multiplicação por escalar}: $1\cdot A = A$;
+			\item \sub{Distributividade, de uma em relação à outra}: $\lambda(A+B) = \lambda A + \lambda B$ e $(\lambda +\mu)A = \lambda A + \mu A$.
+		\end{enumerate}
+	\end{proposicao} 
+
+\end{frame}
+
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Operações com Matrizes}
+    
+    \begin{definicao}[Multiplicação de matrizes]
+        Dadas matrizes $ A = \paren{a_{ij}}_{m \times n}$ e $ B = \paren{b_{ij}}_{n \times p}$, onde o número de colunas de $A$ coincide com o número de linhas de $B$. Definimos o \sub{produto $ AB$} como a matriz $P = \paren{p_{ij}}_{m \times p}$, cujas entradas são:
+        $$ p_{ij} = \sum_{k=1}^n a_{ik}b_{kj} = a_{i1}b_{1j}+ a_{i2}b_{2j}+ \dots + a_{in}b_{nj}.$$
+    \end{definicao} \pause
+
+    \begin{exemplo}\label{exprodmatriz}
+        Calcule: 
+        \begin{displaymath} A =
+            \begin{bmatrix}
+                2 & 3 \\
+                3 & 4 \\
+                4 & 5
+            \end{bmatrix}  
+            \begin{bmatrix}
+                0 & -1 & 3 \\
+                3 & 2 & 1 
+            \end{bmatrix} \space \text{ e } \space B =
+            \begin{bmatrix}
+                2 & 3 \\
+                4 & 5
+            \end{bmatrix}  
+            \begin{bmatrix}
+                0 & -1 \\
+                3 & 2 
+            \end{bmatrix} .
+        \end{displaymath}
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Operações com Matrizes} 
+	
+	\begin{proposicao}[Propriedades do produto de matrizes]
+		\label{propopmatriz2}
+		Sejam as matrizes $A=(a_{ij})_{m \times n}$, $B=(b_{ij})_{n \times p}$, $C=(c_{ij})_{p \times q}$, $D=(d_{ij})_{n \times p}$ e $E=(e_{ij})_{m \times n}$. Tem-se:
+		\begin{enumerate}[i.]
+			\item \sub{Associatividade}: $A  \paren{B  C}= \paren{A  B} C$;
+			\item \sub{Distributividade à esquerda, em relação a soma}: $A\paren{B + D} = AB + AD$;
+			\item \sub{Distributividade à direita, em relação a soma}: $\paren{A + E}B = AB + EB$.
+		\end{enumerate}
+	\end{proposicao} 
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Operações com Matrizes} 
+
+
+	\begin{observacao}
+		Dadas duas matrizes $A$ e $B$ quadradas e de mesma ordem, os dois produtos $AB$ e $BA$ estão bem definidos. No entanto, de modo geral, eles NÃO SÃO IGUAIS, isto é, O PRODUTO DE MATRIZES QUADRADAS DE MESMA ORDEM NÃO É COMUTATIVO. Quando, excepcionalmente, ocorre a igualdade $AB = BA$, dizemos que $A$ e $B$ \sub{comutam}.
+	\end{observacao}\pause
+
+    \begin{exemplo}
+        Comprove a observação anterior comparando o produto das matrizes quadradas do Exemplo \ref{exprodmatriz} com o produto abaixo: 
+        \begin{displaymath} C = 
+            \begin{bmatrix}
+                0 & -1 \\
+                3 & 2
+            \end{bmatrix}  
+            \begin{bmatrix}
+                2 & 3 \\
+                4 & 5 
+            \end{bmatrix} .
+        \end{displaymath}
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------

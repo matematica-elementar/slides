@@ -1,0 +1,49 @@
+\section{Funções Compostas}
+\begin{frame}
+\frametitle{Composição de Funções} 
+
+\begin{definicao}
+Sejam $f: X \to Y$ e $g: U \to V$ duas funções, com $Y \contido U$.\\
+A \sub{função composta de $g$ com $f$} é a função denotada por $g
+\circ f$, com domínio em $X$ e contradomínio em $V$, que a cada
+elemento $x \in X$ faz corresponder o elemento $v = \paren{g \circ
+f}(x) = g(f(x)) \in V$. Isto é:
+$$\begin{array}{cccccc}
+g \circ f : & X & \to     & Y \contido U & \to & V \\
+		 &  x & \mapsto & f(x) & \mapsto & g(f(x))
+\end{array}.$$
+\end{definicao}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Composição de Funções} 
+
+\begin{exemplo}
+Seja $f: X \to Y$ uma função. Mostre que $f \circ \I{X} = f$ e $\I{Y}
+\circ f = f$.
+\end{exemplo}\pause
+
+\begin{exemplo}
+Qual função resulta da composição $p \circ q$?
+\end{exemplo}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Composição de Funções} 
+
+
+\begin{proposicao}[Associatividade da composição de funções]
+	Considere $f: X \to Y$, $g: U \to V$ e $h: A \to B$ funções, com $B \contido U$ e $V \contido X$. Vale a seguinte igualdade:
+	$$f \composta (g \composta h) = (f \composta g) \composta h.$$
+\end{proposicao}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------

@@ -11,7 +11,7 @@
 
 	\begin{exercicio}
 		Decida quais das afirmações a seguir estão corretas. Justifique suas respostas.
-		\begin{enumerate}[a.]
+		\begin{enumerate}[a)]
 			\item $\vazio \pertence \vazio$;
 			\item $\vazio \contido  \vazio$;
 			\item $\vazio \pertence \unitario{\vazio}$;
@@ -20,24 +20,14 @@
 	\end{exercicio}
 
 	\begin{exercicio}
-		Complete as demonstrações das Propriedades de União e Interseção que não foram feitas em sala de aula.
-	\end{exercicio}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Exercícios}
-	
-	\begin{exercicio}
-		Demonstre que os seguintes itens são equivalentes:
-		
-		\begin{enumerate}[a.]
-			\item $A \uniao B = B$;
-			\item $A \contido B$;
-			\item $A \inter B = A$;
+		Dê exemplos de conjuntos $A$, $B$ e $C$, justificando, que satisfaçam:
+		\begin{enumerate}[a)]
+			\item $A \contem B$;
+			\item $A \naocontem B$;
+			\item $A \contidoproprio B$;
+			\item $A \contido B$, $B \naocontido C$ e $A \contido C$;
+			\item $A \naocontido B$, $B \contido C$ e $A \naocontido C$.
 		\end{enumerate}
-		
-		\textit{Dica}: Para tanto, é preciso provar \textbf{a. $\sse$ b.} e \textbf{b. $\sse$ c.}. Outra maneira é provar \textbf{a. $\implica$ b.}, \textbf{b. $\implica$ c.} e por fim, \textbf{c. $\implica$ a.}.
 	\end{exercicio}
 \end{frame}
 
@@ -46,7 +36,62 @@
 	\frametitle{Exercícios}
 	
 	\begin{exercicio}
-		O diagrama de Venn para os conjuntos $X$, $Y$, $Z$ decompõe o plano em oito regiões. Numere essas regiões e exprima cada um dos conjuntos abaixo como reunião de algumas dessas regiões.  (Por exemplo: $X \inter Y = 1 \uniao 2$.)
+		Considere $A = \{x \in \Z_+ \talque x<3 \}$. Calcule $\partes{A}$.
+	\end{exercicio}
+
+	\begin{exercicio}
+		Dê exemplos de conjuntos $A$, $B$ e $C$, justificando com os cálculos, que satisfaçam:
+		\begin{enumerate}[a)]
+			\item $A \uniao ( B \inter C) \diferente (A \uniao B) \inter C$. Qual o conjunto que será sempre igual a $A \uniao ( B \inter C)$?
+			\item $A \contido B$ mas $A\complementar \naocontido B\complementar$. Qual inclusão é sempre válida envolvendo $A\complementar$ e $B\complementar$?
+			\item $A \contidoproprio B$;
+			\item $(A \inter B)\complementar \diferente A\complementar \inter B\complementar$. Qual o conjunto que será sempre igual a $(A \inter B)\complementar$?
+		\end{enumerate}
+	\end{exercicio}
+
+	\begin{exercicio}
+		As igualdades abaixo acerca dos conjuntos $A$, $B$ e $C$ não são válidas geralmente. Em cada um dos itens, dê exemplos que ilustram esses fatos.
+		\begin{enumerate}[a)]
+			\item $A \diferenca ( B \inter C) = \paren{A \diferenca B} \inter \paren{A \diferenca C}$;
+			\item $A \diferenca ( B \uniao C) = \paren{A \diferenca B} \uniao \paren{A \diferenca C}$.
+		\end{enumerate}
+	\end{exercicio}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Exercícios}
+	
+	\begin{exercicio}
+		Sejam $A$, $B$ conjuntos quaisquer. Classifique como verdadeiro ou falso cada sentença abaixo. Justifique ou dê um contra-exemplo no caso da sentença ser falsa.
+            \begin{enumerate}[a)]
+                \item  $\left(A \setminus B\right) \contido B$;
+                \item  $\left(A \setminus B\right) \contido \left(A \cup B\right)$.
+            \end{enumerate}
+	\end{exercicio}
+
+	\begin{exercicio}
+		Sejam $A$, $B$ e $C$ conjuntos tais que $A \uniao B \uniao C = \universo$. Em cada um dos itens, use propriedades para obter um conjunto igual a esses escrito somente com uniões de conjuntos.
+		\begin{enumerate}[a)]
+			\item $A \uniao \paren{ B \inter C\complementar} \uniao \paren{A\complementar \inter B\complementar \inter C\complementar} \uniao C$;
+			\item $\colche{\paren{A\complementar \inter B \inter C} \uniao \paren{A \inter B \inter C}}\complementar$;
+			\item $\colche {\paren{A \uniao B\complementar \uniao C} \uniao \paren{B \uniao C\complementar}}\complementar $;
+			\item $\colche {\paren{A \uniao B\complementar \uniao C} \inter \paren{B \inter C\complementar}}\complementar $.
+		\end{enumerate}
+	\end{exercicio}
+
+	\begin{exercicio}
+		Sejam $A$, $B$, $C$, $D$ conjuntos. Use propriedades do nosso material para obter um conjunto igual ao abaixo escrito somente com interseções de, no máximo, 3 conjuntos.
+        $$[A^C \cap B \cap (C \cup D^C)^C] \cup [A \cap (B^C \cup C)^C \cap D].$$
+	\end{exercicio}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Exercícios}
+	
+	\begin{exercicio}
+		O \href{https://pt.wikipedia.org/wiki/Diagrama_de_Venn}{{\tt Diagrama de Venn}} para os conjuntos $X$, $Y$, $Z$ decompõe o plano em oito regiões. Numere essas regiões e exprima cada um dos conjuntos abaixo como reunião de algumas dessas regiões.  (Por exemplo: $X \inter Y = 1 \uniao 2$.)
 		
 		\begin{enumerate}[a.]
 			\item $\left(X^C \uniao Y \right)^C$;
@@ -57,7 +102,7 @@
 	\end{exercicio}
 
 	\begin{exercicio}
-		Exprimindo cada membro como reunião de regiões numeradas, prove as igualdades:
+		Exprimindo cada membro como reunião de regiões numeradas, verifique as igualdades:
 		\begin{enumerate}[a.]
 			\item $\left(X \uniao Y \right)\inter Z = \left(X \inter Z \right) \uniao \left(Y \inter Z
 			\right)$;
@@ -69,29 +114,20 @@
 
 \begin{frame}
 	\frametitle{Exercícios}
+	
 	\begin{exercicio}
-		Sejam $A$, $B$ e $C$ conjuntos. Determine uma condição necessária e suficiente para que se tenha
-		\[
-			A \uniao (B \inter C) = (A \uniao B) \inter C.
-		\]
-	\end{exercicio}
-
-	\begin{exercicio}
-		Recorde a definição da diferença entre conjuntos:
-		\[
-			B \menos A = \conjunto { x \taisque x \pertence B \e x \naopertence A }.
-		\]
-		Mostre que
+		Reduza as expressões abaixo a um intervalo ou a união de intervalos disjuntos.
 		\begin{enumerate}[a.]
-			\item $B \menos A = B \inter A^C$;
-			\item $(B \menos A)^C = B^C \uniao A$;
-			\item $B \menos A = \vazio$ se, e somente se, $B \contido A$;
-			\item $B \menos A = B$ se, e somente se, $A \inter B = \vazio$;
-			\item Vale a igualdade $B \menos A = A \menos B$ se, e somente se, $A = B$;
-			\item Determine uma condição necessária e suficiente para que se tenha
-			\[
-				A \menos (B \menos C) = (A \menos B) \menos C.
-			\]
+			\item $[12; 36) \uniao [-2;37]$;
+			\item $(-\infty ; -2) \inter (-1; \dfrac {-1}2)$;
+			\item $([4; 6] \uniao (5; 8]) \inter ([4; 6] \uniao [4; 9))$;
+			\item $[2; + \infty)\complementar$;
+			\item $\paren{[3;5] \uniao [6;9]}\complementar$;
+			\item $\paren{[2;5]\complementar \inter (-\infty ; 6)}\complementar$;
+			\item $\paren{(2;4] \inter (1;4)} \uniao (7;12]$;
+			\item $[\dfrac \pi 6 ; 2 \pi] \uniao [\pi ; 3 \pi)$;
+			\item $( \pi ; + \infty) \diferenca \R$;
+			\item $\R \diferenca (-\infty ; 3]$.
 		\end{enumerate}
 	\end{exercicio}
 \end{frame}
@@ -99,109 +135,39 @@
 
 \begin{frame}
 	\frametitle{Exercícios}
-
-	\Ex{
-		Dê exemplos de implicações, envolvendo conteúdos de ensino médio, que sejam: verdadeiras com recíproca verdadeira; verdadeiras com recíproca falsa; falsas, com recíproca verdadeira; falsas, com recíproca falsa.
-	}
-
-	\Ex{
-		Considere $P$, $Q$ e $R$ condições aplicáveis aos elementos de um conjunto universo $\U$, e $A$, $B$ e $C$ os subconjuntos de $\U$ dos elementos que satisfazem $P$, $Q$ e $R$, respectivamente. Expresse, em termos de implicações entre $P$, $Q$ e $R$, as seguintes relações entre os conjuntos $A$, $B$ e $C$.
-		\begin{enumerate}[a.]
-			\item $A \inter B^C \contido C$;
-			\item $A^C \uniao B^C \contido C$;
-			\item $A^C \uniao B \contido C^C$;
-			\item $A^C \contido B^C \uniao C$;
-			\item $A \contido B^C \uniao C^C$.
-		\end{enumerate}
-	}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Exercícios}
 	
-	\Ex{
-		Considere as seguintes (aparentes) equivalências lógicas:
-		\begin{align*}
-			x = 1 & \sse x^2 - 2x + 1 = 0 \\
-			      & \sse x^2 - 2 \vezes 1 + 1 = 0 \\
-			      & \sse x^2 - 1 = 0 \\
-			      & \sse x = \maisoumenos 1
-		\end{align*}
-		Conclusão (?): $x = 1 \sse x = \maisoumenos 1$. Onde está o erro?
-	} 
+	\begin{exercicio}
+		Faça os testes do Khan Academy das unidades que envolvam frações em
+\href{https://pt.khanacademy.org/math/arithmetic}
+{{\tt Aritmética}}. Ao final, revise os assuntos que você teve
+problema. 
+	\end{exercicio}
+
+	\begin{exercicio}
+		Faça o estudo completo (vídeos e exercícios) no Khan Academy da unidade
+\href{https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86:irrational-numbers}
+{{\tt Números Irracionais}}.
+	\end{exercicio}
+
+	\begin{exercicio}
+		Faça o estudo completo (vídeos e exercícios) no Khan Academy da unidade
+\href{https://pt.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:exp}
+{{\tt Radicais e Expoentes Racionais}}.
+	\end{exercicio}
 \end{frame}
 
 
-\begin{frame}
-	\frametitle{Exercícios}
-	
-	\Ex{
-		\label{exe:escrever-reciprocas}
-		Escreva as recíprocas, contrapositivas e negações matemáticas das seguintes afirmações:
-		\begin{enumerate}[a.]
-			\item Todos os gatos têm rabo; $(G \implica R)$\\
-			\sub{Recíproca:} Se têm rabo então é gato; $(R \implica G)$\\
-			\sub{Contrapositiva:} Se não tem rabo então não é gato; $(\negacao R \implica \negacao G)$\\
-			\sub{Negação:} Existe um gato que não tem rabo. $(G \land \negacao R)$
-			\item Sempre que chove, eu saio de guarda-chuva ou fico em casa;
-			\item Todas as bolas de ping pong são redondas e brancas;
-			\item Sempre que é terça-feira e o dia do mês é um número primo, eu vou ao cinema;
-			\item Todas as camisas amarelas ou vermelhas têm manga comprida;
-			\item Todas as coisas quadradas ou redondas são amarelas e
-			vermelhas.
-		\end{enumerate}
-	}  
-\end{frame}
+%\begin{frame}
+%	\frametitle{Exercícios}
+%	
+%	\Ex{
+%		Considere as seguintes (aparentes) equivalências lógicas:
+%		\begin{align*}
+%			      & \sse x^2 - 2 \vezes 1 + 1 = 0 \\
+%			      & \sse x^2 - 1 = 0 \\
+%			      & \sse x = \maisoumenos 1
+%		\end{align*}
+%		Conclusão (?): $x = 1 \sse x = \maisoumenos 1$. Onde está o erro?
+%	} 
+%\end{frame}
 
-
-\begin{frame}
-	\frametitle{Exercícios}
-	
-	\Ex{
-		Considere os conjuntos: $F$ composto por todos os filósofos; $M$ por todos os matemáticos; $C$ por todos os cientistas; e $P$ por todos os professores.
-		\begin{enumerate}[a.]
-			\item Exprima cada uma das afirmativas abaixo usando a linguagem de conjuntos: \\
-			(i) Todos os matemáticos são cientistas; (ii) Alguns matemáticos são professores; (iii) Alguns cientistas são filósofos; (iv) Todos os filósofos são cientistas ou professores; (v) Nem todo professor é cientista.
-			\item Faça o mesmo com as afirmativas abaixo: \\
-			(vi) Alguns matemáticos são filósofos; (vii) Nem todo filósofo é cientista; (viii) Alguns filósofos são professores; (ix) Se um filósofo não é matemático, ele é professor; (x) Alguns filósofos são matemáticos.
-			\item Tomando as cinco primeiras afirmativas como hipóteses, verifique quais das afirmativas do segundo grupo são necessariamente verdadeiras.
-		\end{enumerate}
-	}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Exercícios}
-	
-	\Ex{
-		Considere um grupo de 4 cartões, que possuem uma letra escrita em um dos lados e um número do outro. Suponha que seja feita, sobre esses cartões, a seguinte afirmação: \emph{Todo cartão com uma vogal de um lado tem um número ímpar do outro}. Quais dos cartões abaixo você precisaria virar para verificar se essa afirmativa é verdadeira ou falsa?
-	
-		\begin{center}
-			\begin{tabular}{|c|c|c|c|c|c|c|}
-				\cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
-				A & $\empty$ & 1 & $\empty$ & B & $\empty$ & 4 \\
-				\cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
-			\end{tabular}
-		\end{center}
-	}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Exercícios}  
-
-	\Ex{
-		Numa mesa há cinco cartas:
-		\begin{center}
-			\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-				\cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7} \cline{9-9}
-				Q & $\empty$ & T & $\empty$ & 3 & $\empty$ & 4 & $\empty$ & 6 \\
-				\cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7} \cline{9-9}
-			\end{tabular}
-		\end{center}
-		Cada carta tem um número natural de um lado e uma letra de outro lado.
-		Nico afirma: \entreaspas{Qualquer carta que tenha uma vogal tem um número par do outro lado}.
-		Jorel provou que Nico mente virando somente uma das cartas. Qual das cinco cartas Jorel teve que virar para provar que Nico mentiu?
-	}  
-\end{frame}

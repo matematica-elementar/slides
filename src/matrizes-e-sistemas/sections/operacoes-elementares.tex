@@ -1,0 +1,74 @@
+\section{Operações Elementares}
+
+\begin{frame}
+    \frametitle{Operações Elementares sobre Matrizes}
+
+    Algumas operações sobre as linhas de uma matriz são ditas \sub{elementares}. São elas:
+    \begin{itemize}
+        \item $(l_i \sselogico l_j)$: Troca de posição entre duas linhas  $l_i$ e $l_j$;
+        \item $(l_i \to \lambda l_i)$: Multiplicação de uma linha $l_i$ por um escalar $\lambda \neq 0$;
+        \item $(l_j \to l_j + \lambda l_i)$: Substituição de uma linha $l_j$ por $l_j +\lambda l_i$, sendo $\lambda \neq 0$.\pause
+    \end{itemize}
+    
+    \begin{definicao}[Equivalência por linhas]
+        Diz-se que uma matriz $B$ é \sub{linha equivalente} a uma matriz $A$ quando $B$ é obtida de $A$ efetuando-se nesta uma sequência de operações elementares.
+    \end{definicao}\pause
+
+    \begin{proposicao}
+        Dois sistemas lineares $AX=B$ e $A'X=B'$ são equivalentes se suas matrizes aumentadas $(A|B)$ e $(A'|B')$ são linha equivalentes.
+    \end{proposicao}
+
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Operações Elementares sobre Matrizes}
+
+    \begin{definicao}[Matriz escalonada]
+        Diz-se que uma matriz $A= (a_{ij})_{m \times n}$ é \sub{escalonada} quando cumpre as seguintes condições:
+        \begin{itemize}
+            \item O primeiro elemento não-nulo de uma linha está à esquerda do primeiro elemento não-nulo da linha subsequente;
+            \item As linhas nulas, caso existam, estão abaixo das demais.
+        \end{itemize}
+    \end{definicao}\pause
+
+    Para resolvermos um sistema linear, fazemos o \sub{escalonamento} da matriz aumentada do sistema a fim de obtermos uma matriz escalonada que seja linha equivalente à matriz aumentada do sistema. Esse procedimento é chamado de \sub{Método de Gauss} ou \sub{Eliminação Gaussiana}.
+    
+
+    
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Operações Elementares sobre Matrizes}
+
+    \begin{exemplo}
+        Encontre o conjunto solução para o sistema
+
+        \[\left\{
+        \begin{array}{rrrrrrr}
+        x &-&2y &+ &3z &= &1 \\
+        2x &+& y &-&z &= &2 \\
+        4x &-&3y &+&5z &= &4  
+        \end{array} \right..\]
+    \end{exemplo} \pause
+    
+    \begin{exemplo}
+        Encontre o conjunto solução para o sistema
+
+        $$\left\{
+        \begin{array}{rrrrrrrrr}
+        2x &-&y & & &+ &4t &= &9 \\
+        x &+& y &-&z & + & 2t&= &7 \\
+        -x &+& 2y &+&z & - & t&= &3 \\
+         & &4y &-&z &+ & 3t&= &13  
+        \end{array} \right. .$$
+    \end{exemplo}
+    
+
+\end{frame}
+
+%------------------------------------------------------------------------
+

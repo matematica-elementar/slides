@@ -18,6 +18,8 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
+\usepackage{mathtools}
+
 
 % Diversas funções para o uso das aspas.
 \usepackage{csquotes}
@@ -68,13 +70,17 @@
 %Ambientes sem a numeração
 \newtheorem*{obs*}{Observação}
 \newtheorem*{observacao*}{Observação}
+\newtheorem*{remark}{Observação}
+\newtheorem*{hint}{Dica}
+%\newtheorem*{solution}{Solução}
 
 %Numeração dos exercícios
 \newcounter{exercicios}
 \newenvironment{exercicio}{\stepcounter{exercicios} \textbf{\arabic{exercicios}}.}{}
+\newenvironment{exercise}{\stepcounter{exercicios} \textbf{\arabic{exercicios}}.}{}
 
 % compatibilidade
-\newcommand{\Ex}[1]{\begin{exercicio}#1\end{exercicio}}
+\newcommand{\Ex}[1]{\begin{exercicio} #1 \end{exercicio}}
 
 %
 %   Definições e comandos auxiliares do preâmbulo
@@ -82,7 +88,7 @@
 
 \newcommand{\capitulo}[1]{\lecture[#1]{Capítulo}}
 \newcommand{\aula}[1]{\subtitle{#1}}
-\newcommand{\autor}{Igor Oliveira e Rafaela Horacina}
+\newcommand{\autor}{Igor Oliveira}
 \newcommand{\email}{\href{mailto:matematicaelementar@imd.ufrn.br}{\texttt{matematicaelementar@imd.ufrn.br}}}
 \newcommand{\disciplina}{Matemática Elementar}
 \newcommand{\codigo}{IMD1001}
@@ -122,3 +128,8 @@
 \newcommand{\negacao}{\sim}
 
 \justifying
+
+
+% Uso dos Tikz
+
+\newcommand{\importtikz}[1]{\input{tikz/#1.tex}}

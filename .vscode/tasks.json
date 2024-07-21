@@ -39,9 +39,23 @@
             "group": "build"
         },
         {
-            "label": "Equações e Inequações",
+            "label": "Equações e Inequações Pt1",
             "type": "shell",
-            "command": "make slides aula=equacoes-e-inequacoes",
+            "command": "make slides aula=equacoes-e-inequacoes-pt-1",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Equações e Inequações Pt2",
+            "type": "shell",
+            "command": "make slides aula=equacoes-e-inequacoes-pt-2",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Matrizes e Sistemas Lineares",
+            "type": "shell",
+            "command": "make slides aula=matrizes-e-sistemas",
             "problemMatcher": [],
             "group": "build"
         },
@@ -70,6 +84,20 @@
             "label": "Funções Reais e Gráficos",
             "type": "shell",
             "command": "make slides aula=funcoes-reais-e-graficos",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Funções Reais e Gráficos Pt1",
+            "type": "shell",
+            "command": "make slides aula=funcoes-reais-e-graficos-pt-1",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Funções Reais e Gráficos Pt2",
+            "type": "shell",
+            "command": "make slides aula=funcoes-reais-e-graficos-pt-2",
             "problemMatcher": [],
             "group": "build"
         },

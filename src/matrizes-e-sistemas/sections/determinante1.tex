@@ -1,0 +1,53 @@
+\section{Determinante}
+
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes $2 \times 2$ e $3 \times 3$}
+    
+    \begin{definicao}[Determinante de matrizes $2 \times 2$ e $3 \times 3$]
+        Dadas as matrizes  $ A = \paren{a_{ij}}_{2 \times 2}$ e $ B = \paren{b_{ij}}_{3 \times 3}$, definimos o \sub{determinante} de $A$ e $B$, denotados, respectivamente, por $\det A$ e $\det B$ como sendo
+        \begin{displaymath} \det A = 
+            \begin{vmatrix}
+                 a_{11} & a_{12} \\
+                 a_{21} &  a_{22}
+            \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}
+        \end{displaymath}
+        e
+        \begin{align*}    \det B =&
+            \begin{vmatrix}
+                b_{11} & b_{12} & b_{13} \\
+                b_{21} & b_{22} & b_{23} \\
+                b_{31} & b_{32} & b_{33}
+            \end{vmatrix} \\
+            =& \paren{b_{11}b_{22}b_{33} + b_{12}b_{23}b_{31} + b_{13}b_{21}b_{32}} \\ 
+            & - \paren{b_{13}b_{22}b_{31} + b_{11}b_{23}b_{32} + b_{12}b_{21}b_{33}}.
+        \end{align*}
+    \end{definicao}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes $2 \times 2$ e $3 \times 3$}
+    
+    \begin{exemplo}
+        Calcule o determinante das matrizes $A$ e $B$ do Exemplo \ref{exinversa}, ou seja,
+        
+        \begin{displaymath}  
+            \begin{vmatrix}
+                1 & 1  \\
+                0 & 2
+            \end{vmatrix}
+        \text{ e }  
+            \begin{vmatrix}
+                1 & 2 & 1 \\
+                0 & 1 & 1 \\
+                2 & 4 & 2 
+            \end{vmatrix}.
+        \end{displaymath}
+    \end{exemplo}
+
+\end{frame}
+
+%------------------------------------------------------------------------
+

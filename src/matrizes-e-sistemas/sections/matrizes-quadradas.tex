@@ -1,0 +1,117 @@
+\section{Matrizes Quadradas}
+
+
+\begin{frame}
+    \frametitle{Tipos de Matrizes Quadradas}
+    
+    \begin{definicao}[Matrizes triangulares e diagonais]
+        Uma matriz quadrada $A=(a_{ij})_{n\times n}$ é dita \sub{triangular}, quando ocorre uma das possibilidades:
+        
+        $$a_{ij} = 0 \ \ \forall i>j \ \  \text{ ou } \ \  a_{ij} = 0 \ \  \forall i<j.$$
+
+        No primeiro caso, ela é dita \sub{triangular superior} e, no segundo, \sub{triangular inferior}. Uma matriz que é triangular superior e inferior é dita \sub{diagonal}.
+    \end{definicao}\pause
+
+    \begin{exemplo}
+        As matrizes $A$, $B$ e $C$ abaixo são, respectivamente, triangular superior, inferior e diagonal.
+        
+        \begin{displaymath} A = 
+            \begin{bmatrix}
+                3 & 0 & 2 \\
+                0 & 0 & 1 \\
+                0 & 0 & 1
+            \end{bmatrix}
+        ,    
+        B=
+            \begin{bmatrix}
+                1 & 0 & 0 \\
+                7 & 2 & 0 \\
+                -2 & 0 & 0
+            \end{bmatrix}
+        \text{ e } C = 
+            \begin{bmatrix}
+                1 & 0  \\
+                0 & 2  
+            \end{bmatrix}.
+        \end{displaymath}
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Tipos de Matrizes Quadradas}
+    
+    \begin{definicao}[Matriz Identidade]
+        Uma matriz diagonal $n\times n$ cujas entradas não obrigatoriamente nulas são todas iguais a $1$ é chamada de \sub{matriz identidade} de ordem $n$, a qual denota-se por $I_n$ ou, simplesmente, por $I$.
+    \end{definicao}\pause
+    A matriz identidade de ordem $n$ é o elemento neutro da multiplicação de matrizes quadradas, pois, para toda matriz quadrada $A$ de ordem $n$, vale a igualdade: $$AI = IA = A.$$
+
+    Além disso, dada uma matriz $B_{n \times m}$, vale também: $$BI_m = I_nB = B.$$
+
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Tipos de Matrizes Quadradas}
+    
+    \begin{definicao}[Matrizes invertíveis]
+        Diz-se que uma matriz quadrada $A$ é  \sub{invertível}, quando existe uma matriz quadrada $B$, de mesma ordem que $A$, tal que $$AB = BA = I.$$
+    \end{definicao}\pause
+
+    Prova-se que $A$, quando invertível, possui uma única matriz inversa. Tal matriz é dita a \sub{inversa} de $A$, e denotada por $A^{-1}$.\pause
+
+
+    \begin{exemplo}
+        Verifique que as matrizes abaixo são invertíveis multiplicando-as.
+        
+        \begin{displaymath} A = 
+            \begin{bmatrix}
+                1 & 0  \\
+                0 & \dfrac 1 2
+            \end{bmatrix}
+        \text{ e } B = 
+            \begin{bmatrix}
+                1 & 0  \\
+                0 & 2  
+            \end{bmatrix}.
+        \end{displaymath}
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Tipos de Matrizes Quadradas}
+
+    Para calcular a inversa de uma matriz $A$, escalona-se a matriz aumentada $(A|I)$ a fim de se obter uma matriz equivalente por linhas do tipo $(I|B)$. Se for possível tal procedimento, então $B = A^{-1}$. Caso contrário, $A$ não é invertível.
+    
+    \begin{exemplo}\label{exinversa}
+        Calcule a inversa das matrizes abaixo
+        
+        \begin{displaymath} A = 
+            \begin{bmatrix}
+                1 & 1  \\
+                0 & 2
+            \end{bmatrix}
+        \text{ e } B = 
+            \begin{bmatrix}
+                1 & 2 & 1 \\
+                0 & 1 & 1 \\
+                2 & 4 & 2 
+            \end{bmatrix}.
+        \end{displaymath}
+    \end{exemplo}\pause
+
+    \begin{exemplo}
+        Qual a solução do sistema abaixo?
+        $$\left\{
+        \begin{array}{rrrrr}
+        x &+& y & = &2 \\
+        & & 2y& =& 4 
+        \end{array} \right.$$
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------

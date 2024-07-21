@@ -4,7 +4,7 @@
 \begin{frame}
 	\frametitle{A Relação de Inclusão}
 
-	\begin{definicao}
+	\begin{definicao}[Relação de Inclusão]
 		Sejam $A$ e $B$ conjuntos. Se todo elemento de $A$ for também elemento de $B$, diz-se que $A$ é um \sub{subconjunto} de $B$, que $A$ \sub{está contido} em $B$, ou que $A$ é \sub{parte} de $B$. Para indicar esse fato, usa-se a notação $A \contido B$.
 	\end{definicao}
 
@@ -19,9 +19,9 @@
 
 	\begin{exemplo}
 		Sejam $T$ o conjunto de todos os triângulos e $P$ o conjunto dos polígonos do plano. Todo triângulo é um polígono, logo $ T \contido P$.
-	\end{exemplo}
+	\end{exemplo}\pause
 
-	\begin{exemplo}
+	\begin{exemplo}\label{exem:subconjuntosdoplano}
 		Na Geometria, uma reta, um plano e o espaço são conjuntos. Seus elementos são pontos.
 
 		Quando dizemos que uma reta $r$ está no plano $\Pi$, estamos afirmando que $r$ está contida em $\Pi$ ou, equivalentemente, que $r$ é um subconjunto de $\Pi$, pois todos os pontos que pertencem a $r$ pertencem também a $\Pi$.
@@ -34,12 +34,26 @@
 \begin{frame}
 	\frametitle{A Relação de Inclusão} 
 
+	\begin{exemplo}
+		Considere os conjuntos $N = \conjunto{1, 2, 3, 4, 5, 6}$, $I = \conjunto{1, 3, 5}$ e $P = \conjunto{0, 2, 4, 6}$. Analisando o cenário, podemos concluir que:
+	\begin{enumerate}
+		\item $I \contido N$. Observe que todos os elementos de $I$ também são elementos de $N$.
+		\item $P \naocontido N$. Observe que nem todos os elementos de $P$ são elementos de $N$, pois $0 \pertence P$ mas $0 \naopertence N$.
+	\end{enumerate}
+	\end{exemplo}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{A Relação de Inclusão} 
+
 	\begin{proposicao}[Inclusão universal do $\vazio$]
 		Para todo conjunto $A$, vale $\vazio \contido A$.
-	\end{proposicao}
+	\end{proposicao}\pause
 
-	\begin{definicao}
-		Dizemos que $A \diferente \vazio$ é um \sub{subconjunto próprio} de $B$ quando $A \contido B$  e $A \diferente B$.
+	\begin{definicao}[Inclusão Própria]
+		Dizemos que um conjunto $A$ é um \sub{subconjunto próprio} de $B$ quando $A \contido B$  e $A \diferente B$. Denotamos esse fato por $A \contidoproprio B$.
 	\end{definicao}
 \end{frame}
 
@@ -51,21 +65,35 @@
 		Sejam $A$, $B$ e $C$ conjuntos. Tem-se:
 		\begin{enumerate}[i.]
 			\item \sub{Reflexividade}: $A \contido A$;
-			\item \sub{Antissimetria}: Se $A \contido B$ e $B \contido A$, então $A = B$;
+			\item \sub{Antissimetria}: $A = B$ se, e somente se, $A \contido B$ e $B \contido A$;
 			\item \sub{Transitividade}: Se $A \contido B$ e $B \contido C$, então $A \contido C$.
 		\end{enumerate}
 	\end{proposicao}
 
-	Demonstração no quadro.
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{A Relação de Inclusão} 
 
-	\begin{definicao}
+	\begin{exemplo}
+		Considere os conjuntos $A = \conjunto{1, 2}$, $B = \conjunto{1, 2, 3}$ e $C = \conjunto{1,  4}$. Analisando o cenário, podemos concluir que:
+	\begin{enumerate}
+		\item $A \contido B$, mas $B \naocontido A$, então não poderíamos ter $A = B$.
+		\item $A \contido B$, mas $B \naocontido C$ e $A \naocontido C$. Até poderia ocorrer a inclusão $A \contido C$, mas isso só seria obrigatório se tivéssemos $B \contido C$ além de $A \contido B$.
+	\end{enumerate}
+	\end{exemplo}
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{A Relação de Inclusão} 
+
+	\begin{definicao}[Conjunto das Partes]
 		Dado um conjunto $A$, chamamos de \sub{conjunto das partes} de $A$ o conjunto formado por todos os seus subconjuntos, e denotamo-lo $\partes{A}$.
-	\end{definicao}
+	\end{definicao}\pause
 
 	\begin{exemplo}
 		Dado $A = \conjunto {1, 2, 3}$, determine $\partes{A}$.

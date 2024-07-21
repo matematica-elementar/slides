@@ -4,11 +4,10 @@
 \begin{frame}
 	\frametitle{O Complementar de um Conjunto}
 
-	A noção de complementar de um conjunto só faz sentido quando fixamos um \sub{conjunto universo}, que denotaremos por $\U$. Uma vez fixado $\U$, todos os elementos considerados pertencerão a $\U$ e todos os conjuntos serão subconjuntos de $\U$. Por exemplo, na geometria plana, $\U$ é o plano.
 
-	\begin{definicao}
+	\begin{definicao}[Complementar]
 		Dado um conjunto $A$ (isto é, um subconjunto de $\U$), chama-se \sub{complementar} de $A$ ao conjunto $A^C$ formado pelos elementos de $\U$ que não pertencem a $A$.
-	\end{definicao}
+	\end{definicao}\pause
 
 	\begin{exemplo}
 		Seja $\U$ o conjunto dos triângulos. Qual o complementar do conjunto dos triângulos escalenos?
@@ -25,26 +24,41 @@
 		\begin{enumerate}[i.]
 			\item $\complemento{\universo} = \vazio$ e $\complemento{\vazio} = \universo$;
 			\item $\complemento{\complemento A} = A$ (Todo conjunto é complementar do seu complementar);
-			\item Se $A \contido B$ então $B\complementar \contido A\complementar$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro).
+			\item Se $A \contido B$ então $B\complementar \contido A\complementar$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro);
+			\item $A \uniao A\complementar = \universo$ e $A \inter A\complementar = \vazio$;
+			\item \sub{Leis de DeMorgan}: $(A \uniao B)^C = A^C \inter B^C$ e $(A \inter B)^C = A^C \uniao B^C$.
 		\end{enumerate}
 	\end{proposicao}
 
-	Demonstração no quadro.
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{O Complementar de um Conjunto}
 
-	\begin{definicao}
+	\begin{exemplo}
+		Sejam $\universo = \conjunto{1,2,3,4,5}$, $A = \conjunto{1, 2, 3}$ e $B = \conjunto{2, 5}$. Calcule $(A \uniao B)\complementar$, $A\complementar \inter B\complementar$ e $A\complementar \uniao B\complementar$.
+	\end{exemplo}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{O Complementar de um Conjunto}
+
+	\begin{definicao}[Diferença]
 		A \sub{diferença} entre dois conjuntos $A$ e $B$ é definida por:
 		\[
 			B \menos A = \conjunto { x \taisque x \pertence B \e x \naopertence A}.
 		\]
-	\end{definicao}
+	\end{definicao}\pause
 
 	\begin{itemize}
-		\item Em geral, não temos $B \menos A = A \menos B$. Pense em um contraexemplo a essa igualdade.
-		\item Note que $A\complementar = \universo \menos A$.
-	\end{itemize}
+		\item Note que $A\complementar = \universo \menos A$ e $B \menos A = B \inter A\complementar$;
+		\item Em geral, não temos $B \menos A = A \menos B$. O exemplo a seguir comprova essa afirmação.
+	\end{itemize}\pause
+
+	\begin{exemplo}
+		Sejam $A = \conjunto{1, 2, 3}$ e $B = \conjunto{2, 5}$. Determine $A \menos B$ e $B \menos A$.
+	\end{exemplo}
 \end{frame}

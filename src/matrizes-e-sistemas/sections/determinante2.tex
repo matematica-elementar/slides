@@ -1,0 +1,179 @@
+\section{Determinante}
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes de Ordem $n$}
+
+    Antes de apresentar uma definição para o determinante de uma matriz quadrada qualquer, vejamos alguns resultados mais simples sobre o determinante. \pause
+
+    \begin{proposicao}\label{prop-equiv-sl-mat}
+        Dada uma matriz $A_{n \times n}$, são equivalentes as afirmações abaixo:
+        \begin{enumerate}[i)]
+            \item Para toda matriz $B_{n \times 1}$, o sistema linear $AX=B$ admite uma única solução;
+            \item $A$ é invertível;
+            \item $\det A \neq 0$.
+        \end{enumerate}
+    \end{proposicao}\pause
+
+ 
+    
+    \begin{exemplo}
+        Considere a matriz $C_{3 \times 1}$. O que a  Proposição \ref{prop-equiv-sl-mat} pode te garantir acerca de um sistema linear $BX = C$ onde $B$ é definida no Exemplo \ref{exinversa}?
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes de Ordem $n$}
+
+    
+    \begin{proposicao}[Propriedades]
+        Considere as matrizes $A_{n \times n}$ e $B_{n \times n}$, são válidas as afirmações abaixo:
+        \begin{enumerate}[i)]
+            \item $\det (AB) = \det A \cdot \det B$;
+            \item Se $A$ é invertível, então $\det (A^{-1}) = \dfrac 1 {\det A}$.
+        \end{enumerate}
+    \end{proposicao}\pause
+
+ 
+    
+    \begin{exemplo}
+        Qual o determinante das matrizes $C$ e $D$ abaixo?
+        \begin{displaymath} C = 
+            \begin{bmatrix}
+                1 & -\dfrac {1} 2 \\
+                0 & \dfrac 1 2
+            \end{bmatrix}
+        \text{ e } D = 
+            \begin{bmatrix}
+                1 & 1 & 2 \\
+                0 & 1 & 1 \\
+                2 & 2 & 4 
+            \end{bmatrix}.
+        \end{displaymath}
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes de Ordem $n$}
+
+    
+    \begin{proposicao}[Determinante e Operações Elementares]
+        Seja $A_{n \times n}$ uma matriz.
+        \begin{enumerate}[i)]
+            \item Se $B$ é a matriz que resulta quando duas linhas de $A$ são permutadas, então $\det A = - \det B$;
+            \item Se $B$ é a matriz que resulta quando uma única linha de $A$ é multiplicada por um escalar $\lambda \neq 0$, então $\det A = \dfrac 1 \lambda \det B$;
+            \item Se $B$ é a matriz que resulta quando um múltiplo não-nulo de uma linha de $A$ é somado a uma outra linha de $A$, então $\det A = \det B$.
+        \end{enumerate}
+        O resultado é análogo quando as operações elementares são feitas sobre as colunas de $A$.
+    \end{proposicao}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes de Ordem $n$}
+
+    
+    \begin{definicao}[Permutação]
+        Dado $n \pertence \N^{\ast}$, uma \sub{permutação} do conjunto $\conjunto{1, 2, \dots , n}$ é um rearranjo dos elementos desse conjunto  em alguma ordem, sem omissão ou repetição. 
+        
+        Dizemos que uma permutação $\sigma$ é \sub{par} quando o rearranjo pode ser obtido por um número par de trocas de elementos a partir da ordem crescente. Caso contrário, a permutação é dita \sub{ímpar}.
+
+        Definimos o \sub{sinal} da permutação $\sigma$, denotado por $\sgn  \sigma$, como sendo igual a $1$ se  $\sigma$ for par e igual a $-1$ se $\sigma$ for ímpar.
+    \end{definicao}\pause
+
+ 
+    
+    \begin{exemplo}
+        $\sigma_1 = \paren{3, 1, 2}$ e $\sigma_2 = \paren{1,3,2}$ são permutações do conjunto $\conjunto{1, 2, 3}$. Qual o sinal de $\sigma_1$ e $\sigma_2$?
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes de Ordem $n$}
+
+    
+    \begin{definicao}[Produto Elementar]
+        Dado uma matriz $A_{n \times n}$ e $\sigma = (\sigma_1, \sigma_2, \dots , \sigma_n)$ uma permutação de $\conjunto{1, 2, \dots , n}$. Dizemos que $$a_{1\sigma_1} \cdot a_{2\sigma_2} \dots  a_{n\sigma_n}$$ é um \sub{produto elementar} de $A$. Em outras palavras, é o produto de $n$ entradas de $A$ sem que haja mais de uma entrada de alguma linha ou coluna.
+        Dizemos também que $$\sgn \sigma \cdot a_{1\sigma_1}\cdot a_{2\sigma_2} \dots a_{n\sigma_n}$$ é um \sub{produto elementar com sinal} de $A$.
+    \end{definicao}\pause
+
+ 
+    
+    \begin{definicao}[Determinante]
+        Seja $A_{n \times n}$. O \sub{determinante} de $A$ é o somatório de todos os seus produtos elementares com sinal.
+    \end{definicao}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes de Ordem $n$}
+
+    
+    \begin{proposicao}[Determinante de matrizes triangulares]\label{det-mat-triang}
+        Seja $A_{n \times n}$ uma matriz triangular. Então
+        $$ \det A = a_{11} a_{22} \dots a_{nn}.$$
+    \end{proposicao}\pause
+
+    \begin{exemplo}
+        Calcule o determinante de 
+        \begin{displaymath} A = 
+            \begin{bmatrix}
+                2 & 0 & 1 & 0 & 3 \\
+                3 & 1 & 2 & 0 & 4 \\
+                \frac 4 3 & \frac 2 3 & 1 & \frac 1 3 & \frac 5 3 \\
+                1 & 0 & 0 & 0 & 2 \\
+                -8 & -4 & -6 & -2 & -9 
+            \end{bmatrix}.
+        \end{displaymath}
+    \end{exemplo}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes de Ordem $n$}
+
+    \begin{definicao}[Matriz menor e cofator]
+        Dada uma matriz $A = (a_{ij})_{n \times n}$, definimos a \sub{matriz menor $ij$} de $A$, denotada por $A_{ij}$, como sendo a matriz obtida a partir de $A$ excluindo-se a linha $i$ e a coluna $j$. Definimos também o \sub{cofator} de $a_{ij}$, como sendo 
+        $$ C_{ij} = (-1)^{i+j} \cdot \det A_{ij}. $$
+    \end{definicao}\pause
+
+    
+    \begin{proposicao}[Determinante a partir de cofatores]
+        Seja $A_{n \times n}$ uma matriz. Fixada uma linha $i$ ou uma coluna $j$ de $A$, teremos, respectivamente:
+        $$\det A = a_{i1}C_{i1} + a_{i2}C_{i2} + \dots + a_{in}C_{in}$$
+        ou
+        $$\det A = a_{1j}C_{1j} + a_{2j}C_{2j} + \dots + a_{nj}C_{nj}.$$
+    \end{proposicao}
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Determinante de Matrizes de Ordem $n$}
+
+    
+    \begin{exemplo}
+        Calcule
+        \begin{displaymath}  
+            \begin{vmatrix}
+                1 & 2 & 4 & 1 \\
+                0 & 1 & 2 & 1 \\
+                2 & 2 & 7 & 4\\
+                2 & 4 & 8 & 2
+            \end{vmatrix}.
+        \end{displaymath}
+    \end{exemplo}
+\end{frame}
+
+%------------------------------------------------------------------------
+

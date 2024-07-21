@@ -1,0 +1,86 @@
+\section{Sistemas Lineares}
+
+
+\begin{frame}
+    \frametitle{Sistemas Lineares e Matrizes}
+
+    Um sistema de $m$ equações lineares nas variáveis $x_1, x_2, \dots, x_n$ pode ser representado pelas equações
+    $$\left\{
+        \begin{array}{llll}
+        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n =b_1 \\
+        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n =b_2 \\
+        (\dots) \\
+        a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n =b_m  
+        \end{array} \right. .$$
+    
+    Tal sistema é equivalente à equação matricial $AX = B$, onde
+
+        \begin{displaymath} A = 
+            \begin{bmatrix}
+                a_{11} & a_{12} & \dots & a_{1n} \\
+                a_{21} & a_{22} & \dots & a_{2n} \\
+                \vdots & \vdots & \ddots & \vdots \\
+                a_{m1} & a_{m2} & \dots & a_{mn}
+            \end{bmatrix}
+        ,    \ \ 
+        X=
+            \begin{bmatrix}
+                x_1   \\
+                x_2 \\
+                \vdots \\
+                x_n
+            \end{bmatrix}
+        \ \text{ e } \  B = 
+            \begin{bmatrix}
+                b_1   \\
+                b_2 \\
+                \vdots \\
+                b_m 
+            \end{bmatrix}.
+        \end{displaymath}
+
+    Nesse caso, dizemos que $A$ é a \sub{matriz do sistema}. Quando $B = 0_{m \times 1}$, o sistema é dito \sub{homogêneo}. Observe que todo sistema homogêneo admite a solução $X = 0_{n \times 1}$, dita \sub{trivial}.
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Sistemas Lineares e Matrizes}
+
+    \begin{definicao}[Sistemas lineares equivalentes]
+        Dois sistemas lineares são ditos \sub{equivalentes} quando têm o mesmo conjunto solução.
+    \end{definicao}\pause
+
+    \begin{definicao}[Matriz aumentada de um sistema linear]
+        Dado um sistema linear $AX=B$, define-se a sua \sub{matriz aumentada} $(A|B)$, como sendo a matriz obtida ``posicionando'' a matriz $B$ à direita da matriz $A$, isto é,
+        \begin{displaymath}(A|B)=
+            \begin{bmatrix}
+                a_{11} & \dots & a_{1n} & b_1\\
+                \vdots & \ddots & \vdots & \vdots \\
+                a_{m1} & \dots & a_{mn} & b_m
+            \end{bmatrix}.
+        \end{displaymath}
+    \end{definicao}
+    
+    
+\end{frame}
+
+%------------------------------------------------------------------------
+
+
+
+\begin{frame}
+    \frametitle{Sistemas Lineares e Matrizes}
+
+    \begin{exemplo}
+        Qual a matriz aumentada do sistema linear abaixo?
+        $$\left\{
+        \begin{array}{rrrrrrr}
+        x &+& y &-& z& = &1 \\
+        x& -& y& & &=& 1 
+        \end{array} \right.$$
+    \end{exemplo}
+
+\end{frame}
+
+%------------------------------------------------------------------------
